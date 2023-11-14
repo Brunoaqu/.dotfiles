@@ -1,0 +1,33 @@
+command=$SCRIPT_DIR/$BLOCK_NAME/$BLOCK_NAME
+separator_block_width=5
+markup=pango
+full_text=
+align=center
+separator=false
+
+[memory]
+label=󰍛 
+interval=persist
+
+[separator]
+
+[volume]
+command=$SCRIPT_DIR/volume/volume
+label=󰕾 
+instance=Master
+interval=once
+signal=10
+
+[separator]
+
+[calendar]
+label= 
+command=date +"%d/%m/%Y %H:%M"
+interval=5
+
+[separator]
+
+[time]
+label=󰥔 
+command=date +"%H:%M"
+interval=5
