@@ -36,7 +36,8 @@ return require('packer').startup(function(use)
 	use({'nvim-lualine/lualine.nvim', requires = { 'nvim-tree/nvim-web-devicons', opt = true }})
 	use({'l3mon4d3/luasnip', tag = 'v2.*', run = 'make install_jsregexp'})
 	-- use('rafamadrz/friendly-snippets')
-
+	
+	use {'akinsho/bufferline.nvim', tag = "*", requires = 'nvim-tree/nvim-web-devicons'}
 	use {
 		"folke/which-key.nvim",
 		config = function()
@@ -48,5 +49,15 @@ return require('packer').startup(function(use)
 				-- refer to the configuration section below
 			}
 		end
+	}
+
+	use {
+		"hrsh7th/nvim-cmp",
+		requires = {
+			"hrsh7th/cmp-buffer", "hrsh7th/cmp-nvim-lsp",
+			'quangnguyen30192/cmp-nvim-ultisnips', 'hrsh7th/cmp-nvim-lua',
+			'octaltree/cmp-look', 'hrsh7th/cmp-path', 'hrsh7th/cmp-calc',
+			'f3fora/cmp-spell', 'hrsh7th/cmp-emoji'
+		}
 	}
 end)
