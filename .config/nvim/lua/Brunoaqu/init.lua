@@ -1,2 +1,5 @@
 require("Brunoaqu.remap")
-print("I am a file at ~/.config/nvim/lua/Brunoaqu/init.lua")
+
+vim.g.netrw_browse_split = 0
+vim.g.netrw_banner = 0
+vim.g.netrw_winsize = 25
