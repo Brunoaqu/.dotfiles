@@ -37,7 +37,7 @@ font:
   bold_italic:
     family: JetBrainsMono Nerd Font
     style: Bold Italic
-  size: 11
+  size: 9
 
 shell:
   program: /bin/zsh
@@ -47,3 +47,6 @@ shell:
     - tmux attach || tmux
 
 live_config_reload: true
+
+window:
+  opacity: 0.85
