@@ -37,7 +37,6 @@ return require('packer').startup(function(use)
 	use({'l3mon4d3/luasnip', tag = 'v2.*', run = 'make install_jsregexp'})
 	-- use('rafamadrz/friendly-snippets')
 	
-	use {'akinsho/bufferline.nvim', tag = "*", requires = 'nvim-tree/nvim-web-devicons'}
 	use {
 		"folke/which-key.nvim",
 		config = function()
@@ -60,4 +59,18 @@ return require('packer').startup(function(use)
 			'f3fora/cmp-spell', 'hrsh7th/cmp-emoji'
 		}
 	}
+
+	use({
+		'nvimdev/dashboard-nvim',
+		requires = {'nvim-tree/nvim-web-devicons'}
+	})
+
+	use({
+		"willothy/nvim-cokeline",
+		requires = {
+			"nvim-lua/plenary.nvim",        -- Required for v0.4.0+
+			"kyazdani42/nvim-web-devicons", -- If you want devicons
+			"stevearc/resession.nvim"       -- Optional, for persistent history
+		}
+	})
 end)
