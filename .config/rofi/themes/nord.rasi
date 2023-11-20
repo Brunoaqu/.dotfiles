@@ -1,31 +1,32 @@
 // Nord palette with some extra colors.
 
 * {
-    black:      #191D24;
-    gray0:      #242933;
-    gray1:      #2E3440;
-    gray2:      #3B4252;
-    gray3:      #434C5E;
-    gray4:      #4C566A;
-    gray5:      #60728A;
-    white0:     #D8DEE9;
-    white1:     #E5E9F0;
-    white2:     #ECEFF4;
-    blue0:      #5E81AC;
-    blue1:      #81A1C1;
-    blue2:      #88C0D0;
-    cyan:       #8FBCBB;
-    red:        #BF616A;
-    orange:     #D08770;
-    yellow:     #EBCB8B;
-    green:      #A3BE8C;
-    magenta:    #B48EAD;
+    black:          #0D0D0D;
+    gray0:          #242933;
+    gray1:          #2E3440;
+    gray2:          #3B4252;
+    gray3:          #434C5E;
+    gray4:          #4C566A;
+    gray5:          #60728A;
+    white0:         #F2E2DF;
+    white1:         #F2E2DF;
+    white2:         #F2E2DF;
+    blue0:          #2BA8D9;
+    blue1:          #2BA8D9;
+    blue2:          #2BA8D9;
+    cyan:           #8FBCBB;
+    red:            #BF616A;
+    orange:         #D08770;
+    yellow:         #EBCB8B;
+    green:          #A3BE8C;
+    magenta:        #BF247A;
+    magenta2:       #8C1F5B;
 
     background:     @black;
     background-alt: @black;
-    foreground:     @white2;
-    selected:       @yellow;
+    foreground:     @white0;
+    selected:       @magenta2;
     active:         @blue2;
     urgent:         @red;
-    border:         @cyan;
+    border:         @magenta2;
 }
