@@ -1,0 +1,146 @@
+2023-10-30 10:19:27,358 DEBUG    root            Loaded Command Group: ['gcloud', 'storage']
+2023-10-30 10:19:27,359 DEBUG    root            Loaded Command Group: ['gcloud', 'storage', 'buckets']
+2023-10-30 10:19:27,526 DEBUG    root            Loaded Command Group: ['gcloud', 'storage', 'buckets', 'add_iam_policy_binding']
+2023-10-30 10:19:27,529 DEBUG    root            Running [gcloud.storage.buckets.add-iam-policy-binding] with arguments: [--member: "allUsers", --role: "roles/storage.objectViewer", URL: "gs://openapi.pixlog.com.br"]
+2023-10-30 10:19:27,575 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): storage.googleapis.com:443
+2023-10-30 10:19:27,911 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /storage/v1/b/openapi.pixlog.com.br/iam?alt=json&fields=bindings%2Cetag&optionsRequestedPolicyVersion=3 HTTP/1.1" 200 651
+2023-10-30 10:19:27,917 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): storage.googleapis.com:443
+2023-10-30 10:19:29,012 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "PUT /storage/v1/b/openapi.pixlog.com.br/iam?alt=json HTTP/1.1" 200 858
+2023-10-30 10:19:29,019 DEBUG    root            Chosen display Format:default
+2023-10-30 10:19:29,023 INFO     root            Display format: "default"
+2023-10-30 10:19:29,030 INFO     ___FILE_ONLY___ bindings
+2023-10-30 10:19:29,031 INFO     ___FILE_ONLY___ :
+2023-10-30 10:19:29,031 INFO     ___FILE_ONLY___ 
+
+2023-10-30 10:19:29,031 INFO     ___FILE_ONLY___ -
+2023-10-30 10:19:29,032 INFO     ___FILE_ONLY___  
+2023-10-30 10:19:29,032 INFO     ___FILE_ONLY___ members
+2023-10-30 10:19:29,033 INFO     ___FILE_ONLY___ :
+2023-10-30 10:19:29,033 INFO     ___FILE_ONLY___ 
+
+2023-10-30 10:19:29,033 INFO     ___FILE_ONLY___   
+2023-10-30 10:19:29,034 INFO     ___FILE_ONLY___ -
+2023-10-30 10:19:29,034 INFO     ___FILE_ONLY___  
+2023-10-30 10:19:29,035 INFO     ___FILE_ONLY___ projectEditor:pixlog-backend-ml
+2023-10-30 10:19:29,035 INFO     ___FILE_ONLY___ 
+
+2023-10-30 10:19:29,035 INFO     ___FILE_ONLY___   
+2023-10-30 10:19:29,036 INFO     ___FILE_ONLY___ -
+2023-10-30 10:19:29,036 INFO     ___FILE_ONLY___  
+2023-10-30 10:19:29,036 INFO     ___FILE_ONLY___ projectOwner:pixlog-backend-ml
+2023-10-30 10:19:29,037 INFO     ___FILE_ONLY___ 
+
+2023-10-30 10:19:29,037 INFO     ___FILE_ONLY___   
+2023-10-30 10:19:29,038 INFO     ___FILE_ONLY___ role
+2023-10-30 10:19:29,038 INFO     ___FILE_ONLY___ :
+2023-10-30 10:19:29,038 INFO     ___FILE_ONLY___  
+2023-10-30 10:19:29,039 INFO     ___FILE_ONLY___ roles/storage.legacyBucketOwner
+2023-10-30 10:19:29,040 INFO     ___FILE_ONLY___ 
+
+2023-10-30 10:19:29,040 INFO     ___FILE_ONLY___ -
+2023-10-30 10:19:29,041 INFO     ___FILE_ONLY___  
+2023-10-30 10:19:29,041 INFO     ___FILE_ONLY___ members
+2023-10-30 10:19:29,042 INFO     ___FILE_ONLY___ :
+2023-10-30 10:19:29,042 INFO     ___FILE_ONLY___ 
+
+2023-10-30 10:19:29,043 INFO     ___FILE_ONLY___   
+2023-10-30 10:19:29,043 INFO     ___FILE_ONLY___ -
+2023-10-30 10:19:29,043 INFO     ___FILE_ONLY___  
+2023-10-30 10:19:29,043 INFO     ___FILE_ONLY___ projectViewer:pixlog-backend-ml
+2023-10-30 10:19:29,043 INFO     ___FILE_ONLY___ 
+
+2023-10-30 10:19:29,043 INFO     ___FILE_ONLY___   
+2023-10-30 10:19:29,043 INFO     ___FILE_ONLY___ role
+2023-10-30 10:19:29,043 INFO     ___FILE_ONLY___ :
+2023-10-30 10:19:29,043 INFO     ___FILE_ONLY___  
+2023-10-30 10:19:29,043 INFO     ___FILE_ONLY___ roles/storage.legacyBucketReader
+2023-10-30 10:19:29,043 INFO     ___FILE_ONLY___ 
+
+2023-10-30 10:19:29,044 INFO     ___FILE_ONLY___ -
+2023-10-30 10:19:29,044 INFO     ___FILE_ONLY___  
+2023-10-30 10:19:29,044 INFO     ___FILE_ONLY___ members
+2023-10-30 10:19:29,044 INFO     ___FILE_ONLY___ :
+2023-10-30 10:19:29,044 INFO     ___FILE_ONLY___ 
+
+2023-10-30 10:19:29,044 INFO     ___FILE_ONLY___   
+2023-10-30 10:19:29,044 INFO     ___FILE_ONLY___ -
+2023-10-30 10:19:29,044 INFO     ___FILE_ONLY___  
+2023-10-30 10:19:29,044 INFO     ___FILE_ONLY___ projectEditor:pixlog-backend-ml
+2023-10-30 10:19:29,044 INFO     ___FILE_ONLY___ 
+
+2023-10-30 10:19:29,044 INFO     ___FILE_ONLY___   
+2023-10-30 10:19:29,044 INFO     ___FILE_ONLY___ -
+2023-10-30 10:19:29,044 INFO     ___FILE_ONLY___  
+2023-10-30 10:19:29,045 INFO     ___FILE_ONLY___ projectOwner:pixlog-backend-ml
+2023-10-30 10:19:29,045 INFO     ___FILE_ONLY___ 
+
+2023-10-30 10:19:29,045 INFO     ___FILE_ONLY___   
+2023-10-30 10:19:29,045 INFO     ___FILE_ONLY___ role
+2023-10-30 10:19:29,045 INFO     ___FILE_ONLY___ :
+2023-10-30 10:19:29,045 INFO     ___FILE_ONLY___  
+2023-10-30 10:19:29,045 INFO     ___FILE_ONLY___ roles/storage.legacyObjectOwner
+2023-10-30 10:19:29,045 INFO     ___FILE_ONLY___ 
+
+2023-10-30 10:19:29,045 INFO     ___FILE_ONLY___ -
+2023-10-30 10:19:29,045 INFO     ___FILE_ONLY___  
+2023-10-30 10:19:29,045 INFO     ___FILE_ONLY___ members
+2023-10-30 10:19:29,045 INFO     ___FILE_ONLY___ :
+2023-10-30 10:19:29,045 INFO     ___FILE_ONLY___ 
+
+2023-10-30 10:19:29,046 INFO     ___FILE_ONLY___   
+2023-10-30 10:19:29,046 INFO     ___FILE_ONLY___ -
+2023-10-30 10:19:29,046 INFO     ___FILE_ONLY___  
+2023-10-30 10:19:29,046 INFO     ___FILE_ONLY___ projectViewer:pixlog-backend-ml
+2023-10-30 10:19:29,046 INFO     ___FILE_ONLY___ 
+
+2023-10-30 10:19:29,046 INFO     ___FILE_ONLY___   
+2023-10-30 10:19:29,046 INFO     ___FILE_ONLY___ role
+2023-10-30 10:19:29,046 INFO     ___FILE_ONLY___ :
+2023-10-30 10:19:29,046 INFO     ___FILE_ONLY___  
+2023-10-30 10:19:29,046 INFO     ___FILE_ONLY___ roles/storage.legacyObjectReader
+2023-10-30 10:19:29,046 INFO     ___FILE_ONLY___ 
+
+2023-10-30 10:19:29,046 INFO     ___FILE_ONLY___ -
+2023-10-30 10:19:29,046 INFO     ___FILE_ONLY___  
+2023-10-30 10:19:29,046 INFO     ___FILE_ONLY___ members
+2023-10-30 10:19:29,047 INFO     ___FILE_ONLY___ :
+2023-10-30 10:19:29,047 INFO     ___FILE_ONLY___ 
+
+2023-10-30 10:19:29,047 INFO     ___FILE_ONLY___   
+2023-10-30 10:19:29,047 INFO     ___FILE_ONLY___ -
+2023-10-30 10:19:29,047 INFO     ___FILE_ONLY___  
+2023-10-30 10:19:29,047 INFO     ___FILE_ONLY___ allUsers
+2023-10-30 10:19:29,047 INFO     ___FILE_ONLY___ 
+
+2023-10-30 10:19:29,047 INFO     ___FILE_ONLY___   
+2023-10-30 10:19:29,047 INFO     ___FILE_ONLY___ role
+2023-10-30 10:19:29,047 INFO     ___FILE_ONLY___ :
+2023-10-30 10:19:29,047 INFO     ___FILE_ONLY___  
+2023-10-30 10:19:29,047 INFO     ___FILE_ONLY___ roles/storage.objectViewer
+2023-10-30 10:19:29,047 INFO     ___FILE_ONLY___ 
+
+2023-10-30 10:19:29,047 INFO     ___FILE_ONLY___ etag
+2023-10-30 10:19:29,048 INFO     ___FILE_ONLY___ :
+2023-10-30 10:19:29,048 INFO     ___FILE_ONLY___  
+2023-10-30 10:19:29,048 INFO     ___FILE_ONLY___ CAI=
+2023-10-30 10:19:29,048 INFO     ___FILE_ONLY___ 
+
+2023-10-30 10:19:29,048 INFO     ___FILE_ONLY___ kind
+2023-10-30 10:19:29,048 INFO     ___FILE_ONLY___ :
+2023-10-30 10:19:29,048 INFO     ___FILE_ONLY___  
+2023-10-30 10:19:29,048 INFO     ___FILE_ONLY___ storage#policy
+2023-10-30 10:19:29,048 INFO     ___FILE_ONLY___ 
+
+2023-10-30 10:19:29,048 INFO     ___FILE_ONLY___ resourceId
+2023-10-30 10:19:29,048 INFO     ___FILE_ONLY___ :
+2023-10-30 10:19:29,048 INFO     ___FILE_ONLY___  
+2023-10-30 10:19:29,048 INFO     ___FILE_ONLY___ projects/_/buckets/openapi.pixlog.com.br
+2023-10-30 10:19:29,048 INFO     ___FILE_ONLY___ 
+
+2023-10-30 10:19:29,049 INFO     ___FILE_ONLY___ version
+2023-10-30 10:19:29,049 INFO     ___FILE_ONLY___ :
+2023-10-30 10:19:29,050 INFO     ___FILE_ONLY___  
+2023-10-30 10:19:29,050 INFO     ___FILE_ONLY___ 1
+2023-10-30 10:19:29,050 INFO     ___FILE_ONLY___ 
+
+2023-10-30 10:19:29,050 DEBUG    root            SDK update checks are disabled.

@@ -1,0 +1,29 @@
+2023-11-20 15:18:29.822 [warning] Via 'product.json#extensionEnabledApiProposals' extension 'ms-dotnettools.dotnet-interactive-vscode' wants API proposal 'languageConfigurationAutoClosingPairs' but that proposal DOES NOT EXIST. Likely, the proposal has been finalized (check 'vscode.d.ts') or was abandoned.
+2023-11-20 15:18:30.268 [warning] [twxs.cmake]: Cannot register 'cmake.cmakePath'. This property is already registered.
+2023-11-20 15:18:31.541 [error] [xabikos.JavaScriptSnippets]: Unknown language in `contributes.JavaScriptSnippets.language`. Provided value: vue
+2023-11-20 15:18:32.969 [info] [perf] Render performance baseline is 46ms
+2023-11-20 15:18:33.586 [warning] [cmake-tools]: Couldn't find message for key cmake-tools.configuration.cmake.options.advanced.statusBarVisibility.variant.description.
+2023-11-20 15:18:37.894 [error] Model is disposed!: Error: Model is disposed!
+    at W.ib (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:728:263)
+    at W.validateRange (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:731:2567)
+    at Object.resolveCodeLens (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:1569:15145)
+    at async Promise.all (index 0)
+    at async Promise.all (index 0)
+2023-11-20 15:18:37.894 [error] Model is disposed!: Error: Model is disposed!
+    at W.ib (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:728:263)
+    at W.validateRange (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:731:2567)
+    at Object.resolveCodeLens (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:1569:15145)
+    at async Promise.all (index 1)
+    at async Promise.all (index 0)
+2023-11-20 15:18:37.894 [error] Model is disposed!: Error: Model is disposed!
+    at W.ib (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:728:263)
+    at W.validateRange (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:731:2567)
+    at Object.resolveCodeLens (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:1569:15145)
+    at async Promise.all (index 0)
+    at async Promise.all (index 1)
+2023-11-20 15:18:37.894 [error] Model is disposed!: Error: Model is disposed!
+    at W.ib (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:728:263)
+    at W.validateRange (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:731:2567)
+    at Object.resolveCodeLens (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:1569:15145)
+    at async Promise.all (index 1)
+    at async Promise.all (index 1)

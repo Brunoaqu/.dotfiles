@@ -1,0 +1,146 @@
+[INFO] [default] [2023-11-21T14:52:53.882Z] [fetchCompletions] engine https://copilot-proxy.githubusercontent.com/v1/engines/copilot-codex
+[INFO] [ghostText] [2023-11-21T14:53:51.286Z] Cancelled during debounce
+[INFO] [default] [2023-11-21T14:53:51.445Z] [fetchCompletions] engine https://copilot-proxy.githubusercontent.com/v1/engines/copilot-codex
+[INFO] [default] [2023-11-21T14:58:13.499Z] [fetchCompletions] engine https://copilot-proxy.githubusercontent.com/v1/engines/copilot-codex
+[INFO] [default] [2023-11-21T14:58:13.863Z] [fetchCompletions] engine https://copilot-proxy.githubusercontent.com/v1/engines/copilot-codex
+[INFO] [default] [2023-11-21T14:58:14.188Z] request.response: [https://copilot-proxy.githubusercontent.com/v1/engines/copilot-codex/completions] took 324 ms
+[INFO] [streamChoices] [2023-11-21T14:58:14.197Z] solution 0 returned. finish reason: [stop]
+[INFO] [streamChoices] [2023-11-21T14:58:14.206Z] request done: headerRequestId: [5ff0df0f-6e44-4015-a7f0-e9b359c42b2b] model deployment ID: [wf1c940e73ac]
+[INFO] [default] [2023-11-21T14:58:41.605Z] [fetchCompletions] engine https://copilot-proxy.githubusercontent.com/v1/engines/copilot-codex
+[INFO] [ghostText] [2023-11-21T14:58:41.941Z] Cancelled by contextual filter
+[INFO] [ghostText] [2023-11-21T14:58:44.729Z] Cancelled by contextual filter
+[INFO] [default] [2023-11-21T15:01:32.309Z] [fetchCompletions] engine https://copilot-proxy.githubusercontent.com/v1/engines/copilot-codex
+[INFO] [default] [2023-11-21T15:01:32.768Z] [fetchCompletions] engine https://copilot-proxy.githubusercontent.com/v1/engines/copilot-codex
+[INFO] [default] [2023-11-21T15:01:33.047Z] request.response: [https://copilot-proxy.githubusercontent.com/v1/engines/copilot-codex/completions] took 278 ms
+[INFO] [streamChoices] [2023-11-21T15:01:33.048Z] solution 0 returned. finish reason: [stop]
+[INFO] [streamChoices] [2023-11-21T15:01:33.049Z] request done: headerRequestId: [2b0b1f8c-9e76-4973-b935-59423f82e271] model deployment ID: [wf1c940e73ac]
+[INFO] [default] [2023-11-21T15:04:09.757Z] [fetchCompletions] engine https://copilot-proxy.githubusercontent.com/v1/engines/copilot-codex
+[INFO] [default] [2023-11-21T15:04:10.203Z] request.response: [https://copilot-proxy.githubusercontent.com/v1/engines/copilot-codex/completions] took 445 ms
+[INFO] [streamChoices] [2023-11-21T15:04:10.204Z] solution 0 returned. finish reason: [stop]
+[INFO] [streamChoices] [2023-11-21T15:04:10.208Z] request done: headerRequestId: [2d53411c-fd58-44d4-8b2a-acd5e7c9c208] model deployment ID: [wf1c940e73ac]
+[INFO] [default] [2023-11-21T15:04:10.501Z] [fetchCompletions] engine https://copilot-proxy.githubusercontent.com/v1/engines/copilot-codex
+[INFO] [default] [2023-11-21T15:04:10.870Z] [fetchCompletions] engine https://copilot-proxy.githubusercontent.com/v1/engines/copilot-codex
+[INFO] [default] [2023-11-21T15:04:11.231Z] request.response: [https://copilot-proxy.githubusercontent.com/v1/engines/copilot-codex/completions] took 361 ms
+[INFO] [streamChoices] [2023-11-21T15:04:11.232Z] solution 0 returned. finish reason: [stop]
+[INFO] [streamChoices] [2023-11-21T15:04:11.233Z] request done: headerRequestId: [04dcf7cb-fdde-47eb-87e4-266eafa6894d] model deployment ID: [wf1c940e73ac]
+[INFO] [ghostText] [2023-11-21T15:05:03.570Z] Cancelled after extractPrompt
+[INFO] [default] [2023-11-21T15:05:57.393Z] [fetchCompletions] engine https://copilot-proxy.githubusercontent.com/v1/engines/copilot-codex
+[INFO] [default] [2023-11-21T15:05:57.647Z] request.response: [https://copilot-proxy.githubusercontent.com/v1/engines/copilot-codex/completions] took 253 ms
+[INFO] [streamChoices] [2023-11-21T15:05:57.650Z] solution 0 returned. finish reason: [stop]
+[INFO] [streamChoices] [2023-11-21T15:05:57.653Z] request done: headerRequestId: [c9c08d75-502f-4249-ac9e-3b7919bd937d] model deployment ID: [wf1c940e73ac]
+[INFO] [ghostText] [2023-11-21T15:06:32.974Z] Cancelled after extractPrompt
+[INFO] [ghostText] [2023-11-21T15:06:33.131Z] Cancelled after extractPrompt
+[INFO] [default] [2023-11-21T15:07:07.050Z] [fetchCompletions] engine https://copilot-proxy.githubusercontent.com/v1/engines/copilot-codex
+[INFO] [default] [2023-11-21T15:07:07.313Z] request.response: [https://copilot-proxy.githubusercontent.com/v1/engines/copilot-codex/completions] took 263 ms
+[INFO] [streamChoices] [2023-11-21T15:07:07.314Z] solution 0 returned. finish reason: [stop]
+[INFO] [streamChoices] [2023-11-21T15:07:07.315Z] request done: headerRequestId: [48cfe2f1-7b10-4858-9be4-a1ea1a3751cd] model deployment ID: [wf1c940e73ac]
+[INFO] [ghostText] [2023-11-21T15:07:50.519Z] Cancelled after extractPrompt
+[INFO] [ghostText] [2023-11-21T15:07:50.634Z] Cancelled after extractPrompt
+[INFO] [default] [2023-11-21T15:08:49.751Z] [fetchCompletions] engine https://copilot-proxy.githubusercontent.com/v1/engines/copilot-codex
+[INFO] [default] [2023-11-21T15:08:50.038Z] request.response: [https://copilot-proxy.githubusercontent.com/v1/engines/copilot-codex/completions] took 286 ms
+[INFO] [streamChoices] [2023-11-21T15:08:50.044Z] solution 0 returned. finish reason: [stop]
+[INFO] [streamChoices] [2023-11-21T15:08:50.045Z] request done: headerRequestId: [346c21c7-35dd-464d-95e0-3ed096c1dc9f] model deployment ID: [wf1c940e73ac]
+[INFO] [ghostText] [2023-11-21T15:09:03.821Z] Cancelled during debounce
+[INFO] [default] [2023-11-21T15:09:03.985Z] [fetchCompletions] engine https://copilot-proxy.githubusercontent.com/v1/engines/copilot-codex
+[INFO] [default] [2023-11-21T15:09:04.358Z] request.response: [https://copilot-proxy.githubusercontent.com/v1/engines/copilot-codex/completions] took 373 ms
+[INFO] [streamChoices] [2023-11-21T15:09:04.362Z] solution 0 returned. finish reason: [stop]
+[INFO] [streamChoices] [2023-11-21T15:09:04.364Z] request done: headerRequestId: [4df4ed3a-6ed1-4fb8-973e-c25a07316f39] model deployment ID: [wf1c940e73ac]
+[INFO] [default] [2023-11-21T15:11:07.844Z] [fetchCompletions] engine https://copilot-proxy.githubusercontent.com/v1/engines/copilot-codex
+[INFO] [default] [2023-11-21T15:11:08.145Z] [fetchCompletions] engine https://copilot-proxy.githubusercontent.com/v1/engines/copilot-codex
+[INFO] [default] [2023-11-21T15:12:05.072Z] [fetchCompletions] engine https://copilot-proxy.githubusercontent.com/v1/engines/copilot-codex
+[INFO] [default] [2023-11-21T15:12:05.554Z] request.response: [https://copilot-proxy.githubusercontent.com/v1/engines/copilot-codex/completions] took 482 ms
+[INFO] [streamChoices] [2023-11-21T15:12:05.555Z] solution 0 returned. finish reason: [stop]
+[INFO] [streamChoices] [2023-11-21T15:12:05.556Z] request done: headerRequestId: [79f67d92-89b0-4279-85b5-a5ed3ea5627b] model deployment ID: [wf1c940e73ac]
+[INFO] [ghostText] [2023-11-21T15:12:34.420Z] Cancelled after extractPrompt
+[INFO] [ghostText] [2023-11-21T15:12:56.071Z] Cancelled by contextual filter
+[INFO] [ghostText] [2023-11-21T15:14:09.935Z] Cancelled after extractPrompt
+[INFO] [ghostText] [2023-11-21T15:14:10.045Z] Cancelled after extractPrompt
+[INFO] [ghostText] [2023-11-21T15:15:07.239Z] Cancelled after extractPrompt
+[INFO] [ghostText] [2023-11-21T15:15:07.285Z] Cancelled after extractPrompt
+[INFO] [default] [2023-11-21T15:16:03.274Z] [fetchCompletions] engine https://copilot-proxy.githubusercontent.com/v1/engines/copilot-codex
+[INFO] [default] [2023-11-21T15:16:04.928Z] [fetchCompletions] engine https://copilot-proxy.githubusercontent.com/v1/engines/copilot-codex
+[INFO] [default] [2023-11-21T15:16:05.138Z] [fetchCompletions] engine https://copilot-proxy.githubusercontent.com/v1/engines/copilot-codex
+[INFO] [default] [2023-11-21T15:16:05.476Z] request.response: [https://copilot-proxy.githubusercontent.com/v1/engines/copilot-codex/completions] took 338 ms
+[INFO] [streamChoices] [2023-11-21T15:16:05.478Z] solution 0 returned. finish reason: [stop]
+[INFO] [streamChoices] [2023-11-21T15:16:05.479Z] request done: headerRequestId: [4222b24d-ad18-4bd5-92ec-e8580992751e] model deployment ID: [wf1c940e73ac]
+[INFO] [default] [2023-11-21T15:16:26.105Z] [fetchCompletions] engine https://copilot-proxy.githubusercontent.com/v1/engines/copilot-codex
+[INFO] [default] [2023-11-21T15:16:26.506Z] [fetchCompletions] engine https://copilot-proxy.githubusercontent.com/v1/engines/copilot-codex
+[INFO] [default] [2023-11-21T15:16:26.836Z] request.response: [https://copilot-proxy.githubusercontent.com/v1/engines/copilot-codex/completions] took 330 ms
+[INFO] [streamChoices] [2023-11-21T15:16:26.838Z] solution 0 returned. finish reason: [stop]
+[INFO] [streamChoices] [2023-11-21T15:16:26.840Z] request done: headerRequestId: [464b697d-1ff1-4322-a361-db84ba8026df] model deployment ID: [wf1c940e73ac]
+[INFO] [ghostText] [2023-11-21T15:16:51.728Z] Cancelled after extractPrompt
+[INFO] [ghostText] [2023-11-21T15:16:51.756Z] Cancelled after extractPrompt
+[INFO] [ghostText] [2023-11-21T15:16:51.836Z] Cancelled after extractPrompt
+[INFO] [ghostText] [2023-11-21T15:16:52.220Z] Cancelled after extractPrompt
+[INFO] [ghostText] [2023-11-21T15:17:50.772Z] Cancelled during debounce
+[INFO] [ghostText] [2023-11-21T15:17:50.986Z] Cancelled by contextual filter
+[INFO] [default] [2023-11-21T15:17:51.118Z] [fetchCompletions] engine https://copilot-proxy.githubusercontent.com/v1/engines/copilot-codex
+[INFO] [default] [2023-11-21T15:17:51.911Z] request.response: [https://copilot-proxy.githubusercontent.com/v1/engines/copilot-codex/completions] took 792 ms
+[INFO] [streamChoices] [2023-11-21T15:17:52.223Z] request done: headerRequestId: [2a3df115-8dfd-415b-a858-09bd8e3a7f93] model deployment ID: [wf1c940e73ac]
+[INFO] [ghostText] [2023-11-21T15:17:52.386Z] Cancelled by contextual filter
+[INFO] [default] [2023-11-21T15:19:55.430Z] [fetchCompletions] engine https://copilot-proxy.githubusercontent.com/v1/engines/copilot-codex
+[INFO] [default] [2023-11-21T15:19:57.267Z] [fetchCompletions] engine https://copilot-proxy.githubusercontent.com/v1/engines/copilot-codex
+[INFO] [default] [2023-11-21T15:19:57.695Z] request.response: [https://copilot-proxy.githubusercontent.com/v1/engines/copilot-codex/completions] took 427 ms
+[INFO] [streamChoices] [2023-11-21T15:19:57.698Z] solution 0 returned. finish reason: [stop]
+[INFO] [streamChoices] [2023-11-21T15:19:57.701Z] request done: headerRequestId: [04d83e38-8c95-469b-94c3-bda1b7068050] model deployment ID: [wf1c940e73ac]
+[INFO] [default] [2023-11-21T15:19:58.461Z] [fetchCompletions] engine https://copilot-proxy.githubusercontent.com/v1/engines/copilot-codex
+[INFO] [default] [2023-11-21T15:19:58.732Z] request.response: [https://copilot-proxy.githubusercontent.com/v1/engines/copilot-codex/completions] took 271 ms
+[INFO] [streamChoices] [2023-11-21T15:19:58.733Z] solution 0 returned. finish reason: [stop]
+[INFO] [streamChoices] [2023-11-21T15:19:58.734Z] request done: headerRequestId: [08beac4f-7e58-4623-bd9c-1579bb5628a0] model deployment ID: [wf1c940e73ac]
+[INFO] [ghostText] [2023-11-21T15:24:48.581Z] Cancelled after extractPrompt
+[INFO] [default] [2023-11-21T15:58:05.602Z] [fetchCompletions] engine https://copilot-proxy.githubusercontent.com/v1/engines/copilot-codex
+[INFO] [default] [2023-11-21T15:58:06.178Z] request.response: [https://copilot-proxy.githubusercontent.com/v1/engines/copilot-codex/completions] took 576 ms
+[INFO] [streamChoices] [2023-11-21T15:58:06.184Z] solution 0 returned. finish reason: [stop]
+[INFO] [streamChoices] [2023-11-21T15:58:06.187Z] request done: headerRequestId: [4ae6f26f-b197-4876-9bf3-be058c06f739] model deployment ID: [wf1c940e73ac]
+[INFO] [ghostText] [2023-11-21T16:03:25.616Z] Cancelled by contextual filter
+[INFO] [ghostText] [2023-11-21T16:08:38.197Z] Cancelled by contextual filter
+[INFO] [default] [2023-11-21T16:11:47.440Z] [fetchCompletions] engine https://copilot-proxy.githubusercontent.com/v1/engines/copilot-codex
+[INFO] [ghostText] [2023-11-21T16:12:18.500Z] Cancelled after extractPrompt
+[INFO] [ghostText] [2023-11-21T16:12:18.600Z] Cancelled after extractPrompt
+[INFO] [ghostText] [2023-11-21T16:13:31.360Z] Cancelled by contextual filter
+[INFO] [default] [2023-11-21T16:14:32.576Z] [fetchCompletions] engine https://copilot-proxy.githubusercontent.com/v1/engines/copilot-codex
+[INFO] [default] [2023-11-21T16:14:32.867Z] request.response: [https://copilot-proxy.githubusercontent.com/v1/engines/copilot-codex/completions] took 290 ms
+[INFO] [streamChoices] [2023-11-21T16:14:32.870Z] solution 0 returned. finish reason: [stop]
+[INFO] [streamChoices] [2023-11-21T16:14:32.871Z] request done: headerRequestId: [6bfaba5e-f22d-4cb0-bfd2-b19b6b119a32] model deployment ID: [wf1c940e73ac]
+[INFO] [ghostText] [2023-11-21T16:15:04.494Z] Cancelled during debounce
+[INFO] [default] [2023-11-21T16:15:14.616Z] [fetchCompletions] engine https://copilot-proxy.githubusercontent.com/v1/engines/copilot-codex
+[INFO] [default] [2023-11-21T16:15:15.261Z] request.response: [https://copilot-proxy.githubusercontent.com/v1/engines/copilot-codex/completions] took 644 ms
+[INFO] [streamChoices] [2023-11-21T16:15:15.265Z] solution 0 returned. finish reason: [stop]
+[INFO] [streamChoices] [2023-11-21T16:15:15.272Z] request done: headerRequestId: [94df2fa1-e306-456b-ac19-caff707e8963] model deployment ID: [wf1c940e73ac]
+[INFO] [default] [2023-11-21T16:15:16.196Z] [fetchCompletions] engine https://copilot-proxy.githubusercontent.com/v1/engines/copilot-codex
+[INFO] [default] [2023-11-21T16:15:16.590Z] request.response: [https://copilot-proxy.githubusercontent.com/v1/engines/copilot-codex/completions] took 393 ms
+[INFO] [streamChoices] [2023-11-21T16:15:16.591Z] solution 0 returned. finish reason: [stop]
+[INFO] [streamChoices] [2023-11-21T16:15:16.591Z] request done: headerRequestId: [ada63a61-3d5e-4fdd-8f36-e5462cc48ccd] model deployment ID: [wf1c940e73ac]
+[INFO] [ghostText] [2023-11-21T16:15:17.157Z] Found inline suggestions locally
+[INFO] [ghostText] [2023-11-21T16:15:22.483Z] Cancelled after extractPrompt
+[INFO] [ghostText] [2023-11-21T16:15:23.079Z] Cancelled after extractPrompt
+[INFO] [default] [2023-11-21T16:15:24.455Z] [fetchCompletions] engine https://copilot-proxy.githubusercontent.com/v1/engines/copilot-codex
+[INFO] [default] [2023-11-21T16:15:24.782Z] [fetchCompletions] engine https://copilot-proxy.githubusercontent.com/v1/engines/copilot-codex
+[INFO] [default] [2023-11-21T16:15:25.263Z] request.response: [https://copilot-proxy.githubusercontent.com/v1/engines/copilot-codex/completions] took 481 ms
+[INFO] [streamChoices] [2023-11-21T16:15:25.268Z] solution 0 returned. finish reason: [stop]
+[INFO] [streamChoices] [2023-11-21T16:15:25.272Z] request done: headerRequestId: [e4c33ea4-0d02-4265-b80d-19a19e3d2364] model deployment ID: [wf1c940e73ac]
+[INFO] [ghostText] [2023-11-21T16:16:07.196Z] Cancelled after extractPrompt
+[INFO] [ghostText] [2023-11-21T16:16:07.411Z] Cancelled after extractPrompt
+[INFO] [ghostText] [2023-11-21T16:16:07.451Z] Cancelled after extractPrompt
+[INFO] [ghostText] [2023-11-21T16:16:07.670Z] Cancelled after extractPrompt
+[INFO] [ghostText] [2023-11-21T16:16:13.689Z] Cancelled after extractPrompt
+[INFO] [default] [2023-11-21T16:16:37.762Z] [fetchCompletions] engine https://copilot-proxy.githubusercontent.com/v1/engines/copilot-codex
+[INFO] [default] [2023-11-21T16:16:38.004Z] request.response: [https://copilot-proxy.githubusercontent.com/v1/engines/copilot-codex/completions] took 242 ms
+[INFO] [streamChoices] [2023-11-21T16:16:38.009Z] solution 0 returned. finish reason: [stop]
+[INFO] [streamChoices] [2023-11-21T16:16:38.012Z] request done: headerRequestId: [984b057a-e3a8-44fe-b525-0be9eb1a7c6b] model deployment ID: [wf1c940e73ac]
+[INFO] [ghostText] [2023-11-21T16:17:00.781Z] Cancelled after extractPrompt
+[INFO] [ghostText] [2023-11-21T16:17:55.416Z] Cancelled after extractPrompt
+[INFO] [ghostText] [2023-11-21T16:17:55.580Z] Cancelled after extractPrompt
+[INFO] [ghostText] [2023-11-21T16:18:35.959Z] Cancelled after extractPrompt
+[INFO] [ghostText] [2023-11-21T16:18:38.002Z] Cancelled after extractPrompt
+[INFO] [ghostText] [2023-11-21T16:19:18.306Z] Cancelled after extractPrompt
+[INFO] [default] [2023-11-21T16:20:32.386Z] [fetchCompletions] engine https://copilot-proxy.githubusercontent.com/v1/engines/copilot-codex
+[INFO] [default] [2023-11-21T16:20:32.660Z] request.response: [https://copilot-proxy.githubusercontent.com/v1/engines/copilot-codex/completions] took 274 ms
+[INFO] [streamChoices] [2023-11-21T16:20:32.662Z] solution 0 returned. finish reason: [stop]
+[INFO] [streamChoices] [2023-11-21T16:20:32.662Z] request done: headerRequestId: [641ca91d-3220-4930-8d9f-c7b8d4da8495] model deployment ID: [wf1c940e73ac]
+[INFO] [ghostText] [2023-11-21T16:21:32.324Z] Cancelled by contextual filter
+[INFO] [default] [2023-11-21T16:29:24.148Z] [fetchCompletions] engine https://copilot-proxy.githubusercontent.com/v1/engines/copilot-codex
+[INFO] [default] [2023-11-21T16:29:24.424Z] [fetchCompletions] engine https://copilot-proxy.githubusercontent.com/v1/engines/copilot-codex
+[INFO] [default] [2023-11-21T16:29:25.346Z] request.response: [https://copilot-proxy.githubusercontent.com/v1/engines/copilot-codex/completions] took 922 ms
+[INFO] [streamChoices] [2023-11-21T16:29:25.352Z] solution 0 returned. finish reason: [stop]
+[INFO] [streamChoices] [2023-11-21T16:29:25.359Z] request done: headerRequestId: [69bda61d-fe24-4a8c-a6f7-570b02c3a75f] model deployment ID: [wf1c940e73ac]

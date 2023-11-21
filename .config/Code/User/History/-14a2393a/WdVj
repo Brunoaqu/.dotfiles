@@ -1,0 +1,32 @@
+# /.env
+
+# Configuration for node-api
+PRODUCTION_MODE=false
+API_PORT=8080
+API_SECRET=super+secret
+LOG_LEVEL=debug
+
+# Token lifespans in minutes
+TKN_EXP_RESET_PASSWORD=5
+TKN_EXP_CONFIRM_EMAIL=5
+
+# Access token configuration
+TKN_EXP_ACCESS_TOKEN=15
+MAX_SESSIONS=7
+
+# Configuration for mysql-database
+DB_USER=root
+DB_PASS=password123
+DB_HOST=mariadb
+DB_PORT=3306
+DB_NAME=sandbox
+
+# Configuration for Redis
+REDIS_HOST=172.28.0.3
+REDIS_PORT=6379
+
+# Configuration for mailer
+SMTP_HOST=mail.pixlog.com.br
+SMTP_PORT=465
+SMTP_USER=no-reply-dev@pixlog.com.br
+SMTP_PASSWORD=Barbed5-Jumbo-Tiptoeing

@@ -1,0 +1,26 @@
+version: "3.8"
+
+networks:
+  default:
+    driver: "bridge"
+
+services:
+  app:
+    image: "pixlog/api:dev"
+    build:
+      context: "./"
+      dockerfile: "Dockerfile"
+      target: "build"
+    command: "/bin/bash"
+    restart: "always"
+    volumes:
+      - "$PWD:/usr/app"
+    networks:
+      - "default"
+
+  cache:
+    image: "redis/redis-stack:latest"
+    ports:
+      - "6379:6379"
+    networks:
+      - "default"

@@ -1,0 +1,27 @@
+[2023-11-21 14:18:00.277] Starting Git Graph ...
+[2023-11-21 14:18:00.328] Using git (version: 2.42.0)
+[2023-11-21 14:18:00.330] Started Git Graph - Ready to use!
+[2023-11-21 14:18:00.331] Searching workspace for new repos ...
+[2023-11-21 14:18:00.340] > git rev-parse --show-toplevel
+[2023-11-21 14:18:00.370] Completed searching workspace for new repos
+[2023-11-21 14:18:00.373] Successfully set Visual Studio Code Context "git-graph:codiconsSupported" to "true"
+[2023-11-21 14:18:03.081] > git rev-parse --show-toplevel
+[2023-11-21 14:18:03.092] > git rev-parse --show-toplevel
+[2023-11-21 14:18:03.103] > git rev-parse --show-toplevel
+[2023-11-21 14:18:03.115] > git rev-parse --show-toplevel
+[2023-11-21 14:20:39.145] > git rev-parse --show-toplevel
+[2023-11-21 14:21:05.529] > git rev-parse --show-toplevel
+[2023-11-21 14:26:36.189] > git rev-parse --show-toplevel
+[2023-11-21 14:30:57.447] > git rev-parse --show-toplevel
+[2023-11-21 14:31:13.073] > git rev-parse --show-toplevel
+[2023-11-21 14:33:40.598] > git rev-parse --show-toplevel
+[2023-11-21 14:34:02.397] > git rev-parse --show-toplevel
+[2023-11-21 14:34:13.153] > git rev-parse --show-toplevel
+[2023-11-21 14:34:16.355] > git rev-parse --show-toplevel
+[2023-11-21 14:36:57.896] > git rev-parse --show-toplevel
+[2023-11-21 14:36:57.911] > git rev-parse --show-toplevel
+[2023-11-21 14:41:49.478] > git rev-parse --show-toplevel
+[2023-11-21 14:41:57.422] > git rev-parse --show-toplevel
+[2023-11-21 14:46:31.722] > git rev-parse --show-toplevel
+[2023-11-21 14:46:31.729] Added new repo: /home/bruno/.config/tmux/plugins/tpm
+[2023-11-21 14:46:31.735] Showing "Git Graph" Status Bar Item

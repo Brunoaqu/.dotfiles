@@ -1,0 +1,13 @@
+2023-11-17 14:07:54,495 DEBUG    root            Loaded Command Group: ['gcloud', 'projects']
+2023-11-17 14:07:54,497 DEBUG    root            Loaded Command Group: ['gcloud', 'projects', 'describe']
+2023-11-17 14:07:54,498 DEBUG    root            Running [gcloud.projects.describe] with arguments: [--account: "bruno@pixlog.com.br", --configuration: "default", --format: "value(name)", PROJECT_ID_OR_NUMBER: "pixlog-backend-ml"]
+2023-11-17 14:07:54,539 DEBUG    google.auth.transport.requests Making request: POST https://oauth2.googleapis.com/token
+2023-11-17 14:07:54,540 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): oauth2.googleapis.com:443
+2023-11-17 14:07:54,734 DEBUG    urllib3.connectionpool https://oauth2.googleapis.com:443 "POST /token HTTP/1.1" 200 None
+2023-11-17 14:07:54,787 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): cloudresourcemanager.googleapis.com:443
+2023-11-17 14:07:55,779 DEBUG    urllib3.connectionpool https://cloudresourcemanager.googleapis.com:443 "GET /v1/projects/pixlog-backend-ml?alt=json HTTP/1.1" 200 None
+2023-11-17 14:07:55,781 DEBUG    root            Chosen display Format:default value(name)
+2023-11-17 14:07:55,782 INFO     root            Display format: "default value(name)"
+2023-11-17 14:07:55,782 INFO     ___FILE_ONLY___ Pixlog
+
+2023-11-17 14:07:55,782 DEBUG    root            SDK update checks are disabled.

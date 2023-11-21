@@ -1,0 +1,135 @@
+{
+    "workbench.iconTheme": "vscode-icons",
+    "editor.inlineSuggest.enabled": true,
+    "github.copilot.enable": {
+        "*": true,
+        "plaintext": true,
+        "markdown": true,
+        "scminput": false,
+        "yaml": true
+    },
+    "editor.bracketPairColorization.enabled": true,
+    "editor.guides.bracketPairs": true,
+    "cSpell.language": "en,pt,pt_BR",
+    "cSpell.userWords": [
+        "airbnb",
+        "ansible",
+        "auditjs",
+        "buildx",
+        "camelcase",
+        "circleci",
+        "cnpj",
+        "commitlint",
+        "confiability",
+        "containerd",
+        "copyfiles",
+        "CURDATE",
+        "datetime",
+        "Desloga",
+        "dolar",
+        "dotenv",
+        "github",
+        "gnupg",
+        "healthcheck",
+        "Healthcheck",
+        "Laet",
+        "luxon",
+        "mysql",
+        "nodegeocoder",
+        "openapi",
+        "opentelemetry",
+        "ossi",
+        "pixlog",
+        "Pixlog",
+        "predev",
+        "preinstall",
+        "pxlg",
+        "PXLG",
+        "pymysql",
+        "randtoken",
+        "savetxt",
+        "signout",
+        "SMPT",
+        "sqlalchemy",
+        "TINYINT",
+        "VARCHAR",
+        "zipcode"
+    ],
+    "vsicons.dontShowNewVersionMessage": true,
+    "debug.javascript.autoAttachFilter": "onlyWithFlag",
+    "debug.openDebug": "neverOpen",
+    "git.autofetch": true,
+    "editor.fontFamily": "JetBrainsMono Nerd Font",
+    "editor.fontLigatures": true,
+    "workbench.colorTheme": "GitHub Dark Default",
+    "editor.tokenColorCustomizations": {
+        "textMateRules": [
+            {
+                "name": "One Dark italic",
+                "scope": [
+                    "comment",
+                    "entity.other.attribute-name",
+                    "keyword",
+                    "markup.underline.link",
+                    "storage.modifier",
+                    "storage.type",
+                    "string.url",
+                    "variable.language.super",
+                    "variable.language.this"
+                ],
+                "settings": {
+                    "fontStyle": "italic"
+                }
+            },
+            {
+                "name": "One Dark italic reset",
+                "scope": [
+                    "keyword.operator",
+                    "keyword.other.type",
+                    "storage.modifier.import",
+                    "storage.modifier.package",
+                    "storage.type.built-in",
+                    "storage.type.function.arrow",
+                    "storage.type.generic",
+                    "storage.type.java",
+                    "storage.type.primitive"
+                ],
+                "settings": {
+                    "fontStyle": ""
+                }
+            }
+        ]
+    },
+    "workbench.editorAssociations": {
+        "*.csv": "gc-excelviewer-csv-editor"
+    },
+    "csv-preview.resizeColumns": "all",
+    "csv-preview.formatValues": "never",
+    "c-cpp-compile-run.c-flags": "-Wall -Wextra -g3 -lm",
+    "c-cpp-compile-run.cpp-flags": "-Wall -Wextra -g3 -lGL -lglut",
+    "terminal.integrated.defaultProfile.linux": "zsh",
+    "terminal.integrated.enableMultiLinePasteWarning": false,
+    "workbench.startupEditor": "none",
+    "eslint.rules.customizations": [],
+    "js/ts.implicitProjectConfig.experimentalDecorators": true,
+    "extensions.ignoreRecommendations": true,
+    "files.autoSave": "onFocusChange",
+    "editor.fontWeight": "normal",
+    "editor.renderWhitespace": "boundary",
+    "editor.overviewRulerBorder": false,
+    "editor.hideCursorInOverviewRuler": true,
+    "workbench.statusBar.visible": false,
+    "editor.suggest.showIcons": false,
+    "explorer.compactFolders": false,
+    "explorer.fileNesting.enabled": true,
+    "svg.preview.mode": "svg",
+    "debug.toolBarLocation": "docked",
+    "files.insertFinalNewline": true,
+    "files.trimTrailingWhitespace": true,
+    "terminal.explorerKind": "external",
+    "workbench.panel.defaultLocation": "right",
+    "workbench.settings.applyToAllProfiles": [
+        "terminal.integrated.defaultProfile.linux"
+    ],
+    "security.workspace.trust.untrustedFiles": "open"
+}

@@ -1,0 +1,12 @@
+# Stage 1: Development Container
+FROM node:20.9-alpine
+
+WORKDIR /usr/app
+
+COPY . /usr/app
+
+SHELL ["/bin/bash", "-o", "pipefail", "-c"]
+
+RUN curl -f https://get.pnpm.io/v6.16.js | node - add --global pnpm
+
+ENTRYPOINT ["tail", "-f", "/dev/null"]

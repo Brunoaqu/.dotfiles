@@ -1,0 +1,1 @@
+{"ref":"a0de7031-c63d-4162-b249-fe80325165d8","syncData":{"version":2,"machineId":"da0c27fa-cc8d-43dd-a479-a18eb8ed8c0d","content":"{\"linux\":\"// Place your key bindings in this file to override the defaults\\n[\\n    { \\\"key\\\": \\\"ctrl+n\\\", \\\"command\\\": \\\"explorer.newFile\\\" }\\n]\"}"}}

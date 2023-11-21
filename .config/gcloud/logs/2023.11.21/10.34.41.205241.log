@@ -1,0 +1,7 @@
+2023-11-21 10:34:41,205 DEBUG    root            Loaded Command Group: ['gcloud', 'projects']
+2023-11-21 10:34:41,206 DEBUG    root            Loaded Command Group: ['gcloud', 'projects', 'describe']
+2023-11-21 10:34:41,208 DEBUG    root            Running [gcloud.projects.describe] with arguments: [--account: "bruno@pixlog.com.br", --configuration: "default", --format: "value(name)", PROJECT_ID_OR_NUMBER: "pixlog-backend-ml"]
+2023-11-21 10:34:41,213 DEBUG    google.auth.transport.requests Making request: POST https://oauth2.googleapis.com/token
+2023-11-21 10:34:41,214 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): oauth2.googleapis.com:443
+2023-11-21 10:34:41,404 DEBUG    urllib3.connectionpool https://oauth2.googleapis.com:443 "POST /token HTTP/1.1" 200 None
+2023-11-21 10:34:41,451 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): cloudresourcemanager.googleapis.com:443

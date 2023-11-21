@@ -1,0 +1,34 @@
+version: "3.8"
+
+networks:
+  default:
+    driver: "bridge"
+
+volumes:
+  redis-data:
+    driver: "local"
+
+services:
+  app:
+    image: "pixlog/cache-poc:development"
+    build:
+      context: "./"
+      dockerfile: "Dockerfile"
+      target: "build"
+    ports:
+      - "8080:8080"
+    command: "/bin/bash"
+    restart: "always"
+    volumes:
+      - "$PWD:/usr/app"
+    networks:
+      - "default"
+
+  cache:
+    image: "redis/redis-stack:latest"
+    ports:
+      - "6379:6379"
+    networks:
+      - "default"
+    volumes:
+      - "redis-data:/data"

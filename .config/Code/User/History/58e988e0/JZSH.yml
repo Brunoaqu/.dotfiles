@@ -1,0 +1,36 @@
+version: "3.8"
+
+services:
+  api:
+    image: "pxlg/api:dev"
+    env_file: "./.env"
+    command: "pnpm run test:integration"
+    depends_on:
+      - "mariadb"
+      - "redis"
+  mariadb:
+    image: "mariadb:latest"
+    env_file: "./.env"
+    restart: "always"
+    ports:
+      - "$DB_PORT:$DB_PORT"
+    environment:
+      MYSQL_DATABASE: "$DB_NAME"
+      MYSQL_ROOT_PASSWORD: "$DB_PASS"
+      MYSQL_PASSWORD: "$DB_PASS"
+      MYSQL_ROOT_HOST: "%"
+    volumes:
+      - "./sample.app.database:/docker-entrypoint-initdb.d"
+      - "sql_conf:/etc/mysql"
+      - "sql_data:/var/lib/mysql"
+    networks:
+      - "default"
+  redis:
+    image: "redis:6.0"
+    restart: "always"
+    ports:
+      - "6379:6379"
+    volumes:
+      - "redis_data:/data"
+    networks:
+      - "default"

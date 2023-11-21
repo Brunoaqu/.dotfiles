@@ -1,0 +1,26 @@
+version: "3.8"
+
+services:
+  api:
+    image: "pxlg/api:dev"
+    command: "pnpm run test:integration"
+    depends_on:
+      - "mariadb"
+      - "redis"
+  mariadb:
+    image: "mariadb:latest"
+    restart: "always"
+    environment:
+      MYSQL_DATABASE: "$DB_NAME"
+      MYSQL_ROOT_PASSWORD: "$DB_PASS"
+      MYSQL_PASSWORD: "$DB_PASS"
+      MYSQL_ROOT_HOST: "%"
+  redis:
+    image: "redis:6.0"
+    restart: "always"
+    ports:
+      - "6379:6379"
+    volumes:
+      - "redis_data:/data"
+    networks:
+      - "default"

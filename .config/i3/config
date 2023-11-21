@@ -1,6 +1,9 @@
+# Settings
 set $mod Mod4
-
-font pango:JetBrainsMono Nerd Font 9.5
+font pango: JetBrainsMono Nerd Font 10
+focus_follows_mouse no
+mouse_warping none
+workspace_layout default
 
 exec --no-startup-id dex-autostart --autostart --environment i3
 
@@ -19,8 +22,11 @@ floating_modifier $mod
 tiling_drag modifier titlebar
 
 bindsym $mod+Return exec alacritty
-bindsym $mod+q kill
-bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
+
+# Launcher.
+bindsym $mod+d exec ~/.config/rofi/launcher/run.sh
+
+
 bindsym $mod+j focus left
 bindsym $mod+k focus down
 bindsym $mod+l focus up
@@ -77,18 +83,6 @@ set $ws8 "8"
 set $ws9 "9"
 set $ws10 "10"
 
-# switch to workspace
-bindsym $mod+1 workspace number $ws1
-bindsym $mod+2 workspace number $ws2
-bindsym $mod+3 workspace number $ws3
-bindsym $mod+4 workspace number $ws4
-bindsym $mod+5 workspace number $ws5
-bindsym $mod+6 workspace number $ws6
-bindsym $mod+7 workspace number $ws7
-bindsym $mod+8 workspace number $ws8
-bindsym $mod+9 workspace number $ws9
-bindsym $mod+0 workspace number $ws10
-
 # move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace number $ws1
 bindsym $mod+Shift+2 move container to workspace number $ws2
@@ -109,6 +103,61 @@ bindsym $mod+Shift+r restart
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
 # set keyboard layout
 exec "setxkbmap -model abnt2 -layout br"
+
+# Thin borders.
+hide_edge_borders both
+
+# Hide all  window titles.
+for_window [class="^.*"] border pixel 0h
+
+# Set inner/outer gaps.
+gaps inner 10
+gaps vertical 1
+gaps right 1
+smart_gaps off
+
+# Show window title bars (not officially supported with i3gaps).
+default_border none
+
+# Window title alignment.
+title_align center
+
+# Use Mouse+$mod to drag floating windows to their wanted position.
+floating_modifier $mod
+
+# Switch to workspace.
+bindsym $mod+1    workspace  $ws1
+bindsym $mod+2    workspace  $ws2 
+bindsym $mod+3    workspace  $ws3 
+bindsym $mod+4    workspace  $ws4 
+bindsym $mod+5    workspace  $ws5 
+bindsym $mod+6    workspace  $ws6
+bindsym $mod+7    workspace  $ws7
+bindsym $mod+8    workspace  $ws8
+bindsym $mod+9    workspace  $ws9
+bindsym $mod+0    workspace  $ws10
+
+# Switch to workspace with numpad keys.
+bindcode $mod+87 workspace 1
+bindcode $mod+88 workspace 2
+bindcode $mod+89 workspace 3
+bindcode $mod+83 workspace 4
+bindcode $mod+84 workspace 5
+bindcode $mod+85 workspace 6
+bindcode $mod+79 workspace 7
+bindcode $mod+80 workspace 8
+bindcode $mod+81 workspace 9
+bindcode $mod+90 workspace 10
+
+######################################
+# keybindings for different actions: #
+######################################
+
+# Kill focused window.
+bindsym $mod+q kill
+
+# Lock screen.
+bindsym $mod+Escape exec "betterlockscreen --lock --display 1"
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
@@ -141,7 +190,7 @@ bindsym $mod+r mode "resize"
 exec_always feh --bg-fill ~/.config/i3/wallpaper.png
 
 # Set Transparency
-exec_always picom --fade-in-step=1 --fade-out-step=1 --fade-delta=0 -f
+# exec_always picom --fade-in-step=1 --fade-out-step=1 --fade-delta=0 -f
 
 # Set workspace names
 set $ws1 "1:  Terminal"
@@ -149,6 +198,7 @@ set $ws2 "2: 󰈹 Firefox"
 set $ws3 "3: 󰘐 Code"
 set $ws4 "4:  Random"
 set $ws5 "5:  Spotify"
+set $ws6 "6: 󰐹 Comunication"
 
 # Gaps
 default_border pixel 0

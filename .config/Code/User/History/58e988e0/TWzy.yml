@@ -1,0 +1,14 @@
+version: "3.8"
+
+services:
+  api:
+    image: "pxlg/api:dev"
+    env_file: "./.env"
+    depends_on:
+      - "mariadb"
+      - "redis"
+    volumes:
+      - "$PWD/src:/usr/app/src"
+      - "$PWD/node_modules:/usr/app/node_modules"
+    networks:
+      - "default"

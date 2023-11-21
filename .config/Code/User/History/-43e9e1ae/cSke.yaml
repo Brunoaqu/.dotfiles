@@ -1,0 +1,2215 @@
+openapi: "3.0.3"
+
+components:
+  parameters:
+    userId:
+      name: userId
+      in: path
+      required: true
+      description: |
+        Identificador único do usuário.
+      schema:
+        type: string
+        format: nanoid
+    reportId:
+      name: reportId
+      in: path
+      required: true
+      description: |
+        Identificador único do relatório.
+      schema:
+        type: string
+        format: nanoid
+    groupId:
+      name: reportId
+      in: path
+      required: true
+      description: |
+        Identificador único do grupo de relatórios.
+      schema:
+        type: string
+        format: nanoid
+    transactionId:
+      name: transactionId
+      in: path
+      required: true
+      description: |
+        Identificador único da transação.
+      schema:
+        type: string
+        format: nanoid
+    page:
+      name: page
+      in: query
+      description: |
+        Número da página desejada para os resultados.
+        Utilize esse parâmetro para especificar o número da página que deseja obter.
+      required: false
+      schema:
+        type: integer
+        format: int32
+        default: 1
+    perPage:
+      name: perPage
+      in: query
+      description: |
+        Número de itens por página.
+        Utilize esse parâmetro para especificar o número de itens que deseja obter por página.
+      required: false
+      schema:
+        type: integer
+        format: int32
+        default: 25
+    query:
+      name: query
+      in: query
+      description: |
+        Filtro de busca.
+        Utilize esse parâmetro para especificar um filtro de busca.
+      required: false
+      schema:
+        type: string
+        default: ""
+    sortBy:
+      name: sortBy
+      in: query
+      description: |
+        Ordenação dos resultados.
+        Utilize esse parâmetro para especificar um campo para ordenação dos resultados.
+      required: false
+      schema:
+        type: string
+        default: createdAt
+    sortOrder:
+      name: sortOrder
+      in: query
+      description: |
+        Direção da ordenação.
+        Utilize esse parâmetro para especificar a direção da ordenação dos resultados.
+      schema:
+        type: string
+        enum:
+          - asc
+          - desc
+        default: desc
+
+  securitySchemes:
+    accessToken:
+      type: apiKey
+      in: header
+      name: token
+
+  schemas:
+    # Requests and responses
+    postV2Users:
+      type: object
+      properties:
+        name:
+          description: Nome do usuário.
+          type: string
+        enterpriseName:
+          description: Nome da empresa.
+          type: string
+        phone:
+          description: Telefone do usuário.
+          type: string
+          format: phoneNumber
+        doc:
+          description: CPF ou CNPJ do usuário.
+          type: string
+        emailAddress:
+          description: E-mail do usuário.
+          type: string
+          format: email
+        password:
+          description: Senha do usuário.
+          type: string
+        physicalAddress:
+          type: object
+          properties:
+            level2long:
+              description: Cidade do usuário.
+              type: string
+    postV2Scans:
+      type: object
+      required:
+        - userId
+        - appVersion
+        - durationInSec
+        - volume
+        - pileLength
+        - woodLogs
+      properties:
+        userId:
+          description: ID do usuário.
+          type: string
+          format: nanoid
+        additionalInformation:
+          description: Informações adicionais do relatório.
+          type: string
+        reportName:
+          description: Nome do relatório.
+          type: string
+        originalTimezone:
+          description: Fuso horário original de quando o relatório foi criado.
+          type: string
+        originalCreationDate:
+          description: Data original de quando o relatório foi criado.
+          type: string
+          format: date-time
+        appVersion:
+          description: Versão do aplicativo que gerou o relatório.
+          type: string
+        device:
+          description: Modelo do dispositivo que gerou o relatório.
+          type: string
+        durationInSec:
+          description: Duração da medição em segundos.
+          type: integer
+        latitude:
+          description: Latitude da medição.
+          type: number
+          format: float
+          minimum: -90
+          maximum: 90
+        longitude:
+          description: Longitude da medição.
+          type: number
+          format: float
+          minimum: -180
+          maximum: 180
+        volume:
+          description: Volume detectado na medição.
+          type: number
+          format: float
+        volumeFormula:
+          description: Fórmula utilizada para calcular o volume.
+          type: string
+          example: "cilíndrica"
+        specieFound:
+          description: Espécie da madeira medida.
+          type: string
+        pileLength:
+          description: Comprimento da pilha de madeira medida.
+          type: number
+          format: float
+        pileWidth:
+          description: Largura da pilha de madeira medida.
+          type: number
+          format: float
+        pileHeight:
+          description: Altura da pilha de madeira medida.
+          type: number
+          format: float
+        sortingMin:
+          description: Valor mínimo de classificação.
+          type: number
+          format: float
+        sortingMax:
+          description: Valor máximo de classificação.
+          type: number
+          format: float
+        usedSettings:
+          description: Configurações utilizadas para gerar o relatório.
+          type: object
+          properties:
+            diameter_factor:
+              type: number
+              format: float
+            volume_factor:
+              type: number
+              format: float
+        woodLogs:
+          type: array
+          items:
+            type: object
+            required:
+              - woodLogName
+              - width
+              - height
+            properties:
+              woodLogName:
+                description: Id da tora criado pelo cliente.
+                type: string
+              confiability:
+                description: Grau de confiabilidade da medição do diâmetro.
+                type: integer
+                format: float
+              height:
+                description: Altura do diâmetro medido.
+                type: integer
+                format: float
+              width:
+                description: Largura do diâmetro medido.
+                type: integer
+                format: float
+    postV2Groups:
+      type: object
+      properties:
+        appVersion:
+          description: Versão do aplicativo que gerou o relatório.
+          type: string
+        device:
+          description: Modelo do dispositivo que gerou o relatório.
+          type: string
+        additionalInformation:
+          description: Informações adicionais do relatório.
+          type: string
+        reportName:
+          description: Nome do relatório.
+          type: string
+        originalTimezone:
+          description: Fuso horário original de quando o relatório foi criado.
+          type: string
+        originalCreationDate:
+          description: Data original de quando o relatório foi criado.
+          type: string
+          format: date-time
+        scans:
+          description: Relatórios de escaneamento.
+          type: array
+          uniqueItems: true
+          items:
+            type: object
+            required:
+              - scanId
+            properties:
+              scanId:
+                $ref: "#/components/schemas/Scans/properties/reportId"
+    postV1SendFile:
+      type: object
+      required:
+        - reportNumber
+        - filename
+        - encoded
+      properties:
+        reportNumber:
+          type: integer
+        filename:
+          type: string
+        encoded:
+          type: string
+          format: binary
+    postV2Auth:
+      type: object
+      properties:
+        email_address:
+          type: string
+          format: email
+          description: E-mail do usuário.
+        password:
+          type: string
+          description: Senha do usuário.
+    postV2VerifyEmail:
+      type: object
+      properties:
+        emailAddress:
+          type: string
+          format: email
+          description: E-mail do usuário.
+    postV2ConfirmEmail:
+      type: object
+      properties:
+        emailAddress:
+          type: string
+          format: email
+          description: E-mail do usuário.
+        verificationCode:
+          type: string
+          description: Código de verificação.
+          maxLength: 4
+          minLength: 4
+    postV2GenerateConfirmEmailToken:
+      type: object
+      properties:
+        emailAddress:
+          type: string
+          format: email
+          description: E-mail do usuário.
+    postV2ValidateResetPasswordToken:
+      type: object
+      properties:
+        emailAddress:
+          type: string
+          format: email
+          description: E-mail do usuário.
+        token:
+          type: string
+          description: Código de verificação.
+          maxLength: 4
+          minLength: 4
+    patchV2ChangePasswordWithToken:
+      type: object
+      properties:
+        emailAddress:
+          type: string
+          format: email
+          description: E-mail do usuário.
+        token:
+          type: string
+          description: Código de verificação.
+          maxLength: 4
+          minLength: 4
+        newPassword:
+          type: string
+          format: password
+          description: Senha do usuário.
+    postV2ChangePasswordWithCurrent:
+      type: object
+      properties:
+        oldPassword:
+          type: string
+          format: password
+          description: Senha atual do usuário.
+        newPassword:
+          type: string
+          format: password
+          description: Nova senha do usuário.
+    putV2UserSettings:
+      type: object
+      properties:
+        updatedAtMs:
+          description: Data de atualização das configurações do usuário.
+          type: integer
+          format: int64
+        diameterFactor:
+          description: Fator de diâmetro.
+          type: number
+          format: float
+        volumeFactor:
+          description: Fator de volume.
+          type: number
+          format: float
+        overWrite:
+          description: Sobrescrever configurações.
+          type: boolean
+          default: false
+    postV2Feedback:
+      type: object
+      properties:
+        userId:
+          description: ID do usuário.
+          type: string
+          format: nanoid
+        rating:
+          description: Nota do feedback
+          type: integer
+          maximum: 5
+          minimum: 1
+        description:
+          description: Descrição do feedback
+          type: string
+    postV2Settings:
+      type: object
+      required:
+        - "userId"
+        - "updatedAt"
+        - "options"
+      properties:
+        userId:
+          description: ID do usuário.
+          type: string
+          format: nanoid
+        updatedAt:
+          description: Data de atualização das configurações do usuário.
+          type: integer
+        options:
+          description: Opções de configuração.
+          type: object
+          properties:
+            diameterFactor:
+              description: Fator de diâmetro.
+              type: number
+              format: float
+            volumeFactor:
+              description: Fator de volume.
+              type: number
+              format: float
+            overwrite:
+              description: Sobrescrever configurações.
+              type: boolean
+              default: false
+    postV2Transactions:
+      type: object
+      required:
+        - "userId"
+        - "reportId"
+        - "debit"
+        - "credit"
+      properties:
+        userId:
+          description: Identificador único do usuário.
+          type: string
+          format: nanoid
+        credit:
+          description: Valor creditado.
+          type: number
+          format: float
+        receipt:
+          description: Recibo de pagamento.
+          type: string
+          format: base64
+    putV2Scans:
+      type: object
+      required:
+        - "reportId"
+      properties:
+        reportName:
+          description: Nome do relatório.
+          type: string
+    putV2Group:
+      type: object
+      required:
+        - "reportId"
+      properties:
+        reportName:
+          description: Nome do relatório.
+          type: string
+
+    # Models
+    Error:
+      type: object
+      properties:
+        errors:
+          type: array
+          items:
+            type: object
+            properties:
+              name:
+                type: string
+              details:
+                type: string
+    Scans:
+      type: object
+      required:
+        - scan_result
+        - original_creation_date
+      properties:
+        reportId:
+          description: ID do relatório.
+          type: string
+          format: nanoid
+        operatorId:
+          description: ID do operador.
+          type: string
+          format: nanoid
+        purchaserId:
+          description: ID do comprador.
+          type: string
+          format: nanoid
+        counter:
+          description: Contador de relatórios.
+          type: integer
+        status:
+          description: Status do relatório.
+          type: string
+          enum:
+            - active
+            - archived
+        reportName:
+          description: Nome do relatório.
+          type: string
+        additionalInformation:
+          description: Informações adicionais do relatório.
+          type: string
+        originalTimezone:
+          description: Fuso horário original de quando o relatório foi criado.
+          type: string
+        originalCreationDate:
+          description: Data original de quando o relatório foi criado.
+          type: string
+          format: date-time
+        appVersion:
+          description: Versão do aplicativo que gerou o relatório.
+          type: string
+        device:
+          description: Modelo do dispositivo que gerou o relatório.
+          type: string
+        durationInSec:
+          description: Duração da medição em segundos.
+          type: integer
+        latitude:
+          description: Latitude da medição.
+          type: number
+          format: float
+          minimum: -90
+          maximum: 90
+        longitude:
+          description: Longitude da medição.
+          type: number
+          format: float
+          minimum: -180
+          maximum: 180
+        volume:
+          description: Volume detectado na medição.
+          type: number
+          format: float
+        volumeFormula:
+          description: Fórmula utilizada para calcular o volume.
+          type: string
+          example: "cilíndrica"
+        specieFound:
+          description: Espécie da madeira medida.
+          type: string
+        pileLength:
+          description: Comprimento da pilha de madeira medida.
+          type: number
+          format: float
+        pileWidth:
+          description: Largura da pilha de madeira medida.
+          type: number
+          format: float
+        pileHeight:
+          description: Altura da pilha de madeira medida.
+          type: number
+          format: float
+        sortingMin:
+          description: Valor mínimo de classificação.
+          type: number
+          format: float
+        sortingMax:
+          description: Valor máximo de classificação.
+          type: number
+          format: float
+        usedSettings:
+          description: Configurações utilizadas para gerar o relatório.
+          type: object
+          properties:
+            diameter_factor:
+              type: number
+              format: float
+            volume_factor:
+              type: number
+              format: float
+        woodLogs:
+          $ref: "#/components/schemas/WoodLogs"
+    WoodLogs:
+      type: array
+      items:
+        type: object
+        required:
+          - width
+          - height
+          - confiability
+        properties:
+          logId:
+            description: Id da tora.
+            type: string
+          confiability:
+            description: Grau de confiabilidade da medição do diâmetro.
+            type: integer
+            format: float
+          height:
+            description: Altura do diâmetro medido.
+            type: integer
+            format: float
+          width:
+            description: Largura do diâmetro medido.
+            type: integer
+            format: float
+          positionX:
+            description: Posição X do diâmetro medido.
+            type: integer
+            format: float
+          positionY:
+            description: Posição Y do diâmetro medido.
+            type: integer
+            format: float
+    Scan::Summary:
+      type: array
+      uniqueItems: true
+      items:
+        properties:
+          scanId:
+            $ref: "#/components/schemas/Scans/properties/reportId"
+          operatorId:
+            $ref: "#/components/schemas/Scans/properties/operatorId"
+          purchaserId:
+            $ref: "#/components/schemas/Scans/properties/purchaserId"
+          status:
+            $ref: "#/components/schemas/Scans/properties/status"
+    Group:
+      type: object
+      properties:
+        reportId:
+          description: Identificador único do relatório de escaneamento.
+          type: string
+          format: nanoid
+        operatorId:
+          description: Identificador único do operador.
+          type: string
+          format: nanoid
+        purchaserId:
+          description: Identificador único do comprador.
+          type: string
+          format: nanoid
+        status:
+          description: Status do relatório.
+          type: string
+          enum:
+            - active
+            - deleted
+        reportName:
+          description: Nome do relatório.
+          type: string
+        appVersion:
+          description: Versão do aplicativo que gerou o relatório.
+          type: string
+        device:
+          description: Modelo do dispositivo que gerou o relatório.
+          type: string
+        counter:
+          description: Contador de relatórios.
+          type: integer
+        additionalInformation:
+          description: Informações adicionais do relatório.
+          type: string
+        originalTimezone:
+          description: Fuso horário original de quando o relatório foi criado.
+          type: string
+        originalCreationDate:
+          description: Data original de quando o relatório foi criado.
+          type: string
+          format: date-time
+        createdAt:
+          description: Data de criação do relatório.
+          type: string
+          format: date-time
+        usedSettings:
+          description: Configurações utilizadas para gerar o relatório.
+          type: object
+          properties:
+            diameterFactor:
+              type: number
+              format: float
+            volumeFactor:
+              type: number
+              format: float
+        scans:
+          $ref: "#/components/schemas/Scan::Summary"
+    Users:
+      type: object
+      properties:
+        userId:
+          type: string
+          format: nanoid
+          description: ID do usuário.
+        name:
+          type: string
+          description: Nome do usuário.
+        enterpriseName:
+          type: string
+          description: Nome da empresa.
+        phone:
+          type: string
+          format: phoneNumber
+          description: Telefone do usuário.
+        doc:
+          type: string
+          description: CPF ou CNPJ do usuário.
+        emailAddress:
+          type: string
+          format: email
+          description: E-mail do usuário.
+        physicalAddress:
+          type: object
+          properties:
+            level2long:
+              type: string
+              description: Cidade do usuário.
+        createdAt:
+          type: string
+          format: date-time
+          description: Data de criação do usuário.
+        updatedAt:
+          type: string
+          format: date-time
+          description: Data de atualização do usuário.
+    ReportTypes:
+      type: array
+      items:
+        type: object
+        properties:
+          reportTypeId:
+            type: string
+            description: Tipo do relatório.
+          name:
+            type: string
+            description: Nome do relatório disponível.
+    Feedback:
+      type: object
+      properties:
+        feedbackId:
+          type: string
+          format: nanoid
+          description: ID do feedback.
+        userId:
+          type: string
+          format: nanoid
+          description: ID do usuário.
+        rating:
+          type: string
+          description: Feedback do usuário.
+        createdAt:
+          type: string
+          format: date-time
+          description: Data de criação do feedback.
+    Settings:
+      type: object
+      properties:
+        userId:
+          type: string
+          format: nanoid
+          description: ID do usuário.
+        updatedAt:
+          type: string
+          format: date-time
+          description: Data de atualização das configurações do usuário.
+        diameterFactor:
+          type: number
+          format: float
+          description: Fator de diâmetro.
+        volumeFactor:
+          type: number
+          format: float
+          description: Fator de volume.
+        overwrite:
+          type: boolean
+          default: false
+          description: Sobrescrever configurações.
+    Transactions:
+      type: object
+      properties:
+        transactionId:
+          type: string
+          format: nanoid
+          description: Identificador único da transação.
+        userId:
+          type: string
+          format: nanoid
+          description: Identificador único do usuário.
+        debit:
+          type: number
+          format: float
+          description: Valor debitado.
+        credit:
+          type: number
+          format: float
+          description: Valor creditado.
+        balance:
+          type: number
+          format: float
+          description: Saldo atual.
+        createdAt:
+          type: string
+          format: date-time
+          description: Data de criação da transação.
+    AppResources:
+      type: object
+      properties:
+        telefone_contato:
+          type: string
+          description: Telefone de contato.
+        email_de_contato:
+          type: string
+          format: email
+          description: E-mail de contato.
+        link_termo_de_uso:
+          type: string
+          description: Link para o termo de uso.
+        link_politica_de_privacidade:
+          type: string
+          description: Link para a política de privacidade.
+        link_faq:
+          type: string
+          description: Link para a página de FAQ.
+        link_sobre_nos:
+          type: string
+          description: Link para a página sobre nós.
+        pagamento_implementado:
+          type: boolean
+          description: Indica se o pagamento está implementado.
+        modelos_compativeis:
+          type: array
+          items:
+            type: string
+            description: Modelos compatíveis.
+        data_expiracao_beta:
+          type: string
+          format: date-time
+          description: Data de expiração do beta.
+        pixlog_bundles_info:
+          type: object
+          properties:
+            apple_bundles_id:
+              type: array
+              items:
+                type: string
+                description: ID do bundle.
+            free_bundle_details:
+              type: object
+              properties:
+                id:
+                  type: string
+                  description: ID do bundle.
+                title:
+                  type: string
+                  description: Título do bundle.
+                price:
+                  type: string
+                  description: Preço do bundle.
+                credit:
+                  type: integer
+                  description: Crédito do bundle.
+                credit_per_cubit:
+                  type: string
+                  description: Crédito por cubit.
+                cubit_meter_price:
+                  type: string
+                  description: Preço por cubit.
+                show_on_bundle_list:
+                  type: boolean
+                  description: Indica se o bundle deve ser exibido na lista.
+        log_type:
+          type: array
+          items:
+            type: string
+            description: Tipo de madeira.
+
+  responses:
+    BadRequest:
+      description: Indica que ocorreu um erro de sintaxe JSON no corpo da requisição.
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/Error"
+    NotFound:
+      description: Indica que o recurso solicitado não foi encontrado.
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/Error"
+    UnprocessableEntity:
+      description: Indica que a requisição possui problemas de validação.
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/Error"
+
+security:
+  - accessToken: []
+
+info:
+  title: Main API
+  version: "v2.0.0"
+  description: |
+    A API é responsável por gerenciar o armazenamento de informações do 'usuário, relatórios e pagamentos. O sistema é
+    projetado para ser usado em conjunto com um aplicativo que faz uso da tecnologia de realidade aumentada para medir e
+    gerar informações. A API se comunica com um banco de dados MariaDB para armazenar e recuperar as informações do sistema.
+
+    # Autenticação
+
+    A API utiliza um sistema de autenticação baseado em tokens de acesso. Para obter um token de acesso, é necessário que
+    o usuário faça login na aplicação.
+    O token deve ser utilizado no cabeçalho da aplicação sob o nome:
+
+    <code>token</code>
+
+servers:
+  - url: http://localhost:3000/v1
+    description: Servidor local
+
+tags:
+  - name: Usuários
+    description: Gerenciamento de usuários, incluindo cadastro, atualização, busca e exclusão.
+  - name: Autenticação
+    description: Autenticação de usuários, como login, logout, geração e renovação de tokens de acesso.
+  - name: Relatórios de Escaneamento
+    description: Geração de relatórios de escaneamento, contendo informações sobre análises, auditorias ou inspeções realizadas na aplicação.
+  - name: Grupos de Relatórios
+    description: Gerenciamento de grupos de relatórios.
+  - name: Transações
+    description: Processamento de pagamentos, incluindo transações financeiras, histórico de pagamentos e informações de faturamento.
+  - name: Feedbacks
+    description: Coleta de feedbacks dos usuários, permitindo que expressem suas opiniões, sugestões ou problemas relacionados à aplicação.
+  - name: Configurações
+    description: Configurações do usuário, como fatores de diâmetro e volume.
+  - name: Notificações por E-mail
+    description: Envio de notificações por e-mail, como confirmações, alertas ou comunicações importantes para os usuários.
+  - name: Debug Aplicativo
+    description: Recursos de depuração da API, usados principalmente para diagnosticar problemas e identificar erros no sistema.
+  - name: Recursos Do Aplicativo
+    description: Recursos do aplicativo, que contém informações de telefone, endereço e outras informações úteis.
+  - name: Monitoramento da API
+    description: Monitoramento e métricas da API, fornecendo informações sobre desempenho, disponibilidade e uso da API.
+  - name: Relatórios Disponíveis
+    description: Informações sobre os diferentes tipos de relatórios disponíveis no sistema.
+
+paths:
+  # Autenticação
+  /auth/login:
+    post:
+      summary: Autentica um usuário.
+      description: |
+        ## Descrição
+
+        Utilize esta função para autenticar um usuário e obter um token de acesso.
+
+      operationId: login
+      tags:
+        - "Autenticação"
+      security: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/postV2Auth"
+
+      responses:
+        200:
+          description: Autenticação realizada com sucesso.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/postV2Auth"
+        400:
+          $ref: "#/components/responses/BadRequest"
+        422:
+          $ref: "#/components/responses/UnprocessableEntity"
+  /auth/refresh-token:
+    post:
+      summary: Gera um novo token de acesso.
+      description: Gera um novo token de acesso.
+      operationId: refreshToken
+      tags:
+        - "Autenticação"
+      security: []
+      # requestBody:
+        # required: true
+        # content:
+          # application/json:
+            # schema:
+              # $ref: schemas/postV1RefreshAccessToken.yaml
+      responses:
+        200:
+          description: Token de acesso gerado com sucesso.
+          # content:
+            # application/json:
+              # schema:
+                # $ref: responses/postV1RefreshAccessToken.yaml
+        400:
+          $ref: "#/components/responses/BadRequest"
+        422:
+          $ref: "#/components/responses/UnprocessableEntity"
+  /auth/logout:
+    post:
+      summary: Encerra a sessão de um usuário.
+      description: |
+        ## Descrição
+
+        Encerra a sessão de um usuário, invalidando o token de acesso.
+      operationId: signout
+      tags:
+        - "Autenticação"
+      # parameters:
+      #   - $ref: parameters/query/all.yaml
+      responses:
+        200:
+          description: Operação realizada com sucesso.
+        400:
+          $ref: "#/components/responses/BadRequest"
+        422:
+          $ref: "#/components/responses/UnprocessableEntity"
+  /auth/email/confirm:
+  # Usuários
+    post:
+      summary: Confirmar o e-mail do usuário.
+      description: |
+        ## Descrição
+
+        Confirma o e-mail associado a um usuário registrado.
+      operationId: confirmEmail
+      tags:
+        - "Autenticação"
+      security: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/postV2ConfirmEmail"
+      responses:
+        200:
+          description: E-mail confirmado com sucesso.
+        400:
+          $ref: "#/components/responses/BadRequest"
+        422:
+          $ref: "#/components/responses/UnprocessableEntity"
+  /auth/email/send-confirmation:
+    post:
+      summary: Gerar um token de confirmação de e-mail.
+      description: |
+        ## Descrição
+
+        Gera um token de confirmação que é enviado ao e-mail do usuário para fins de verificação.
+      operationId: generateConfirmEmailToken
+      tags:
+        - "Autenticação"
+      security: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/postV2GenerateConfirmEmailToken"
+      responses:
+        200:
+          description: Token gerado com sucesso.
+        400:
+          $ref: "#/components/responses/BadRequest"
+        422:
+          $ref: "#/components/responses/UnprocessableEntity"
+  /auth/password/reset:
+    post:
+      summary: Gera um token para redefinição de senha.
+      description: |
+        ## Descrição
+
+        Gera um token para redefinição de senha.
+      operationId: generateResetPasswordToken
+      tags:
+        - "Autenticação"
+      security: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/postV2GenerateConfirmEmailToken"
+      responses:
+        200:
+          description: Token gerado com sucesso.
+        400:
+          $ref: "#/components/responses/BadRequest"
+        404:
+          $ref: "#/components/responses/NotFound"
+        422:
+          $ref: "#/components/responses/UnprocessableEntity"
+  /auth/password/validate-token:
+    post:
+      summary: Valida um token para redefinição de senha.
+      description: |
+        ## Descrição
+
+        Valida um token para redefinição de senha.
+      operationId: validateResetPasswordToken
+      tags:
+        - "Autenticação"
+      security: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/postV2ValidateResetPasswordToken"
+      responses:
+        200:
+          description: Token validado com sucesso.
+        400:
+          $ref: "#/components/responses/BadRequest"
+        404:
+          $ref: "#/components/responses/NotFound"
+        422:
+          $ref: "#/components/responses/UnprocessableEntity"
+  /auth/password/change-with-token:
+    patch:
+      summary: Altera a senha de um usuário.
+      description: |
+        ## Descrição
+
+        Altera a senha de um usuário.
+      operationId: changePasswordWithToken
+      tags:
+        - "Autenticação"
+      security: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/patchV2ChangePasswordWithToken"
+      responses:
+        200:
+          description: Senha alterada com sucesso.
+        400:
+          $ref: "#/components/responses/BadRequest"
+        404:
+          $ref: "#/components/responses/NotFound"
+        422:
+          $ref: "#/components/responses/UnprocessableEntity"
+  /auth/password/change-with-old:
+    patch:
+      summary: Altera a senha de um usuário.
+      description: |
+        ## Descrição
+
+        Altera a senha de um usuário.
+      operationId: changePasswordUsingCurrent
+      tags:
+        - "Autenticação"
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/postV2ChangePasswordWithCurrent"
+      responses:
+        200:
+          description: Senha alterada com sucesso.
+        400:
+          $ref: "#/components/responses/BadRequest"
+        404:
+          $ref: "#/components/responses/NotFound"
+        422:
+          $ref: "#/components/responses/UnprocessableEntity"
+
+  # Usuários
+  /users/verify-email:
+    post:
+      summary: Verificar disponibilidade do e-mail para cadastro.
+      description: |
+        ## Descrição
+
+        Verifica se o e-mail solicitado já está cadastrado no sistema.
+      operationId: verifyEmail
+      tags:
+        - "Usuários"
+      security: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/postV2VerifyEmail"
+      responses:
+        200:
+          description: E-mail disponível para cadastro.
+        400:
+          $ref: "#/components/responses/BadRequest"
+        422:
+          $ref: "#/components/responses/UnprocessableEntity"
+  /users:
+    post:
+      summary: Cadastra um novo usuário.
+      description: |
+        ## Descrição
+
+        Utilize esta função para criar novas contas de usuário. Essa conta pode representar uma pessoa física ou jurídica que possui uma ou mais assinaturas.
+      operationId: createUser
+      tags:
+        - "Usuários"
+      security: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/postV2Users"
+      responses:
+        201:
+          description: Ok. Usuário criado com sucesso.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Users"
+        400:
+          $ref: "#/components/responses/BadRequest"
+        422:
+          $ref: "#/components/responses/UnprocessableEntity"
+    get:
+      summary: Obter lista de usuários.
+      description: |
+        ## Descrição
+
+        Utilize esta função para consultar informações de usuários.
+
+        ## Atributos para busca
+
+        <code>userId</code> <code>name</code> <code>enterpriseName</code> <code>phone</code>
+        <code>doc</code> <code>emailAddress</code> <code>level2long</code> <code>createdAt</code>
+        <code>updatedAt</code>
+
+        ## Segurança
+
+        Dependendo da sua permissão de acesso, você pode consultar apenas os seus próprios dados.
+      operationId: getUsers
+      tags:
+        - "Usuários"
+      parameters:
+        - $ref: "#/components/parameters/page"
+        - $ref: "#/components/parameters/perPage"
+        - $ref: "#/components/parameters/query"
+        - $ref: "#/components/parameters/sortBy"
+        - $ref: "#/components/parameters/sortOrder"
+      responses:
+        200:
+          description: Consulta realizada com sucesso.
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Users"
+        400:
+          $ref: "#/components/responses/BadRequest"
+        422:
+          $ref: "#/components/responses/UnprocessableEntity"
+  /users/current:
+    get:
+      summary: Consultar detalhes do usuário
+      description: |
+        ## Descrição
+
+        Esta operação retorna informações detalhadas do usuário atual.
+
+        ## Segurança
+
+        Dependendo da sua permissão de acesso, você pode consultar apenas os seus próprios dados.
+      operationId: getCurrentUser
+      tags:
+        - "Usuários"
+      responses:
+        200:
+          description: Consulta realizada com sucesso.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Users"
+        400:
+          $ref: "#/components/responses/BadRequest"
+        422:
+          $ref: "#/components/responses/UnprocessableEntity"
+  /users/{userId}:
+    get:
+      summary: Consulta detalhes de um usuário pelo ID.
+      description: |
+        ## Descrição
+
+        Utilize esta função para consultar informações detalhadas de um usuário específico.
+
+        ## Segurança
+
+        Dependendo da sua permissão de acesso, você pode consultar apenas os seus próprios dados.
+      operationId: getUserById
+      tags:
+        - "Usuários"
+      security: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/Users"
+      responses:
+        200:
+          description: Consulta realizada com sucesso.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Users"
+        400:
+          $ref: "#/components/responses/BadRequest"
+        404:
+          $ref: "#/components/responses/NotFound"
+        422:
+          $ref: "#/components/responses/UnprocessableEntity"
+  /users/{userId}/feedbacks:
+    get:
+      summary: Obter lista de feedbacks de um usuário.
+      description: |
+        ## Descrição
+
+        Utilize esta função para consultar informações de feedbacks de um usuário.
+
+        ## Atributos para busca
+
+        <code>feedbackId</code> <code>userId</code> <code>rating</code> <code>createdAt</code>
+
+        ## Segurança
+
+        Dependendo da sua permissão de acesso, você pode consultar apenas os seus próprios dados.
+      operationId: getFeedbacksByUserId
+      parameters:
+        - $ref: "#/components/parameters/userId"
+        - $ref: "#/components/parameters/page"
+        - $ref: "#/components/parameters/perPage"
+        - $ref: "#/components/parameters/query"
+        - $ref: "#/components/parameters/sortBy"
+        - $ref: "#/components/parameters/sortOrder"
+      tags:
+        - "Usuários"
+      responses:
+        200:
+          description: Consulta realizada com sucesso.
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Feedback"
+        400:
+          $ref: "#/components/responses/BadRequest"
+        422:
+          $ref: "#/components/responses/UnprocessableEntity"
+  /users/{userId}/scans:
+    get:
+      summary: Obter lista de relatórios de escaneamento de um usuário.
+      description: |
+        ## Descrição
+
+        Utilize esta função para consultar informações de relatórios de escaneamento de um usuário.
+
+        ## Atributos para busca
+
+        <code>reportId</code> <code>operatorId</code> <code>purchaserId</code> <code>reportType</code>
+        <code>appVersion</code> <code>scarfVersion</code> <code>createdAt</code> <code>device</code>
+
+        ## Segurança
+
+        Dependendo da sua permissão de acesso, você pode consultar apenas os seus próprios dados.
+      operationId: getUserScans
+      tags:
+        - "Usuários"
+      parameters:
+        - $ref: "#/components/parameters/userId"
+        - $ref: "#/components/parameters/page"
+        - $ref: "#/components/parameters/perPage"
+        - $ref: "#/components/parameters/query"
+        - $ref: "#/components/parameters/sortBy"
+        - $ref: "#/components/parameters/sortOrder"
+      responses:
+        200:
+          description: Consulta realizada com sucesso.
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Scans"
+        400:
+          $ref: "#/components/responses/BadRequest"
+        422:
+          $ref: "#/components/responses/UnprocessableEntity"
+  /users/{userId}/groups:
+    get:
+      summary: Obter lista de grupos de relatórios de um usuário.
+      description: |
+        ## Descrição
+
+        Utilize esta função para consultar informações de grupos de relatórios de um usuário.
+
+        ## Atributos para busca
+
+        <code>reportId</code> <code>operatorId</code> <code>purchaserId</code> <code>reportType</code>
+        <code>appVersion</code> <code>scarfVersion</code> <code>createdAt</code> <code>device</code>
+
+        ## Segurança
+
+        Dependendo da sua permissão de acesso, você pode consultar apenas os seus próprios dados.
+      operationId: getUserScansGroups
+      tags:
+        - "Usuários"
+      parameters:
+        - $ref: "#/components/parameters/userId"
+        - $ref: "#/components/parameters/page"
+        - $ref: "#/components/parameters/perPage"
+        - $ref: "#/components/parameters/query"
+        - $ref: "#/components/parameters/sortBy"
+        - $ref: "#/components/parameters/sortOrder"
+      responses:
+        200:
+          description: Consulta realizada com sucesso.
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Group"
+        400:
+          $ref: "#/components/responses/BadRequest"
+        422:
+          $ref: "#/components/responses/UnprocessableEntity"
+  /users/{userId}/transactions:
+    get:
+      summary: Obter lista de transações de um usuário.
+      description: |
+        ## Descrição
+
+        Utilize esta função para consultar informações de transações de um usuário.
+
+        ## Atributos para busca
+
+        <code>transactionId</code> <code>userId</code> <code>reportId</code> <code>debit</code>
+        <code>credit</code> <code>createdAt</code>
+
+        ## Segurança
+
+        Dependendo da sua permissão de acesso, você pode consultar apenas os seus próprios dados.
+      operationId: getUserBalance
+      tags:
+        - "Usuários"
+      responses:
+        200:
+          description: Consulta realizada com sucesso.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Transactions"
+        400:
+          $ref: "#/components/responses/BadRequest"
+        404:
+          $ref: "#/components/responses/NotFound"
+        422:
+          $ref: "#/components/responses/UnprocessableEntity"
+  /users/{userId}/settings:
+    get:
+      summary: Obter configurações de um usuário.
+      description: |
+        ## Descrição
+
+        Utilize esta função para consultar informações de configurações de um usuário.
+
+        ## Segurança
+
+        Dependendo da sua permissão de acesso, você pode consultar apenas os seus próprios dados.
+      operationId: getSettingsByUserId
+      tags:
+        - "Usuários"
+      parameters:
+        - $ref: "#/components/parameters/userId"
+      responses:
+        200:
+          description: Consulta realizada com sucesso.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Settings"
+        400:
+          $ref: "#/components/responses/BadRequest"
+        404:
+          $ref: "#/components/responses/NotFound"
+        422:
+          $ref: "#/components/responses/UnprocessableEntity"
+    put:
+      summary: Atualizar configurações de um usuário.
+      description: |
+        ## Descrição
+
+        Utilize esta função para atualizar informações de configurações de um usuário.
+
+        ## Segurança
+
+        Dependendo da sua permissão de acesso, você pode atualizar apenas os seus próprios dados.
+      operationId: updateSettingsByUserId
+      tags:
+        - "Usuários"
+      parameters:
+        - $ref: "#/components/parameters/userId"
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/putV2UserSettings"
+      responses:
+        200:
+          description: Configurações atualizadas com sucesso.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Settings"
+        400:
+          $ref: "#/components/responses/BadRequest"
+        404:
+          $ref: "#/components/responses/NotFound"
+        422:
+          $ref: "#/components/responses/UnprocessableEntity"
+
+
+  # Relatórios de Escaneamento
+  /scans:
+    post:
+      summary: Cria um novo relatório de escaneamento.
+      description: |
+        ## Descrição
+
+        Utilize esta função para criar um novo relatório de escaneamento. Esses relatórios contêm informações detalhadas sobre os resultados dos escaneamentos realizados. Utilize esta rota para acessar e visualizar os dados dos escaneamentos de forma fácil e organizada.
+
+        ## Segurança
+
+        Dependendo da sua permissão de acesso, você pode criar apenas relatórios de escaneamento para si mesmo ou para qualquer usuário da sua empresa.
+      operationId: createReport
+      tags:
+        - "Relatórios de Escaneamento"
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/postV2Scans"
+      responses:
+        201:
+          description: Relatório de escaneamento criado com sucesso.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Scans"
+        422:
+          $ref: "#/components/responses/UnprocessableEntity"
+    get:
+      summary: Obter lista de relatórios de escaneamento
+      description: |
+        ## Descrição
+
+        Esta rota retorna uma lista dos relatórios de escaneamento disponíveis no sistema.
+        Esses relatórios contêm informações detalhadas sobre os resultados dos escaneamentos
+        realizados. Utilize esta rota para acessar e visualizar os dados dos escaneamentos
+        de forma fácil e organizada.
+
+        ## Atributos para busca
+
+        <code>reportId</code> <code>operatorId</code> <code>purchaserId</code> <code>reportType</code> <code>appVersion</code> <code>scarfVersion</code> <code>createdAt</code> <code>device</code>
+
+        ## Segurança
+
+        Dependendo da sua permissão de acesso, você pode visualizar apenas os relatórios de escaneamento que você criou ou todos os relatórios de escaneamento criados por qualquer usuário da sua empresa.
+      operationId: getScans
+      tags:
+        - "Relatórios de Escaneamento"
+      parameters:
+        - $ref: "#/components/parameters/page"
+        - $ref: "#/components/parameters/perPage"
+        - $ref: "#/components/parameters/query"
+        - $ref: "#/components/parameters/sortBy"
+        - $ref: "#/components/parameters/sortOrder"
+      responses:
+        200:
+          description: Consulta realizada com sucesso.
+          content:
+            application/json:
+              schema:
+                type: array
+                uniqueItems: true
+                items:
+                  $ref: "#/components/schemas/Scans"
+        404:
+          $ref: "#/components/responses/NotFound"
+        422:
+          $ref: "#/components/responses/UnprocessableEntity"
+  /scans/{scanId}:
+    get:
+      summary: Retorna um relatório de escaneamento específico através do ID.
+      description: |
+        ## Descrição
+
+        Esta rota retorna um relatório de escaneamento específico com base no ID fornecido.
+      operationId: getScanById
+      tags:
+        - "Relatórios de Escaneamento"
+      parameters:
+        - $ref: "#/components/parameters/reportId"
+      responses:
+        200:
+          description: Relatório encontrado.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Scans"
+        400:
+          $ref: "#/components/responses/BadRequest"
+        404:
+          $ref: "#/components/responses/NotFound"
+        422:
+          $ref: "#/components/responses/UnprocessableEntity"
+    delete:
+      summary: Arquiva um relatório de escaneamento específico através do ID.
+      description: |
+        ## Descrição
+
+        Esta rota arquiva um relatório de escaneamento específico com base no ID fornecido.
+
+        ## Segurança
+
+        Dependendo da sua permissão de acesso, você pode arquivar apenas os relatórios de escaneamento que você criou.
+      operationId: deleteScanById
+      tags:
+        - "Relatórios de Escaneamento"
+      parameters:
+        - $ref: "#/components/parameters/reportId"
+      responses:
+        200:
+          description: Relatório excluído com sucesso.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Scans"
+        400:
+          $ref: "#/components/responses/BadRequest"
+        404:
+          $ref: "#/components/responses/NotFound"
+        422:
+          $ref: "#/components/responses/UnprocessableEntity"
+    put:
+      summary: Atualiza um relatório de escaneamento específico através do ID.
+      description: |
+        # Descrição
+
+        Esta rota atualiza um relatório de escaneamento específico com base no ID fornecido.
+
+        # Campos atualizáveis
+
+        <code>reportName</code>
+
+        # Segurança
+
+        Dependendo da sua permissão de acesso, você pode atualizar apenas os relatórios de escaneamento que você criou.
+      operationId: updateScanById
+      tags:
+        - "Relatórios de Escaneamento"
+      parameters:
+        - $ref: "#/components/parameters/reportId"
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/putV2Scans"
+      responses:
+        200:
+          description: Relatório atualizado com sucesso.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Scans"
+        400:
+          $ref: "#/components/responses/BadRequest"
+        404:
+          $ref: "#/components/responses/NotFound"
+        422:
+          $ref: "#/components/responses/UnprocessableEntity"
+  /scans/{scanId}/woodLogs:
+    get:
+      summary: Retorna uma lista de toras de um relatório de escaneamento específico através do ID.
+      description: |
+        ## Descrição
+
+        Esta rota retorna uma lista de toras de um relatório de escaneamento específico com base no ID fornecido.
+      operationId: getWoodLogsByScanId
+      tags:
+        - "Relatórios de Escaneamento"
+      parameters:
+        - $ref: "#/components/parameters/reportId"
+      responses:
+        200:
+          description: Relatório encontrado.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Scans"
+        400:
+          $ref: "#/components/responses/BadRequest"
+        404:
+          $ref: "#/components/responses/NotFound"
+        422:
+          $ref: "#/components/responses/UnprocessableEntity"
+  /scans/{scanId}/unarchive:
+    post:
+      summary: Desarquiva um relatório de escaneamento específico através do ID.
+      description: |
+        ## Descrição
+
+        Esta rota desarquiva um relatório de escaneamento específico com base no ID fornecido.
+
+        ## Segurança
+
+        Dependendo da sua permissão de acesso, você pode desarquivar apenas os relatórios de escaneamento que você criou.
+      operationId: unarchiveScanById
+      tags:
+        - "Relatórios de Escaneamento"
+      parameters:
+        - $ref: "#/components/parameters/reportId"
+      responses:
+        200:
+          description: Relatório desarquivado com sucesso.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Scans"
+        400:
+          $ref: "#/components/responses/BadRequest"
+        404:
+          $ref: "#/components/responses/NotFound"
+        422:
+          $ref: "#/components/responses/UnprocessableEntity"
+
+  # Grupos de Relatórios
+  /groups:
+    post:
+      summary: Agrupar relatórios de escaneamento.
+      description: |
+        ## Descrição
+
+        Utilize esta função para agrupar relatórios de escaneamento.
+
+      operationId: groupScans
+      tags:
+        - "Grupos de Relatórios"
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/postV2Groups"
+      parameters:
+        - $ref: "#/components/parameters/page"
+        - $ref: "#/components/parameters/perPage"
+        - $ref: "#/components/parameters/query"
+        - $ref: "#/components/parameters/sortBy"
+        - $ref: "#/components/parameters/sortOrder"
+      responses:
+        201:
+          description: Grupo de relatórios criado com sucesso.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Group"
+        400:
+          $ref: "#/components/responses/BadRequest"
+        422:
+          $ref: "#/components/responses/UnprocessableEntity"
+    get:
+      summary: Retorna uma lista de relatórios gerais.
+      description: |
+        ## Descrição
+
+        Esta rota retorna uma lista dos groups de relatórios disponíveis no sistema.
+
+        ## Atributos para busca
+
+        <code>reportId</code> <code>operatorId</code> <code>appVersion</code>
+        <code>scarfVersion</code> <code>createdAt</code> <code>device</code>
+        <code>originalCreationDate</code> <code>originalTimezone</code>
+        <code>counter</code>
+
+        ## Segurança
+
+        Dependendo da sua permissão de acesso, você pode visualizar apenas os relatórios de escaneamento que você criou ou todos os relatórios de escaneamento criados por qualquer usuário da sua empresa.
+
+        ## Relatórios do grupo
+
+        Para visualizar os relatórios de escaneamento de um grupo com todas as informações completas, é necessário utilizar a rota <code>GET /groups/{groupId}/reports</code>.
+      operationId: getGroup
+      tags:
+        - "Grupos de Relatórios"
+      parameters:
+        - $ref: "#/components/parameters/page"
+        - $ref: "#/components/parameters/perPage"
+        - $ref: "#/components/parameters/query"
+        - $ref: "#/components/parameters/sortBy"
+        - $ref: "#/components/parameters/sortOrder"
+      responses:
+        200:
+          description: Consulta realizada com sucesso.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Group"
+        400:
+          $ref: "#/components/responses/NotFound"
+        422:
+          $ref: "#/components/responses/UnprocessableEntity"
+  /groups/{groupId}/reports:
+    get:
+      summary: Retorna uma lista de relatórios de escaneamento de um relatório geral.
+      description: Retorna uma lista de relatórios de escaneamento de um relatório geral.
+      operationId: getReportByGroupId
+      tags:
+        - "Grupos de Relatórios"
+      responses:
+        200:
+          description: Consulta realizada com sucesso.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/postV2Scans"
+        400:
+          $ref: "#/components/responses/NotFound"
+        422:
+          $ref: "#/components/responses/UnprocessableEntity"
+  /groups/{groupId}:
+    get:
+      summary: Retorna um relatório geral específico através do ID
+      description: |
+        # Descrição
+
+        Esta rota retorna um relatório geral específico com base no ID fornecido.
+
+        # Segurança
+
+        Dependendo da sua permissão de acesso, você pode visualizar apenas os relatórios de escaneamento que você criou.
+      operationId: getGroupReportById
+      tags:
+        - "Grupos de Relatórios"
+      parameters:
+        - $ref: "#/components/parameters/groupId"
+      responses:
+        200:
+          description: Relatório geral encontrado.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Group"
+        400:
+          $ref: "#/components/responses/BadRequest"
+        404:
+          $ref: "#/components/responses/NotFound"
+        422:
+          $ref: "#/components/responses/UnprocessableEntity"
+    delete:
+      summary: Arquiva um relatório geral específico através do ID.
+      description: |
+        ## Descrição
+
+        Esta rota arquiva um relatório geral específico com base no ID fornecido.
+
+        ## Segurança
+
+        Dependendo da sua permissão de acesso, você pode arquivar apenas os relatórios de escaneamento que você criou.
+      operationId: deleteGroupReportById
+      tags:
+        - "Grupos de Relatórios"
+      parameters:
+        - $ref: "#/components/parameters/groupId"
+      responses:
+        200:
+          description: Relatório geral excluído com sucesso.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Group"
+        400:
+          $ref: "#/components/responses/BadRequest"
+        404:
+          $ref: "#/components/responses/NotFound"
+        422:
+          $ref: "#/components/responses/UnprocessableEntity"
+    put:
+      summary: Atualiza um relatório geral específico através do ID.
+      description: |
+        ## Descrição
+
+        Esta rota atualiza um relatório geral específico com base no ID fornecido.
+
+        ## Campos atualizáveis
+
+        <code>reportName</code>
+
+        ## Segurança
+
+        Dependendo da sua permissão de acesso, você pode atualizar apenas os relatórios de escaneamento que você criou.
+      operationId: updateGroupReportById
+      tags:
+        - "Grupos de Relatórios"
+      parameters:
+        - $ref: "#/components/parameters/groupId"
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/putV2Group"
+      responses:
+        200:
+          description: Relatório geral atualizado com sucesso.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Group"
+        400:
+          $ref: "#/components/responses/BadRequest"
+        422:
+          $ref: "#/components/responses/UnprocessableEntity"
+  /groups/{groupId}/unarchive:
+    post:
+      summary: Desarquiva um relatório geral específico através do ID.
+      description: |
+        ## Descrição
+
+        Esta rota desarquiva um relatório geral específico com base no ID fornecido.
+
+        ## Segurança
+
+        Dependendo da sua permissão de acesso, você pode desarquivar apenas os relatórios de escaneamento que você criou.
+      operationId: unarchiveGroupReportById
+      tags:
+        - "Grupos de Relatórios"
+      parameters:
+        - $ref: "#/components/parameters/groupId"
+      responses:
+        200:
+          description: Relatório geral desarquivado com sucesso.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Group"
+        400:
+          $ref: "#/components/responses/BadRequest"
+        404:
+          $ref: "#/components/responses/NotFound"
+        422:
+          $ref: "#/components/responses/UnprocessableEntity"
+
+  # Transações
+  /transactions:
+    post:
+      summary: Cria uma nova transação.
+      description: |
+        ## Descrição
+
+        Utilize esta função para criar novas transações. Essas transações podem representar créditos ou débitos na carteira de um usuário.
+      operationId: createTransaction
+      tags:
+        - "Transações"
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/postV2Transactions"
+      responses:
+        201:
+          description: Transação criada com sucesso.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Transactions"
+        400:
+          $ref: "#/components/responses/BadRequest"
+        422:
+          $ref: "#/components/responses/UnprocessableEntity"
+    get:
+      summary: Obter lista de transações.
+      description: |
+        ## Descrição
+
+        Utilize esta função para consultar informações de transações.
+
+        ## Atributos para busca
+
+        <code>transactionId</code> <code>userId</code> <code>reportId</code> <code>debit</code>
+        <code>credit</code> <code>createdAt</code>
+
+        ## Segurança
+
+        Dependendo da sua permissão de acesso, você pode consultar apenas os seus próprios dados.
+      operationId: getTransactions
+      tags:
+        - "Transações"
+      parameters:
+        - $ref: "#/components/parameters/page"
+        - $ref: "#/components/parameters/perPage"
+        - $ref: "#/components/parameters/query"
+        - $ref: "#/components/parameters/sortBy"
+        - $ref: "#/components/parameters/sortOrder"
+      responses:
+        200:
+          description: Consulta realizada com sucesso.
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Transactions"
+        400:
+          $ref: "#/components/responses/BadRequest"
+        404:
+          $ref: "#/components/responses/NotFound"
+        422:
+          $ref: "#/components/responses/UnprocessableEntity"
+  /transactions/{transactionId}:
+    get:
+      summary: Retorna uma transação específica através do ID
+      description: |
+        ## Descrição
+
+        Essa rota retorna uma transação específica com base no ID fornecido.
+
+        ## Segurança
+
+        Dependendo da sua permissão de acesso, você pode consultar apenas os seus próprios dados.
+      operationId: getTransactionById
+      tags:
+        - "Transações"
+      parameters:
+        - $ref: "#/components/parameters/transactionId"
+      responses:
+        200:
+          description: Transação encontrada.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Transactions"
+        400:
+          $ref: "#/components/responses/BadRequest"
+        404:
+          $ref: "#/components/responses/NotFound"
+        422:
+          $ref: "#/components/responses/UnprocessableEntity"
+
+  # Feedback
+  /feedbacks:
+    post:
+      summary: Cria um novo feedback
+      description: Cria um novo feedback.
+      operationId: createFeedback
+      tags:
+        - "Feedbacks"
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/postV2Feedback"
+      responses:
+        201:
+          description: Feedback criado com sucesso.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Feedback"
+        400:
+          $ref: "#/components/responses/BadRequest"
+        422:
+          $ref: "#/components/responses/UnprocessableEntity"
+    get:
+      summary: Obter lista de feedbacks.
+      description: |
+        ## Descrição
+
+        Utilize esta função para consultar informações de feedbacks.
+
+        ## Atributos para busca
+
+        <code>feedbackId</code> <code>userId</code> <code>reportId</code> <code>createdAt</code>
+        <code>rating</code>
+
+        ## Segurança
+
+        Dependendo da sua permissão de acesso, você pode consultar apenas os seus próprios dados.
+      operationId: getFeedbacks
+      tags:
+        - "Feedbacks"
+      parameters:
+        - $ref: "#/components/parameters/page"
+        - $ref: "#/components/parameters/perPage"
+        - $ref: "#/components/parameters/query"
+        - $ref: "#/components/parameters/sortBy"
+        - $ref: "#/components/parameters/sortOrder"
+      responses:
+        200:
+          description: Consulta realizada com sucesso.
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Feedback"
+        400:
+          $ref: "#/components/responses/BadRequest"
+        422:
+          $ref: "#/components/responses/UnprocessableEntity"
+
+  # Notificações por E-mail
+  /notifications/report-file:
+    post:
+      summary: Envia arquivos para um usuário
+      description: Envia arquivos para um usuário.
+      operationId: sendScanNotification
+      tags:
+        - "Notificações por E-mail"
+      # requestBody:
+      responses:
+        200:
+          description: Operação realizada com sucesso.
+          content:
+            plain/text:
+              schema:
+                type: string
+                example: "Ok"
+        400:
+          $ref: "#/components/responses/BadRequest"
+        422:
+          $ref: "#/components/responses/UnprocessableEntity"
+
+  # Debug
+  /app-debug/scarf:
+    post:
+      summary: Envia um arquivo de debug do Scarf.
+      description: Envia um arquivo de debug do Scarf.
+      operationId: sendDebug
+      tags:
+        - "Debug Aplicativo"
+      responses:
+        200:
+          description: Operação realizada com sucesso.
+          content:
+            plain/text:
+              schema:
+                type: string
+                example: "Ok"
+        400:
+          $ref: "#/components/responses/BadRequest"
+        422:
+          $ref: "#/components/responses/UnprocessableEntity"
+
+  # Recursos Do Aplicativo
+  /app-resources:
+    get:
+      summary: Retorna os recursos do aplicativo.
+      description: |
+        ## Descrição
+
+        Retorna os recursos do aplicativo.
+      operationId: getAppResources
+      tags:
+        - "Recursos Do Aplicativo"
+      responses:
+        200:
+          description: Recursos retornados com sucesso.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/AppResources"
+        404:
+          $ref: "#/components/responses/NotFound"
+
+  # Relatórios Disponíveis
+  /report-types:
+    get:
+      summary: Obter lista de tipos de relatórios.
+      description: |
+        Essa função retorna uma lista dos diferentes tipos de relatórios disponíveis para consulta.
+      operationId: getReportTypes
+      tags:
+        - "Relatórios Disponíveis"
+      responses:
+        200:
+          description: Consulta realizada com sucesso.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ReportTypes"
+        404:
+          $ref: "#/components/responses/NotFound"
+        422:
+          $ref: "#/components/responses/UnprocessableEntity"

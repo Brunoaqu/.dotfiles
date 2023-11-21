@@ -1,0 +1,21 @@
+2023-11-13 11:18:52,099 DEBUG    root            Loaded Command Group: ['gcloud', 'compute']
+2023-11-13 11:18:52,111 DEBUG    root            Loaded Command Group: ['gcloud', 'compute', 'start_iap_tunnel']
+2023-11-13 11:18:52,114 DEBUG    root            Running [gcloud.compute.start-iap-tunnel] with arguments: [--listen-on-stdin: "True", --project: "pixlog-backend-ml", --verbosity: "warning", --zone: "us-central1-a", INSTANCE_NAME: "swarm-manager-p002", INSTANCE_PORT: "22"]
+2023-11-13 11:18:52,250 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): compute.googleapis.com:443
+2023-11-13 11:18:53,291 DEBUG    urllib3.connectionpool https://compute.googleapis.com:443 "GET /compute/v1/projects/pixlog-backend-ml/zones/us-central1-a/instances/swarm-manager-p002?alt=json HTTP/1.1" 200 None
+2023-11-13 11:18:53,294 WARNING  root            
+
+To increase the performance of the tunnel, consider installing NumPy. For instructions,
+please see https://cloud.google.com/iap/docs/using-tcp-forwarding#increasing_the_tcp_upload_bandwidth
+
+2023-11-13 11:18:53,297 DEBUG    root            credentials type for _GetAccessTokenCallback is [<googlecloudsdk.core.credentials.google_auth_credentials.Credentials object at 0x7f47df18e520>].
+2023-11-13 11:18:53,297 DEBUG    root            Using new websocket library
+2023-11-13 11:18:53,297 INFO     root            Connecting with URL ['wss://tunnel.cloudproxy.app/v4/connect?project=pixlog-backend-ml&port=22&newWebsocket=True&zone=us-central1-a&instance=swarm-manager-p002&interface=nic0']
+2023-11-13 11:20:54,316 INFO     root            Received WebSocket Close message [4010: 'destination read failed'].
+2023-11-13 11:20:54,962 DEBUG    root            Error while sending data, trying to reconnect []
+2023-11-13 11:20:54,963 DEBUG    root            CLOSE
+2023-11-13 11:21:05,067 WARNING  root            Failed to send all data from [stdin].
+2023-11-13 11:21:05,068 INFO     root            Client closed connection from [stdin].
+2023-11-13 11:21:05,068 DEBUG    root            Chosen display Format:default
+2023-11-13 11:21:05,069 INFO     root            Display format: "default"
+2023-11-13 11:21:05,069 DEBUG    root            SDK update checks are disabled.

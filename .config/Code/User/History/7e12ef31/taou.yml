@@ -1,0 +1,12 @@
+version: "3.8"
+
+networks:
+  default:
+    driver: "bridge"
+
+services:
+  mariadb:
+    image: "mariadb:10.11.5-jammy"
+    networks:
+      - "default"
+

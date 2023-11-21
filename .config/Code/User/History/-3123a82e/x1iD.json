@@ -1,0 +1,18 @@
+{
+    "timeout": 3000,
+    "extension": [
+        "ts"
+    ],
+    "inline-diffs ": true,
+    "full-trace": true,
+    "recursive": true,
+    "diff": true,
+    "exit": true,
+    "slow": 300,
+    "retries": 3,
+    "ignore": ["node_modules", "dist", "swaggers", "seeds", "migrations", ".devcontainer", ".vscode"],
+    "node-option": [
+        "experimental-specifier-resolution=node",
+        "loader=ts-node/esm"
+    ]
+}

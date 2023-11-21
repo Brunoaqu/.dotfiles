@@ -1,0 +1,82 @@
+{
+    "overrides": [{
+        "files": ["**/*.test.js", "**/test/*"],
+        "rules": {
+            "node/no-unpublished-require": 0,
+            "node/no-missing-require": 0,
+            "func-names": 0,
+            "prefer-arrow-callback": 0,
+            "no-unused-expressions": 0
+        }
+    }],
+    "plugins": [
+        "prettier"
+    ],
+    "extends": [
+        "airbnb-base",
+        "prettier",
+        "plugin:node/recommended"
+    ],
+    "parserOptions": {
+        "ecmaVersion": "latest"
+    },
+    "env": {
+        "commonjs": true,
+        "es2021": true,
+        "node": true,
+        "mocha": true
+    },
+    "ignorePatterns": ["temp.js", "**/ddos/*.js"],
+    "rules": {
+        "import/no-extraneous-dependencies": ["error", {"devDependencies": true}],
+        // Console warning: off
+        "no-console": "off",
+
+        // Eslint off
+        "import/extensions": "off",
+        "import/prefer-default-export": "off",
+        "class-methods-use-this": "off",
+        "no-useless-constructor": "off",
+        "import/no-unresolved": "off",
+        "no-control-regex": "off",
+        "no-shadow": "off",
+        "import/no-cycle": "off",
+        "consistent-return": "off",
+        "no-underscore-dangle": "off",
+        "max-classes-per-file": "off",
+        "camelcase": "off",
+        "no-extra-boolean-cast":"off",
+        "no-param-reassign":"off",
+        "no-return-await":"off",
+
+        // Pretier
+        "prettier/prettier": "error",
+
+        // "no-restricted-globals": "off",
+        // "no-unused-vars": "warn",
+        // "func-names": "off",
+        // "no-process-exit": "off",
+        // "object-shorthand": "off",
+        // "no-param-reassign": "off",
+        // "no-return-await": "off",
+        // "no-new-require": "off",
+        // "new-cap": "off",
+
+        // Eslint errors
+        "no-restricted-syntax": [
+            "error",
+            {
+                "selector": "LabeledStatement",
+                "message": "Labels are a form of GOTO; using them makes code confusing and hard to maintain and understand."
+            },
+            {
+                "selector": "WithStatement",
+                "message": "`with` is disallowed in strict mode because it makes code impossible to predict and optimize."
+            },
+            {
+                "selector": "MethodDefinition[kind='set']",
+                "message": "Property setters are not allowed"
+            }
+        ]
+    }
+}

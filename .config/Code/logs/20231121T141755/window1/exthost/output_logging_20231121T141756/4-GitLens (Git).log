@@ -1,0 +1,70 @@
+[2023-11-21 17:17:59.161] [      8ms] [/home/bruno/.config] git rev-parse --show-toplevel • FAILED
+
+Error: Command failed: /usr/bin/git -c core.quotepath=false -c color.ui=false rev-parse --show-toplevel
+fatal: not a git repository (or any parent up to mount point /)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+
+
+[2023-11-21 17:18:00.684] [     20ms] [/home/bruno/.config] git rev-parse --show-toplevel • FAILED
+
+Error: Command failed: /usr/bin/git -c core.quotepath=false -c color.ui=false rev-parse --show-toplevel
+fatal: not a git repository (or any parent up to mount point /)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+
+
+[2023-11-21 17:26:23.182] [     15ms] [/home/bruno/.config/tmux] git rev-parse --show-toplevel • FAILED
+
+Error: Command failed: /usr/bin/git -c core.quotepath=false -c color.ui=false rev-parse --show-toplevel
+fatal: not a git repository (or any parent up to mount point /)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+
+
+[2023-11-21 17:31:02.786] [     17ms] [/home/bruno/.config/tmux/utils] git rev-parse --show-toplevel • FAILED
+
+Error: Command failed: /usr/bin/git -c core.quotepath=false -c color.ui=false rev-parse --show-toplevel
+fatal: not a git repository (or any parent up to mount point /)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+
+
+[2023-11-21 17:33:57.944] [     19ms] [/home/bruno/.config/lazygit] git rev-parse --show-toplevel • FAILED
+
+Error: Command failed: /usr/bin/git -c core.quotepath=false -c color.ui=false rev-parse --show-toplevel
+fatal: not a git repository (or any parent up to mount point /)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+
+
+[2023-11-21 17:34:10.806] [     27ms] [/home/bruno/.config/lazygit] git rev-parse --show-toplevel • FAILED
+
+Error: Command failed: /usr/bin/git -c core.quotepath=false -c color.ui=false rev-parse --show-toplevel
+fatal: not a git repository (or any parent up to mount point /)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+
+
+[2023-11-21 17:35:26.693] [     18ms] [/home/bruno/.config/lazygit] git rev-parse --show-toplevel • FAILED
+
+Error: Command failed: /usr/bin/git -c core.quotepath=false -c color.ui=false rev-parse --show-toplevel
+fatal: not a git repository (or any parent up to mount point /)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+
+
+[2023-11-21 17:41:55.300] [     16ms] [/home/bruno/.config/flameshot] git rev-parse --show-toplevel • FAILED
+
+Error: Command failed: /usr/bin/git -c core.quotepath=false -c color.ui=false rev-parse --show-toplevel
+fatal: not a git repository (or any parent up to mount point /)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+
+
+[2023-11-21 17:46:30.718] [     34ms] [/home/bruno/.config] git rev-parse --show-toplevel • FAILED
+
+Error: Command failed: /usr/bin/git -c core.quotepath=false -c color.ui=false rev-parse --show-toplevel
+fatal: not a git repository (or any parent up to mount point /)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+
+
+[2023-11-21 17:46:30.733] [     10ms] [/home/bruno/.config] git rev-parse --show-toplevel • FAILED
+
+Error: Command failed: /usr/bin/git -c core.quotepath=false -c color.ui=false rev-parse --show-toplevel
+fatal: not a git repository (or any parent up to mount point /)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+
+

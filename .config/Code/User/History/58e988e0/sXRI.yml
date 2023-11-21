@@ -1,0 +1,11 @@
+version: "3.8"
+
+services:
+  api:
+    image: "pxlg/api:dev"
+    env_file: "./.env"
+    command: "pnpm run test:integration"
+    depends_on:
+      - "mariadb"
+      - "redis"
+

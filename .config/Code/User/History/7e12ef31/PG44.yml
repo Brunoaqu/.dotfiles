@@ -1,0 +1,21 @@
+version: "3.8"
+
+networks:
+  default:
+    driver: "bridge"
+
+services:
+  db:
+    image: "mariadb:10.11.5-jammy"
+    ports:
+      - "3306:3306"
+    environment:
+      MARIADB_ROOT_PASSWORD: "root"
+    networks:
+      - "default"
+  # liquibase:
+  #   image: "liquibase/liquibase:4.24"
+  #   networks:
+  #     - "default"
+  #   volumes:
+  #     - "$PWD:/"

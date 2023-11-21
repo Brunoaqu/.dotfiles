@@ -1,0 +1,153 @@
+import { Either, Result, left, right } from '../../../../../shared/core/Result';
+import { AdditionalInformation } from '../../../domain/AdditionalInformation';
+import { OriginalCreationDate } from '../../../domain/OriginalCreationDate';
+import { OriginalTimezone } from '../../../domain/OriginalTimezone';
+import { AppError } from '../../../../../shared/core/AppError';
+import { IMergedRepo } from '../../../repo/IGroupRepo';
+import { CreateMergedDTO } from './CreateMergedDTO';
+import { IScanRepo } from '../../../repo/IScanRepo';
+import { Merged } from '../../../domain/Merged';
+import { AppVersion } from '../../../domain/AppVersion';
+import { Device } from '../../../domain/Device';
+import { Scan } from '../../../domain/Scan';
+import { User } from '../../../../users/domain/User';
+import { IUserRepo } from '../../../../users/repo/IUserRepo';
+import { GetUserByIdErrors } from '../../../../users/useCases/getUserById/GetUserByIdErrors';
+import { ReportType } from '../../../domain/ReportType';
+import { ReportStatus } from '../../../domain/ReportStatus';
+import { IReportTypeRepo } from '../../../repo/IReportTypeRepo';
+import { IReportStatusRepo } from '../../../repo/IReportStatusRepo';
+import { ReportName } from '../../../domain/ReportName';
+import { VolumeFactor } from '../../../../usersSettings/domain/VolumeFactor';
+import { DiameterFactor } from '../../../../usersSettings/domain/DiameterFactor';
+import { ReportSettings } from '../../../domain/ReportSettings';
+
+export type Response = Either<GetUserByIdErrors.IdNotFound | AppError.UnexpectedError, Result<Merged>>;
+
+export class CreateMergedUseCase {
+  public constructor(
+    groupRepo: IMergedRepo,
+    scanRepo: IScanRepo,
+    reportTypeRepo: IReportTypeRepo,
+    reportStatusRepo: IReportStatusRepo,
+    userRepo: IUserRepo
+  ) {
+    this.groupRepo = groupRepo;
+    this.scanRepo = scanRepo;
+    this.reportTypeRepo = reportTypeRepo;
+    this.reportStatusRepo = reportStatusRepo;
+    this.userRepo = userRepo;
+  }
+
+  private groupRepo: IMergedRepo;
+
+  private scanRepo: IScanRepo;
+
+  private userRepo: IUserRepo;
+
+  private reportTypeRepo: IReportTypeRepo;
+
+  private reportStatusRepo: IReportStatusRepo;
+
+  public async execute(dto: CreateMergedDTO): Promise<Response> {
+    let user: PromiseSettledResult<User>;
+    let reportStatus: PromiseSettledResult<ReportStatus>;
+    let reportType: PromiseSettledResult<ReportType>;
+    let scans: PromiseSettledResult<Scan[]>;
+    let group: Merged;
+
+    if (dto.userId !== dto.decodedUserId) {
+      return left(new GetUserByIdErrors.IdNotFound()) as Response;
+    }
+
+    try {
+      [user, reportStatus, reportType, scans] = await Promise.allSettled([
+        this.userRepo.getById(dto.userId),
+        this.reportStatusRepo.findByDescription('active'),
+        this.reportTypeRepo.findByDescription('group'),
+        Promise.all(dto.scanId.map((scanId) => this.scanRepo.getById(scanId))),
+      ]);
+
+      if (user.status === 'rejected') {
+        return left(new GetUserByIdErrors.IdNotFound()) as Response;
+      }
+
+      if (reportStatus.status === 'rejected') {
+        return left(new AppError.UnexpectedError('Failed to find report status.')) as Response;
+      }
+
+      if (reportType.status === 'rejected') {
+        return left(new AppError.UnexpectedError('Failed to find report type.')) as Response;
+      }
+
+      if (scans.status === 'rejected') {
+        return left(new AppError.UnexpectedError('Failed to find scans.')) as Response;
+      }
+
+      const volumeFactorOrError = VolumeFactor.create({ value: dto.reportSettings.volumeFactor });
+      const diameterFactorOrError = DiameterFactor.create({ value: dto.reportSettings.diameterFactor });
+      const appVersionOrError = AppVersion.create({ value: dto.appVersion });
+      const deviceOrError = Device.create({ value: dto.device });
+      const additionalInformationOrError = AdditionalInformation.create({ value: dto.additionalInformation });
+      const originalTimezoneOrError = OriginalTimezone.create({ value: dto.originalTimezone });
+      const originalCreationDateOrError = OriginalCreationDate.create({ value: new Date(dto.originalCreationDate) });
+      const reportNameOrError = ReportName.create({ value: dto.reportName });
+      const dtoResult = Result.combine([
+        volumeFactorOrError,
+        diameterFactorOrError,
+        reportNameOrError,
+        appVersionOrError,
+        deviceOrError,
+        additionalInformationOrError,
+        originalTimezoneOrError,
+        originalCreationDateOrError,
+      ]);
+
+      if (dtoResult.isFailure) {
+        return left(Result.fail<void>(dtoResult.getErrorValue())) as Response;
+      }
+
+      const volumeFactor: VolumeFactor = volumeFactorOrError.getValue();
+      const diameterFactor: DiameterFactor = diameterFactorOrError.getValue();
+      const reportSettingsOrError = ReportSettings.create({
+        volumeFactor,
+        diameterFactor,
+      });
+
+      if (reportSettingsOrError.isFailure) {
+        return left(Result.fail<void>(reportSettingsOrError.getErrorValue())) as Response;
+      }
+
+      const appVersion: AppVersion = appVersionOrError.getValue();
+      const device: Device = deviceOrError.getValue();
+      const additionalInformation: AdditionalInformation = additionalInformationOrError.getValue();
+      const reportName: ReportName = reportNameOrError.getValue();
+      const originalCreationDate: OriginalCreationDate = originalCreationDateOrError.getValue();
+      const originalTimezone: OriginalTimezone = originalTimezoneOrError.getValue();
+      const groupOrError = Merged.create({
+        reportSettings: reportSettingsOrError.getValue(),
+        scansId: scans.value.map((scan) => scan.reportId),
+        userId: user.value.userId,
+        reportType: reportType.value,
+        reportStatus: reportStatus.value,
+        reportName,
+        appVersion,
+        device,
+        additionalInformation,
+        originalTimezone,
+        originalCreationDate,
+      });
+
+      if (groupOrError.isFailure) {
+        return left(Result.fail<void>(groupOrError.getErrorValue())) as Response;
+      }
+
+      group = groupOrError.getValue();
+      await this.groupRepo.save(group);
+
+      return right(Result.ok<Merged>(await this.groupRepo.getById(group.id.toString())));
+    } catch (error) {
+      return left(new AppError.UnexpectedError(error));
+    }
+  }
+}

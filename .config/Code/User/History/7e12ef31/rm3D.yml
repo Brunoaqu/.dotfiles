@@ -1,0 +1,17 @@
+version: "3.8"
+
+networks:
+  default:
+    driver: "bridge"
+
+services:
+  mariadb:
+    image: "mariadb:10.11.5-jammy"
+    environment:
+      MYSQL_DATABASE: "$DB_NAME"
+      MYSQL_ROOT_PASSWORD: "$DB_PASS"
+      MYSQL_PASSWORD: "$DB_PASS"
+      MYSQL_ROOT_HOST: "%"
+    networks:
+      - "default"
+

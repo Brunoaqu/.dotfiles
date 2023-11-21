@@ -1,0 +1,78 @@
+2023-10-30 10:19:04,515 DEBUG    root            Loaded Command Group: ['gcloud', 'storage']
+2023-10-30 10:19:04,516 DEBUG    root            Loaded Command Group: ['gcloud', 'storage', 'objects']
+2023-10-30 10:19:04,833 DEBUG    root            Loaded Command Group: ['gcloud', 'storage', 'objects', 'update']
+2023-10-30 10:19:04,837 DEBUG    root            Running [gcloud.storage.objects.update] with arguments: [--add-acl-grant: "[OrderedDict([('entity', 'AllUsers'), ('role', 'READER')])]", URL:1: "['gs://openapi.pixlog.com.br/swagger.yaml']"]
+2023-10-30 10:19:04,849 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): storage.googleapis.com:443
+2023-10-30 10:19:05,095 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /storage/v1/b/openapi.pixlog.com.br/o/swagger.yaml?alt=json&projection=full HTTP/1.1" 200 784
+2023-10-30 10:19:05,098 INFO     root            Using high CPU count, single-file workload config.
+2023-10-30 10:19:05,101 INFO     ___FILE_ONLY___   Completed 0
+2023-10-30 10:19:05,103 DEBUG    root            Adding 1 process with 2 threads. Total processes: 1. Total threads: 2.
+2023-10-30 10:19:05,106 INFO     ___FILE_ONLY___ Patching gs://openapi.pixlog.com.br/swagger.yaml...
+
+2023-10-30 10:19:05,116 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): storage.googleapis.com:443
+2023-10-30 10:19:05,496 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "PATCH /storage/v1/b/openapi.pixlog.com.br/o/swagger.yaml?alt=json&projection=noAcl HTTP/1.1" 400 506
+2023-10-30 10:19:05,498 ERROR    root            HTTPError 400: Cannot update access control for an object when uniform bucket-level access is enabled. Read more at https://cloud.google.com/storage/docs/uniform-bucket-level-access
+2023-10-30 10:19:05,498 DEBUG    root            HTTPError 400: Cannot update access control for an object when uniform bucket-level access is enabled. Read more at https://cloud.google.com/storage/docs/uniform-bucket-level-access
+Traceback (most recent call last):
+  File "/usr/lib64/google-cloud-sdk/lib/googlecloudsdk/api_lib/storage/errors.py", line 308, in wrapper
+    return function(*args, **kwargs)
+  File "/usr/lib64/google-cloud-sdk/lib/googlecloudsdk/api_lib/storage/gcs_json/client.py", line 1066, in patch_object_metadata
+    updated_metadata = self.client.objects.Patch(request)
+  File "/usr/lib64/google-cloud-sdk/lib/googlecloudsdk/generated_clients/apis/storage/v1/storage_v1_client.py", line 1408, in Patch
+    return self._RunMethod(
+  File "/usr/lib64/google-cloud-sdk/lib/third_party/apitools/base/py/base_api.py", line 737, in _RunMethod
+    return self.ProcessHttpResponse(method_config, http_response, request)
+  File "/usr/lib64/google-cloud-sdk/lib/third_party/apitools/base/py/base_api.py", line 743, in ProcessHttpResponse
+    self.__ProcessHttpResponse(method_config, http_response, request))
+  File "/usr/lib64/google-cloud-sdk/lib/third_party/apitools/base/py/base_api.py", line 609, in __ProcessHttpResponse
+    raise exceptions.HttpError.FromResponse(
+apitools.base.py.exceptions.HttpBadRequestError: HttpError accessing <https://storage.googleapis.com/storage/v1/b/openapi.pixlog.com.br/o/swagger.yaml?alt=json&projection=noAcl>: response: <{'x-guploader-uploadid': 'ABPtcPqkWT_at_Q19ZJ0VRAomGa5oVRt5mqh1QjdwrEnX-eNG5Kt5hyM2twcgnSoS4NlLCI1cnIZm33f1OXtM846fAfYK4i_56Fr', 'content-type': 'application/json; charset=UTF-8', 'date': 'Mon, 30 Oct 2023 13:19:05 GMT', 'vary': 'Origin, X-Origin', 'cache-control': 'no-cache, no-store, max-age=0, must-revalidate', 'expires': 'Mon, 01 Jan 1990 00:00:00 GMT', 'pragma': 'no-cache', 'content-length': '506', 'server': 'UploadServer', 'alt-svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000', 'status': 400}>, content <{
+  "error": {
+    "code": 400,
+    "message": "Cannot update access control for an object when uniform bucket-level access is enabled. Read more at https://cloud.google.com/storage/docs/uniform-bucket-level-access",
+    "errors": [
+      {
+        "message": "Cannot update access control for an object when uniform bucket-level access is enabled. Read more at https://cloud.google.com/storage/docs/uniform-bucket-level-access",
+        "domain": "global",
+        "reason": "invalid"
+      }
+    ]
+  }
+}
+>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib64/google-cloud-sdk/lib/googlecloudsdk/command_lib/storage/tasks/task_graph_executor.py", line 180, in _thread_worker
+    task_output = task_wrapper.task.execute(
+  File "/usr/lib64/google-cloud-sdk/lib/googlecloudsdk/command_lib/storage/tasks/objects/patch_object_task.py", line 55, in execute
+    api_factory.get_api(provider).patch_object_metadata(
+  File "/usr/lib64/google-cloud-sdk/lib/googlecloudsdk/api_lib/storage/errors.py", line 312, in wrapper
+    core_exceptions.reraise(
+  File "/usr/lib64/google-cloud-sdk/lib/googlecloudsdk/core/exceptions.py", line 146, in reraise
+    six.reraise(type(exc_value), exc_value, tb)
+  File "/usr/lib64/google-cloud-sdk/lib/third_party/six/__init__.py", line 718, in reraise
+    raise value.with_traceback(tb)
+  File "/usr/lib64/google-cloud-sdk/lib/googlecloudsdk/api_lib/storage/errors.py", line 308, in wrapper
+    return function(*args, **kwargs)
+  File "/usr/lib64/google-cloud-sdk/lib/googlecloudsdk/api_lib/storage/gcs_json/client.py", line 1066, in patch_object_metadata
+    updated_metadata = self.client.objects.Patch(request)
+  File "/usr/lib64/google-cloud-sdk/lib/googlecloudsdk/generated_clients/apis/storage/v1/storage_v1_client.py", line 1408, in Patch
+    return self._RunMethod(
+  File "/usr/lib64/google-cloud-sdk/lib/third_party/apitools/base/py/base_api.py", line 737, in _RunMethod
+    return self.ProcessHttpResponse(method_config, http_response, request)
+  File "/usr/lib64/google-cloud-sdk/lib/third_party/apitools/base/py/base_api.py", line 743, in ProcessHttpResponse
+    self.__ProcessHttpResponse(method_config, http_response, request))
+  File "/usr/lib64/google-cloud-sdk/lib/third_party/apitools/base/py/base_api.py", line 609, in __ProcessHttpResponse
+    raise exceptions.HttpError.FromResponse(
+googlecloudsdk.api_lib.storage.errors.GcsApiError: HTTPError 400: Cannot update access control for an object when uniform bucket-level access is enabled. Read more at https://cloud.google.com/storage/docs/uniform-bucket-level-access
+2023-10-30 10:19:05,704 DEBUG    root            Chosen display Format:default
+2023-10-30 10:19:05,705 INFO     root            Display format: "default"
+2023-10-30 10:19:05,705 DEBUG    root            (gcloud.storage.objects.update) 
+Traceback (most recent call last):
+  File "/usr/lib64/google-cloud-sdk/lib/googlecloudsdk/calliope/cli.py", line 987, in Execute
+    resources = calliope_command.Run(cli=self, args=args)
+  File "/usr/lib64/google-cloud-sdk/lib/googlecloudsdk/calliope/backend.py", line 813, in Run
+    raise exceptions.ExitCodeNoError(exit_code=command_instance.exit_code)
+googlecloudsdk.calliope.exceptions.ExitCodeNoError

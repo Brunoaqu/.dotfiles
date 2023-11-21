@@ -1,0 +1,8 @@
+2023-11-21 09:37:50,028 DEBUG    root            Loaded Command Group: ['gcloud', 'compute']
+2023-11-21 09:37:50,136 DEBUG    root            Loaded Command Group: ['gcloud', 'compute', 'start_iap_tunnel']
+2023-11-21 09:37:50,138 DEBUG    root            Running [gcloud.compute.start-iap-tunnel] with arguments: [--listen-on-stdin: "True", --project: "pixlog-backend-ml", --verbosity: "warning", --zone: "us-central1-a", INSTANCE_NAME: "mariadb-p001", INSTANCE_PORT: "22"]
+2023-11-21 09:37:50,261 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): compute.googleapis.com:443
+2023-11-21 09:37:51,279 DEBUG    urllib3.connectionpool https://compute.googleapis.com:443 "GET /compute/v1/projects/pixlog-backend-ml/zones/us-central1-a/instances/mariadb-p001?alt=json HTTP/1.1" 200 None
+2023-11-21 09:37:51,288 DEBUG    root            credentials type for _GetAccessTokenCallback is [<googlecloudsdk.core.credentials.google_auth_credentials.Credentials object at 0x7fa541c37d90>].
+2023-11-21 09:37:51,288 DEBUG    root            Using new websocket library
+2023-11-21 09:37:51,288 INFO     root            Connecting with URL ['wss://tunnel.cloudproxy.app/v4/connect?project=pixlog-backend-ml&port=22&newWebsocket=True&zone=us-central1-a&instance=mariadb-p001&interface=nic0']

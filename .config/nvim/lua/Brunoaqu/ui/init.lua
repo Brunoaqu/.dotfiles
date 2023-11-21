@@ -1,1 +1,0 @@
-require('Brunoaqu.ui.statuscolumn')

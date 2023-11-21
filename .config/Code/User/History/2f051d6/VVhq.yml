@@ -1,0 +1,63 @@
+version: "3.8"
+
+volumes:
+  sql_conf:
+    driver: "local"
+  sql_data:
+    driver: "local"
+  redis_data:
+    driver: "local"
+
+networks:
+  default:
+    driver: "bridge"
+
+services:
+  api:
+    image: "pixlog/api:desenvolvimento"
+    build:
+      context: "./"
+      dockerfile: "Dockerfile.dev"
+    ports:
+      - "8080:8080"
+    depends_on:
+      # - "mariadb"
+      - "redis"
+    volumes:
+      - "$PWD:/usr/app"
+    networks:
+      - "default"
+
+  mariadb:
+    image: "mariadb:latest"
+    env_file: "./.env"
+    restart: "always"
+    ports:
+      - "$DB_PORT:$DB_PORT"
+    environment:
+      MYSQL_DATABASE: "$DB_NAME"
+      MYSQL_ROOT_PASSWORD: "$DB_PASS"
+      MYSQL_PASSWORD: "$DB_PASS"
+      MYSQL_ROOT_HOST: "%"
+    volumes:
+      - "./sample.app.database:/docker-entrypoint-initdb.d"
+      - "sql_conf:/etc/mysql"
+      - "sql_data:/var/lib/mysql"
+    networks:
+      - "default"
+
+  redis:
+    image: "redis/redis-stack:7.2.0-v6"
+    restart: "always"
+    ports:
+      - "6379:6379"
+    volumes:
+      - "redis_data:/data"
+    networks:
+      - "default"
+
+  gcs:
+    image: "fsouza/fake-gcs-server:latest"
+    restart: "always"
+    networks:
+      - "default"

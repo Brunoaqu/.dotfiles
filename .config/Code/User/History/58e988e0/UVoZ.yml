@@ -1,0 +1,10 @@
+version: "3.8"
+
+services:
+  api:
+    image: "pxlg/api:dev"
+    env_file: "./.env"
+    depends_on:
+      - "mariadb"
+      - "redis"
+

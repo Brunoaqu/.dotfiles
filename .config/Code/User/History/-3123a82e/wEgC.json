@@ -1,0 +1,12 @@
+{
+    "diff": true,
+    "extension": ["ts"],
+    "timeout": 3000,
+    "inline-diffs ": true,
+    "full-trace": true,
+    "recursive": true,
+    "exit": true,
+    "slow": 300,
+    "retries": 3,
+    "watch-files": ["test/integration/*.ts"]
+}

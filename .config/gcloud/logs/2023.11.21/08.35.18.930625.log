@@ -1,0 +1,8 @@
+2023-11-21 08:35:18,943 DEBUG    root            Loaded Command Group: ['gcloud', 'compute']
+2023-11-21 08:35:19,050 DEBUG    root            Loaded Command Group: ['gcloud', 'compute', 'start_iap_tunnel']
+2023-11-21 08:35:19,053 DEBUG    root            Running [gcloud.compute.start-iap-tunnel] with arguments: [--listen-on-stdin: "True", --project: "pixlog-backend-ml", --verbosity: "warning", --zone: "us-central1-a", INSTANCE_NAME: "swarm-manager-p001", INSTANCE_PORT: "22"]
+2023-11-21 08:35:19,168 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): compute.googleapis.com:443
+2023-11-21 08:35:20,262 DEBUG    urllib3.connectionpool https://compute.googleapis.com:443 "GET /compute/v1/projects/pixlog-backend-ml/zones/us-central1-a/instances/swarm-manager-p001?alt=json HTTP/1.1" 200 None
+2023-11-21 08:35:20,268 DEBUG    root            credentials type for _GetAccessTokenCallback is [<googlecloudsdk.core.credentials.google_auth_credentials.Credentials object at 0x7f9d2e6343d0>].
+2023-11-21 08:35:20,268 DEBUG    root            Using new websocket library
+2023-11-21 08:35:20,268 INFO     root            Connecting with URL ['wss://tunnel.cloudproxy.app/v4/connect?project=pixlog-backend-ml&port=22&newWebsocket=True&zone=us-central1-a&instance=swarm-manager-p001&interface=nic0']

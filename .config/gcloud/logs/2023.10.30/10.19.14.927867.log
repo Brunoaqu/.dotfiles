@@ -1,0 +1,52 @@
+2023-10-30 10:19:14,932 DEBUG    root            Loaded Command Group: ['gcloud', 'storage']
+2023-10-30 10:19:14,933 DEBUG    root            Loaded Command Group: ['gcloud', 'storage', 'objects']
+2023-10-30 10:19:15,101 DEBUG    root            Loaded Command Group: ['gcloud', 'storage', 'objects', 'update']
+2023-10-30 10:19:15,105 DEBUG    root            Running [gcloud.storage.objects.update] with arguments: [--add-acl-grant: "[OrderedDict([('entity', 'AllUsers'), ('role', 'READER')])]", URL:1: "['gs://openapi.pixlog.com.br']"]
+2023-10-30 10:19:15,107 INFO     root            Using high CPU count, single-file workload config.
+2023-10-30 10:19:15,110 INFO     ___FILE_ONLY___   Completed 0
+2023-10-30 10:19:15,111 DEBUG    root            Adding 1 process with 2 threads. Total processes: 1. Total threads: 2.
+2023-10-30 10:19:15,111 DEBUG    root            Storing error to raise later: Expected object URL. Received: gs://openapi.pixlog.com.br
+2023-10-30 10:19:15,311 DEBUG    root            (gcloud.storage.objects.update) Expected object URL. Received: gs://openapi.pixlog.com.br
+Traceback (most recent call last):
+  File "/usr/lib64/google-cloud-sdk/lib/googlecloudsdk/calliope/cli.py", line 987, in Execute
+    resources = calliope_command.Run(cli=self, args=args)
+  File "/usr/lib64/google-cloud-sdk/lib/googlecloudsdk/calliope/backend.py", line 807, in Run
+    resources = command_instance.Run(args)
+  File "/usr/lib64/google-cloud-sdk/lib/surface/storage/objects/update.py", line 194, in Run
+    self.exit_code = task_executor.execute_tasks(
+  File "/usr/lib64/google-cloud-sdk/lib/googlecloudsdk/command_lib/storage/tasks/task_executor.py", line 125, in execute_tasks
+    exit_code = task_graph_executor.TaskGraphExecutor(
+  File "/usr/lib64/google-cloud-sdk/lib/googlecloudsdk/command_lib/storage/tasks/task_graph_executor.py", line 519, in run
+    raise self.thread_exception  # pylint: disable=raising-bad-type
+  File "/usr/lib64/google-cloud-sdk/lib/googlecloudsdk/command_lib/storage/tasks/task_graph_executor.py", line 306, in wrapper
+    target_function(self, *args, **kwargs)
+  File "/usr/lib64/google-cloud-sdk/lib/googlecloudsdk/command_lib/storage/tasks/task_graph_executor.py", line 403, in _get_tasks_from_iterator
+    task_object = next(self._task_iterator)
+  File "/usr/lib64/google-cloud-sdk/lib/googlecloudsdk/command_lib/storage/plurality_checkable_iterator.py", line 70, in __next__
+    return _get_item_or_raise_exception(self._buffer.pop(0))
+  File "/usr/lib64/google-cloud-sdk/lib/googlecloudsdk/command_lib/storage/plurality_checkable_iterator.py", line 36, in _get_item_or_raise_exception
+    exceptions.reraise(item.exception, tb=item.stack_trace)
+  File "/usr/lib64/google-cloud-sdk/lib/googlecloudsdk/core/exceptions.py", line 146, in reraise
+    six.reraise(type(exc_value), exc_value, tb)
+  File "/usr/lib64/google-cloud-sdk/lib/third_party/six/__init__.py", line 719, in reraise
+    raise value
+  File "/usr/lib64/google-cloud-sdk/lib/googlecloudsdk/command_lib/storage/plurality_checkable_iterator.py", line 96, in _populate_buffer
+    self._buffer.append(next(self._iterator))
+  File "/usr/lib64/google-cloud-sdk/lib/surface/storage/objects/update.py", line 69, in _get_task_iterator
+    for name_expansion_result in name_expansion.NameExpansionIterator(
+  File "/usr/lib64/google-cloud-sdk/lib/googlecloudsdk/command_lib/storage/name_expansion.py", line 268, in __iter__
+    for input_url, name_expansion_result in self._top_level_iterator:
+  File "/usr/lib64/google-cloud-sdk/lib/googlecloudsdk/command_lib/storage/plurality_checkable_iterator.py", line 70, in __next__
+    return _get_item_or_raise_exception(self._buffer.pop(0))
+  File "/usr/lib64/google-cloud-sdk/lib/googlecloudsdk/command_lib/storage/plurality_checkable_iterator.py", line 36, in _get_item_or_raise_exception
+    exceptions.reraise(item.exception, tb=item.stack_trace)
+  File "/usr/lib64/google-cloud-sdk/lib/googlecloudsdk/core/exceptions.py", line 146, in reraise
+    six.reraise(type(exc_value), exc_value, tb)
+  File "/usr/lib64/google-cloud-sdk/lib/third_party/six/__init__.py", line 719, in reraise
+    raise value
+  File "/usr/lib64/google-cloud-sdk/lib/googlecloudsdk/command_lib/storage/plurality_checkable_iterator.py", line 96, in _populate_buffer
+    self._buffer.append(next(self._iterator))
+  File "/usr/lib64/google-cloud-sdk/lib/googlecloudsdk/command_lib/storage/name_expansion.py", line 175, in _get_top_level_iterator
+    raise errors.InvalidUrlError(
+googlecloudsdk.command_lib.storage.errors.InvalidUrlError: Expected object URL. Received: gs://openapi.pixlog.com.br
+2023-10-30 10:19:15,326 ERROR    root            (gcloud.storage.objects.update) Expected object URL. Received: gs://openapi.pixlog.com.br

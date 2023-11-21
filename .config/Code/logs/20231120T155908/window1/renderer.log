@@ -1,0 +1,5 @@
+2023-11-20 15:59:08.896 [warning] Via 'product.json#extensionEnabledApiProposals' extension 'ms-dotnettools.dotnet-interactive-vscode' wants API proposal 'languageConfigurationAutoClosingPairs' but that proposal DOES NOT EXIST. Likely, the proposal has been finalized (check 'vscode.d.ts') or was abandoned.
+2023-11-20 15:59:09.183 [warning] [twxs.cmake]: Cannot register 'cmake.cmakePath'. This property is already registered.
+2023-11-20 15:59:09.836 [error] [xabikos.JavaScriptSnippets]: Unknown language in `contributes.JavaScriptSnippets.language`. Provided value: vue
+2023-11-20 15:59:12.627 [warning] [cmake-tools]: Couldn't find message for key cmake-tools.configuration.cmake.options.advanced.statusBarVisibility.variant.description.
+2023-11-20 15:59:13.047 [info] [perf] Render performance baseline is 47ms

@@ -1,0 +1,29 @@
+# Stage 1: Build Stage
+FROM node:18 AS build
+
+WORKDIR /usr/app
+
+COPY package.json /usr/app/
+COPY pnpm-lock.yaml /usr/app/
+COPY src /usr/app/src
+COPY tsconfig.json /usr/app/
+COPY nodemon.json /usr/app/
+COPY swagger.yaml /usr/app/
+
+RUN npm install -g pnpm
+RUN pnpm install --frozen-lockfile --ignore-scripts
+RUN pnpm run build
+
+# Stage 2: Production Stage
+FROM node:18-alpine
+
+WORKDIR /usr/app
+
+COPY .env ./
+COPY package*.json ./
+COPY --from=build /usr/app/dist ./dist
+
+RUN npm install -g pnpm
+RUN pnpm install --prod --frozen-lockfile --ignore-scripts
+
+CMD ["node", "./dist/index.js"]

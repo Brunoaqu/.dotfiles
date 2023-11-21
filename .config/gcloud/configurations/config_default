@@ -1,0 +1,8 @@
+[core]
+account = bruno@pixlog.com.br
+project = pixlog-backend-ml
+
+[compute]
+region = us-central1
+zone = us-central1-a
+

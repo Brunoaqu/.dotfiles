@@ -1,0 +1,128 @@
+GitLens v14.5.0 activating in Visual Studio Code (1.84.2) on the desktop; language='en', logLevel='warn', defaultDateLocale='null' (b5c7e76f73cc3a6be9cc6b54a327480a720992d7bc2f3f2eee37662f422a45ea|0025959d-e0d7-43c9-8a98-b3d1822baca31700578322039)
+To enable debug logging, set `"gitlens.outputLevel: "debug"` or run "GitLens: Enable Debug Logging" from the Command Palette
+[2023-11-21 14:52:04.695] [GIT  ] [/home/bruno/.config/nvim] git rev-parse --show-toplevel • Command failed: /usr/bin/git -c core.quotepath=false -c color.ui=false rev-parse --show-toplevel • not a git repository (or any parent up to mount point /) • Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set). [37ms]
+
+[2023-11-21 14:52:04.841] [GIT  ] [/home/bruno/.config/nvim/lua/Brunoaqu] git rev-parse --show-toplevel • Command failed: /usr/bin/git -c core.quotepath=false -c color.ui=false rev-parse --show-toplevel • not a git repository (or any parent up to mount point /) • Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set). [19ms]
+
+[2023-11-21 14:52:04.842] [GIT  ] [/home/bruno/.config/nvim/lua/Brunoaqu/lazyload] git rev-parse --show-toplevel • Command failed: /usr/bin/git -c core.quotepath=false -c color.ui=false rev-parse --show-toplevel • not a git repository (or any parent up to mount point /) • Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set). [29ms]
+
+[2023-11-21 14:52:05.453] [GIT  ] [/home/bruno/.config/nvim/lua/Brunoaqu] git rev-parse --show-toplevel • Command failed: /usr/bin/git -c core.quotepath=false -c color.ui=false rev-parse --show-toplevel • not a git repository (or any parent up to mount point /) • Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set). [15ms]
+
+[2023-11-21 14:52:51.029] [GIT  ] [/home/bruno/.config/nvim/lua/Brunoaqu/ui] git rev-parse --show-toplevel • Command failed: /usr/bin/git -c core.quotepath=false -c color.ui=false rev-parse --show-toplevel • not a git repository (or any parent up to mount point /) • Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set). [16ms]
+
+[2023-11-21 14:54:39.801] [GIT  ] [/home/bruno/.config/nvim] git rev-parse --show-toplevel • Command failed: /usr/bin/git -c core.quotepath=false -c color.ui=false rev-parse --show-toplevel • not a git repository (or any parent up to mount point /) • Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set). [14ms]
+
+[2023-11-21 14:54:41.957] [GIT  ] [/home/bruno/.config/nvim] git rev-parse --show-toplevel • Command failed: /usr/bin/git -c core.quotepath=false -c color.ui=false rev-parse --show-toplevel • not a git repository (or any parent up to mount point /) • Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set). [17ms]
+
+[2023-11-21 14:55:59.919] [GIT  ] [/home/bruno/.config/nvim/lua/Brunoaqu] git rev-parse --show-toplevel • Command failed: /usr/bin/git -c core.quotepath=false -c color.ui=false rev-parse --show-toplevel • not a git repository (or any parent up to mount point /) • Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set). [17ms]
+
+[2023-11-21 14:56:02.959] [GIT  ] [/home/bruno/.config/nvim/lua/Brunoaqu/lazyload] git rev-parse --show-toplevel • Command failed: /usr/bin/git -c core.quotepath=false -c color.ui=false rev-parse --show-toplevel • not a git repository (or any parent up to mount point /) • Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set). [17ms]
+
+[2023-11-21 14:59:35.698] [GIT  ] [/home/bruno/.config/nvim/lua/Brunoaqu/themes] git rev-parse --show-toplevel • Command failed: /usr/bin/git -c core.quotepath=false -c color.ui=false rev-parse --show-toplevel • not a git repository (or any parent up to mount point /) • Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set). [19ms]
+
+[2023-11-21 14:59:49.981] [GIT  ] [/home/bruno/.config/nvim/lua/Brunoaqu/themes] git rev-parse --show-toplevel • Command failed: /usr/bin/git -c core.quotepath=false -c color.ui=false rev-parse --show-toplevel • not a git repository (or any parent up to mount point /) • Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set). [22ms]
+
+[2023-11-21 15:03:02.518] [GIT  ] [/home/bruno/.config/nvim/lua/Brunoaqu/ui] git rev-parse --show-toplevel • Command failed: /usr/bin/git -c core.quotepath=false -c color.ui=false rev-parse --show-toplevel • not a git repository (or any parent up to mount point /) • Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set). [89ms]
+
+[2023-11-21 15:03:02.608] [GIT  ] [/home/bruno/.config/nvim/lua/Brunoaqu/ui] git rev-parse --show-toplevel • Command failed: /usr/bin/git -c core.quotepath=false -c color.ui=false rev-parse --show-toplevel • not a git repository (or any parent up to mount point /) • Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set). [25ms]
+
+[2023-11-21 15:03:02.746] [GIT  ] [/home/bruno/.config/nvim/lua/Brunoaqu] git rev-parse --show-toplevel • Command failed: /usr/bin/git -c core.quotepath=false -c color.ui=false rev-parse --show-toplevel • not a git repository (or any parent up to mount point /) • Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set). [24ms]
+
+[2023-11-21 15:03:13.524] [GIT  ] [/home/bruno/.config/nvim/lua/Brunoaqu/ui] git rev-parse --show-toplevel • Command failed: /usr/bin/git -c core.quotepath=false -c color.ui=false rev-parse --show-toplevel • not a git repository (or any parent up to mount point /) • Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set). [44ms]
+
+[2023-11-21 15:03:31.933] [GIT  ] [/home/bruno/.config/nvim/lua/Brunoaqu/ui] git rev-parse --show-toplevel • Command failed: /usr/bin/git -c core.quotepath=false -c color.ui=false rev-parse --show-toplevel • not a git repository (or any parent up to mount point /) • Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set). [21ms]
+
+[2023-11-21 15:04:45.211] [GIT  ] [/home/bruno/.config/nvim/lua/Brunoaqu/ui] git rev-parse --show-toplevel • Command failed: /usr/bin/git -c core.quotepath=false -c color.ui=false rev-parse --show-toplevel • not a git repository (or any parent up to mount point /) • Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set). [17ms]
+
+[2023-11-21 15:05:53.493] [GIT  ] [/home/bruno/.config/nvim/lua/Brunoaqu/ui] git rev-parse --show-toplevel • Command failed: /usr/bin/git -c core.quotepath=false -c color.ui=false rev-parse --show-toplevel • not a git repository (or any parent up to mount point /) • Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set). [16ms]
+
+[2023-11-21 15:06:53.308] [GIT  ] [/home/bruno/.config/nvim/lua/Brunoaqu/ui] git rev-parse --show-toplevel • Command failed: /usr/bin/git -c core.quotepath=false -c color.ui=false rev-parse --show-toplevel • not a git repository (or any parent up to mount point /) • Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set). [16ms]
+
+[2023-11-21 15:12:45.111] [GIT  ] [/home/bruno/.config/nvim/lua/Brunoaqu/ui] git rev-parse --show-toplevel • Command failed: /usr/bin/git -c core.quotepath=false -c color.ui=false rev-parse --show-toplevel • not a git repository (or any parent up to mount point /) • Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set). [19ms]
+
+[2023-11-21 15:14:16.449] [GIT  ] [/home/bruno/.config/nvim/lua/Brunoaqu/ui] git rev-parse --show-toplevel • Command failed: /usr/bin/git -c core.quotepath=false -c color.ui=false rev-parse --show-toplevel • not a git repository (or any parent up to mount point /) • Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set). [22ms]
+
+[2023-11-21 15:15:13.458] [GIT  ] [/home/bruno/.config/nvim/lua/Brunoaqu/ui] git rev-parse --show-toplevel • Command failed: /usr/bin/git -c core.quotepath=false -c color.ui=false rev-parse --show-toplevel • not a git repository (or any parent up to mount point /) • Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set). [18ms]
+
+[2023-11-21 15:18:52.814] [GIT  ] [/home/bruno/.config/nvim/lua/Brunoaqu/ui] git rev-parse --show-toplevel • Command failed: /usr/bin/git -c core.quotepath=false -c color.ui=false rev-parse --show-toplevel • not a git repository (or any parent up to mount point /) • Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set). [15ms]
+
+[2023-11-21 15:20:28.858] [GIT  ] [/home/bruno/.config/nvim/after/ftplugin] git rev-parse --show-toplevel • Command failed: /usr/bin/git -c core.quotepath=false -c color.ui=false rev-parse --show-toplevel • not a git repository (or any parent up to mount point /) • Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set). [19ms]
+
+[2023-11-21 15:20:39.613] [GIT  ] [/home/bruno/.config/nvim/after/ftplugin] git rev-parse --show-toplevel • Command failed: /usr/bin/git -c core.quotepath=false -c color.ui=false rev-parse --show-toplevel • not a git repository (or any parent up to mount point /) • Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set). [16ms]
+
+[2023-11-21 15:21:07.176] [GIT  ] [/home/bruno/.config/nvim/after/ftplugin] git rev-parse --show-toplevel • Command failed: /usr/bin/git -c core.quotepath=false -c color.ui=false rev-parse --show-toplevel • not a git repository (or any parent up to mount point /) • Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set). [23ms]
+
+[2023-11-21 15:22:27.122] [GIT  ] [/home/bruno/.config/nvim/after/ftplugin] git rev-parse --show-toplevel • Command failed: /usr/bin/git -c core.quotepath=false -c color.ui=false rev-parse --show-toplevel • not a git repository (or any parent up to mount point /) • Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set). [14ms]
+
+[2023-11-21 15:23:30.676] [GIT  ] [/home/bruno/.config/nvim/lua/Brunoaqu/keymaps] git rev-parse --show-toplevel • Command failed: /usr/bin/git -c core.quotepath=false -c color.ui=false rev-parse --show-toplevel • not a git repository (or any parent up to mount point /) • Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set). [22ms]
+
+[2023-11-21 15:23:34.133] [GIT  ] [/home/bruno/.config/nvim/lua/Brunoaqu/keymaps] git rev-parse --show-toplevel • Command failed: /usr/bin/git -c core.quotepath=false -c color.ui=false rev-parse --show-toplevel • not a git repository (or any parent up to mount point /) • Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set). [16ms]
+
+[2023-11-21 15:23:42.415] [GIT  ] [/home/bruno/.config/nvim/lua/Brunoaqu/keymaps] git rev-parse --show-toplevel • Command failed: /usr/bin/git -c core.quotepath=false -c color.ui=false rev-parse --show-toplevel • not a git repository (or any parent up to mount point /) • Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set). [20ms]
+
+[2023-11-21 15:26:03.404] [GIT  ] [/home/bruno/.config/nvim/lua/Brunoaqu] git rev-parse --show-toplevel • Command failed: /usr/bin/git -c core.quotepath=false -c color.ui=false rev-parse --show-toplevel • not a git repository (or any parent up to mount point /) • Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set). [21ms]
+
+[2023-11-21 15:57:57.908] [GIT  ] [/home/bruno/.config/nvim/lua/Brunoaqu/ui] git rev-parse --show-toplevel • Command failed: /usr/bin/git -c core.quotepath=false -c color.ui=false rev-parse --show-toplevel • not a git repository (or any parent up to mount point /) • Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set). [15ms]
+
+[2023-11-21 16:00:49.974] [GIT  ] [/home/bruno/.config/nvim/after/ftplugin] git rev-parse --show-toplevel • Command failed: /usr/bin/git -c core.quotepath=false -c color.ui=false rev-parse --show-toplevel • not a git repository (or any parent up to mount point /) • Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set). [24ms]
+
+[2023-11-21 16:00:58.725] [GIT  ] [/home/bruno/.config/nvim/after/ftplugin] git rev-parse --show-toplevel • Command failed: /usr/bin/git -c core.quotepath=false -c color.ui=false rev-parse --show-toplevel • not a git repository (or any parent up to mount point /) • Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set). [24ms]
+
+[2023-11-21 16:01:11.475] [GIT  ] [/home/bruno/.config/nvim/after/ftplugin] git rev-parse --show-toplevel • Command failed: /usr/bin/git -c core.quotepath=false -c color.ui=false rev-parse --show-toplevel • not a git repository (or any parent up to mount point /) • Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set). [22ms]
+
+[2023-11-21 16:01:27.089] [GIT  ] [/home/bruno/.config/nvim/after/ftplugin] git rev-parse --show-toplevel • Command failed: /usr/bin/git -c core.quotepath=false -c color.ui=false rev-parse --show-toplevel • not a git repository (or any parent up to mount point /) • Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set). [21ms]
+
+[2023-11-21 16:01:45.412] [GIT  ] [/home/bruno/.config/nvim/after/ftplugin] git rev-parse --show-toplevel • Command failed: /usr/bin/git -c core.quotepath=false -c color.ui=false rev-parse --show-toplevel • not a git repository (or any parent up to mount point /) • Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set). [20ms]
+
+[2023-11-21 16:11:42.698] [GIT  ] [/home/bruno/.config/nvim/lua/Brunoaqu/lang] git rev-parse --show-toplevel • Command failed: /usr/bin/git -c core.quotepath=false -c color.ui=false rev-parse --show-toplevel • not a git repository (or any parent up to mount point /) • Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set). [17ms]
+
+[2023-11-21 16:12:05.442] [GIT  ] [/home/bruno/.config/nvim/lua/Brunoaqu/lang] git rev-parse --show-toplevel • Command failed: /usr/bin/git -c core.quotepath=false -c color.ui=false rev-parse --show-toplevel • not a git repository (or any parent up to mount point /) • Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set). [22ms]
+
+[2023-11-21 16:12:34.474] [GIT  ] [/home/bruno/.config/nvim/lua/Brunoaqu/lang] git rev-parse --show-toplevel • Command failed: /usr/bin/git -c core.quotepath=false -c color.ui=false rev-parse --show-toplevel • not a git repository (or any parent up to mount point /) • Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set). [23ms]
+
+[2023-11-21 16:13:05.897] [GIT  ] [/home/bruno/.config/nvim/lua/Brunoaqu/lang/tools] git rev-parse --show-toplevel • Command failed: /usr/bin/git -c core.quotepath=false -c color.ui=false rev-parse --show-toplevel • not a git repository (or any parent up to mount point /) • Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set). [14ms]
+
+[2023-11-21 16:13:25.564] [GIT  ] [/home/bruno/.config/nvim/lua/Brunoaqu/lang/tools] git rev-parse --show-toplevel • Command failed: /usr/bin/git -c core.quotepath=false -c color.ui=false rev-parse --show-toplevel • not a git repository (or any parent up to mount point /) • Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set). [15ms]
+
+[2023-11-21 16:14:23.945] [GIT  ] [/home/bruno/.config/nvim/lua/Brunoaqu/lang/lsp] git rev-parse --show-toplevel • Command failed: /usr/bin/git -c core.quotepath=false -c color.ui=false rev-parse --show-toplevel • not a git repository (or any parent up to mount point /) • Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set). [26ms]
+
+[2023-11-21 16:14:59.375] [GIT  ] [/home/bruno/.config/nvim/lua/Brunoaqu/lang/lsp] git rev-parse --show-toplevel • Command failed: /usr/bin/git -c core.quotepath=false -c color.ui=false rev-parse --show-toplevel • not a git repository (or any parent up to mount point /) • Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set). [17ms]
+
+[2023-11-21 16:15:42.252] [GIT  ] [/home/bruno/.config/nvim/lua/Brunoaqu/lang/lsp] git rev-parse --show-toplevel • Command failed: /usr/bin/git -c core.quotepath=false -c color.ui=false rev-parse --show-toplevel • not a git repository (or any parent up to mount point /) • Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set). [20ms]
+
+[2023-11-21 16:15:49.767] [GIT  ] [/home/bruno/.config/nvim/lua/Brunoaqu/lang/lsp] git rev-parse --show-toplevel • Command failed: /usr/bin/git -c core.quotepath=false -c color.ui=false rev-parse --show-toplevel • not a git repository (or any parent up to mount point /) • Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set). [26ms]
+
+[2023-11-21 16:16:30.646] [GIT  ] [/home/bruno/.config/nvim/lua/Brunoaqu/lang/lsp] git rev-parse --show-toplevel • Command failed: /usr/bin/git -c core.quotepath=false -c color.ui=false rev-parse --show-toplevel • not a git repository (or any parent up to mount point /) • Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set). [22ms]
+
+[2023-11-21 16:16:58.496] [GIT  ] [/home/bruno/.config/nvim/lua/Brunoaqu/lang/lsp] git rev-parse --show-toplevel • Command failed: /usr/bin/git -c core.quotepath=false -c color.ui=false rev-parse --show-toplevel • not a git repository (or any parent up to mount point /) • Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set). [16ms]
+
+[2023-11-21 16:17:47.606] [GIT  ] [/home/bruno/.config/nvim/lua/Brunoaqu/lang/debugger] git rev-parse --show-toplevel • Command failed: /usr/bin/git -c core.quotepath=false -c color.ui=false rev-parse --show-toplevel • not a git repository (or any parent up to mount point /) • Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set). [25ms]
+
+[2023-11-21 16:19:38.853] [GIT  ] [/home/bruno/.config/nvim/lua/Brunoaqu/lang/debugger] git rev-parse --show-toplevel • Command failed: /usr/bin/git -c core.quotepath=false -c color.ui=false rev-parse --show-toplevel • not a git repository (or any parent up to mount point /) • Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set). [25ms]
+
+[2023-11-21 16:20:07.509] [GIT  ] [/home/bruno/.config/nvim/lua/Brunoaqu/lang/debugger] git rev-parse --show-toplevel • Command failed: /usr/bin/git -c core.quotepath=false -c color.ui=false rev-parse --show-toplevel • not a git repository (or any parent up to mount point /) • Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set). [19ms]
+
+[2023-11-21 16:20:31.602] [GIT  ] [/home/bruno/.config/nvim/lua/Brunoaqu/lang/debugger] git rev-parse --show-toplevel • Command failed: /usr/bin/git -c core.quotepath=false -c color.ui=false rev-parse --show-toplevel • not a git repository (or any parent up to mount point /) • Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set). [17ms]
+
+[2023-11-21 16:20:58.182] [GIT  ] [/home/bruno/.config/nvim/lua/Brunoaqu/lang/completion] git rev-parse --show-toplevel • Command failed: /usr/bin/git -c core.quotepath=false -c color.ui=false rev-parse --show-toplevel • not a git repository (or any parent up to mount point /) • Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set). [23ms]
+
+[2023-11-21 16:21:17.770] [GIT  ] [/home/bruno/.config/nvim/lua/Brunoaqu/lang/completion] git rev-parse --show-toplevel • Command failed: /usr/bin/git -c core.quotepath=false -c color.ui=false rev-parse --show-toplevel • not a git repository (or any parent up to mount point /) • Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set). [28ms]
+
+[2023-11-21 16:21:21.397] [GIT  ] [/home/bruno/.config/nvim/lua/Brunoaqu/lang/completion] git rev-parse --show-toplevel • Command failed: /usr/bin/git -c core.quotepath=false -c color.ui=false rev-parse --show-toplevel • not a git repository (or any parent up to mount point /) • Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set). [31ms]
+
+[2023-11-21 16:21:51.315] [GIT  ] [/home/bruno/.config/nvim/lua/Brunoaqu/lang/completion] git rev-parse --show-toplevel • Command failed: /usr/bin/git -c core.quotepath=false -c color.ui=false rev-parse --show-toplevel • not a git repository (or any parent up to mount point /) • Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set). [28ms]
+
+[2023-11-21 16:22:09.424] [GIT  ] [/home/bruno/.config/nvim/lua/Brunoaqu/lang/completion] git rev-parse --show-toplevel • Command failed: /usr/bin/git -c core.quotepath=false -c color.ui=false rev-parse --show-toplevel • not a git repository (or any parent up to mount point /) • Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set). [21ms]
+
+[2023-11-21 16:22:26.990] [GIT  ] [/home/bruno/.config/nvim/lua/Brunoaqu/lang/completion] git rev-parse --show-toplevel • Command failed: /usr/bin/git -c core.quotepath=false -c color.ui=false rev-parse --show-toplevel • not a git repository (or any parent up to mount point /) • Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set). [24ms]
+
+[2023-11-21 16:22:30.716] [GIT  ] [/home/bruno/.config/nvim/lua/Brunoaqu/lang/completion] git rev-parse --show-toplevel • Command failed: /usr/bin/git -c core.quotepath=false -c color.ui=false rev-parse --show-toplevel • not a git repository (or any parent up to mount point /) • Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set). [20ms]
+
+[2023-11-21 16:24:17.252] [GIT  ] [/home/bruno/.config/nvim/lua/Brunoaqu/lang/lsp] git rev-parse --show-toplevel • Command failed: /usr/bin/git -c core.quotepath=false -c color.ui=false rev-parse --show-toplevel • not a git repository (or any parent up to mount point /) • Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set). [20ms]
+
+[2023-11-21 16:27:39.157] [GIT  ] [/home/bruno/.config/nvim] git rev-parse --show-toplevel • Command failed: /usr/bin/git -c core.quotepath=false -c color.ui=false rev-parse --show-toplevel • not a git repository (or any parent up to mount point /) • Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set). [28ms]
+
+[2023-11-21 16:31:27.020] [GIT  ] [/home/bruno/.config/nvim/spell] git rev-parse --show-toplevel • Command failed: /usr/bin/git -c core.quotepath=false -c color.ui=false rev-parse --show-toplevel • not a git repository (or any parent up to mount point /) • Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set). [27ms]
+
+[2023-11-21 16:31:42.482] [GIT  ] [/home/bruno/.config/nvim/spell] git rev-parse --show-toplevel • Command failed: /usr/bin/git -c core.quotepath=false -c color.ui=false rev-parse --show-toplevel • not a git repository (or any parent up to mount point /) • Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set). [27ms]
+

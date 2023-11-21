@@ -1,0 +1,10 @@
+2023-11-06 12:51:41,601 DEBUG    root            Loaded Command Group: ['gcloud', 'projects']
+2023-11-06 12:51:41,603 DEBUG    root            Loaded Command Group: ['gcloud', 'projects', 'describe']
+2023-11-06 12:51:41,604 DEBUG    root            Running [gcloud.projects.describe] with arguments: [--account: "bruno@pixlog.com.br", --configuration: "default", --format: "value(name)", PROJECT_ID_OR_NUMBER: "pixlog-backend-ml"]
+2023-11-06 12:51:41,616 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): cloudresourcemanager.googleapis.com:443
+2023-11-06 12:51:42,489 DEBUG    urllib3.connectionpool https://cloudresourcemanager.googleapis.com:443 "GET /v1/projects/pixlog-backend-ml?alt=json HTTP/1.1" 200 None
+2023-11-06 12:51:42,494 DEBUG    root            Chosen display Format:default value(name)
+2023-11-06 12:51:42,496 INFO     root            Display format: "default value(name)"
+2023-11-06 12:51:42,497 INFO     ___FILE_ONLY___ Pixlog
+
+2023-11-06 12:51:42,498 DEBUG    root            SDK update checks are disabled.

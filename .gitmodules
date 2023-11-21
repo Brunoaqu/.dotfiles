@@ -1,3 +1,6 @@
 [submodule "/home/bruno/.config/i3blocks/i3blocks-contrib"]
 	path = /home/bruno/.config/i3blocks/i3blocks-contrib
 	url = git@github.com:vivien/i3blocks-contrib.git
+[submodule "/home/bruno/.config/tmux/plugins/tpm"]
+	path = /home/bruno/.config/tmux/plugins/tpm
+	url = git@github.com:tmux-plugins/tpm.git

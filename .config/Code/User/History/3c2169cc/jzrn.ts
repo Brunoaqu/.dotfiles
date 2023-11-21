@@ -1,0 +1,21 @@
+/* eslint-disable vars-on-top */
+/* eslint-disable no-var */
+import 'dotenv/config';
+import 'reflect-metadata';
+import chaiHttp from 'chai-http';
+import chai from 'chai';
+import chaiResponseValidator from 'chai-openapi-response-validator';
+import path from 'path';
+
+chai.use(chaiHttp);
+chai.use(chaiResponseValidator(path.join(__dirname, '..', '..', '..', 'swagger.yaml')));
+
+declare global {
+  var expect: Chai.ExpectStatic;
+  var should: Chai.Should;
+  var request: Chai.ChaiHttpRequest;
+}
+
+global.expect = chai.expect;
+global.request = chai.request;
+global.should = chai.should();

@@ -1,0 +1,21 @@
+version: "3.8"
+
+networks:
+  default:
+    driver: "bridge"
+
+services:
+  mariadb:
+    image: "mariadb:latest"
+    env_file: "./.env"
+    restart: "always"
+    ports:
+      - "$DB_PORT:$DB_PORT"
+    environment:
+      MYSQL_DATABASE: "$DB_NAME"
+      MYSQL_ROOT_PASSWORD: "$DB_PASS"
+      MYSQL_PASSWORD: "$DB_PASS"
+      MYSQL_ROOT_HOST: "%"
+    networks:
+      - "default"
+

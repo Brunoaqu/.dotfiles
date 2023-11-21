@@ -1,0 +1,19 @@
+# Stage 1: Development Container
+FROM node:20-slim
+
+WORKDIR /usr/app
+
+ENV PNPM_HOME="/pnpm"
+ENV PATH="$PNPM_HOME:$PATH"
+
+RUN corepack enable
+
+RUN --mount=type=cache,id=pnpm,target=/pnpm/store
+
+COPY . /usr/app
+
+SHELL ["/bin/bash", "-o", "pipefail", "-c"]
+
+# RUN curl -f https://get.pnpm.io/v6.16.js | node - add --global pnpm
+
+ENTRYPOINT ["tail", "-f", "/dev/null"]

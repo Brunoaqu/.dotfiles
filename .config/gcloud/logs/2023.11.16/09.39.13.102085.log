@@ -1,0 +1,9 @@
+2023-11-16 09:39:13,104 DEBUG    root            Loaded Command Group: ['gcloud', 'config']
+2023-11-16 09:39:13,106 DEBUG    root            Loaded Command Group: ['gcloud', 'config', 'configurations']
+2023-11-16 09:39:13,109 DEBUG    root            Loaded Command Group: ['gcloud', 'config', 'configurations', 'describe']
+2023-11-16 09:39:13,111 DEBUG    root            Running [gcloud.config.configurations.describe] with arguments: [--format: "value[separator=""](properties.core.account,properties.core.project)", CONFIGURATION_NAME: "default"]
+2023-11-16 09:39:13,113 DEBUG    root            Chosen display Format:default value[separator=""](properties.core.account,properties.core.project)
+2023-11-16 09:39:13,113 INFO     root            Display format: "default value[separator=""](properties.core.account,properties.core.project)"
+2023-11-16 09:39:13,114 INFO     ___FILE_ONLY___ bruno@pixlog.com.brpixlog-backend-ml
+
+2023-11-16 09:39:13,114 DEBUG    root            SDK update checks are disabled.

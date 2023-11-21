@@ -1,0 +1,9 @@
+2023-11-21 11:24:30,985 DEBUG    root            Loaded Command Group: ['gcloud', 'compute']
+2023-11-21 11:24:31,099 DEBUG    root            Loaded Command Group: ['gcloud', 'compute', 'ssh']
+2023-11-21 11:24:31,102 DEBUG    root            Running [gcloud.compute.ssh] with arguments: [[USER@]INSTANCE: "bruno@swarm-manager-p002"]
+2023-11-21 11:24:31,222 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): compute.googleapis.com:443
+2023-11-21 11:24:31,534 INFO     ___FILE_ONLY___ 
+
+Command killed by keyboard interrupt
+
+

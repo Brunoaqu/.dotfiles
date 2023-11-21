@@ -1,0 +1,13 @@
+2023-11-16 16:39:52,796 DEBUG    root            Loaded Command Group: ['gcloud', 'compute']
+2023-11-16 16:39:52,810 DEBUG    root            Loaded Command Group: ['gcloud', 'compute', 'start_iap_tunnel']
+2023-11-16 16:39:52,813 DEBUG    root            Running [gcloud.compute.start-iap-tunnel] with arguments: [--listen-on-stdin: "True", --project: "pixlog-backend-ml", --verbosity: "warning", --zone: "us-central1-a", INSTANCE_NAME: "swarm-manager-p001", INSTANCE_PORT: "22"]
+2023-11-16 16:39:52,944 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): compute.googleapis.com:443
+2023-11-16 16:39:53,952 DEBUG    urllib3.connectionpool https://compute.googleapis.com:443 "GET /compute/v1/projects/pixlog-backend-ml/zones/us-central1-a/instances/swarm-manager-p001?alt=json HTTP/1.1" 200 None
+2023-11-16 16:39:53,968 WARNING  root            
+
+To increase the performance of the tunnel, consider installing NumPy. For instructions,
+please see https://cloud.google.com/iap/docs/using-tcp-forwarding#increasing_the_tcp_upload_bandwidth
+
+2023-11-16 16:39:53,983 DEBUG    root            credentials type for _GetAccessTokenCallback is [<googlecloudsdk.core.credentials.google_auth_credentials.Credentials object at 0x7f0b855db610>].
+2023-11-16 16:39:53,983 DEBUG    root            Using new websocket library
+2023-11-16 16:39:53,984 INFO     root            Connecting with URL ['wss://tunnel.cloudproxy.app/v4/connect?project=pixlog-backend-ml&port=22&newWebsocket=True&zone=us-central1-a&instance=swarm-manager-p001&interface=nic0']

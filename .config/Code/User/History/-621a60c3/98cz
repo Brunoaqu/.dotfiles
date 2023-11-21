@@ -1,0 +1,10 @@
+logs
+node_modules
+mock
+.env
+.nyc_output
+~
+dist
+.pnpm-store
+```
+2

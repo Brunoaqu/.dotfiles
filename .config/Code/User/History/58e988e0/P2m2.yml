@@ -1,0 +1,34 @@
+version: "3.8"
+
+volumes:
+  sql_conf:
+    driver: "local"
+  sql_data:
+    driver: "local"
+  redis_data:
+    driver: "local"
+
+networks:
+  default:
+    driver: "bridge"
+
+services:
+  api:
+    image: "pxlg/api:dev"
+    env_file: "./.env"
+    build:
+      context: "./"
+      dockerfile: "Dockerfile"
+      target: "build"
+    command: "npm run dev"
+    restart: "always"
+    ports:
+      - "${API_PORT}:${API_PORT}"
+    depends_on:
+      - "mariadb"
+      - "redis"
+    volumes:
+      - "$PWD/src:/usr/app/src"
+      - "$PWD/node_modules:/usr/app/node_modules"
+    networks:
+      - "default"

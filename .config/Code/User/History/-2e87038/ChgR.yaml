@@ -1,0 +1,19 @@
+version: "3.8"
+
+networks:
+  default:
+    driver: "bridge"
+
+services:
+  app:
+    image: "pxlg/api:dev"
+    build:
+      context: "./"
+      dockerfile: "Dockerfile"
+      target: "build"
+    command: "/bin/bash"
+    restart: "always"
+    volumes:
+      - "$PWD:/usr/app"
+    networks:
+      - "default"

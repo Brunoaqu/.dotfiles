@@ -1,0 +1,18 @@
+[INFO] [ghostText] [2023-11-20T19:13:26.457Z] Cancelled after extractPrompt
+[INFO] [default] [2023-11-20T19:14:55.135Z] [fetchCompletions] engine https://copilot-proxy.githubusercontent.com/v1/engines/copilot-codex
+[INFO] [ghostText] [2023-11-20T19:14:55.705Z] Cancelled by contextual filter
+[INFO] [default] [2023-11-20T19:14:56.386Z] [fetchCompletions] engine https://copilot-proxy.githubusercontent.com/v1/engines/copilot-codex
+[INFO] [default] [2023-11-20T19:14:56.598Z] [fetchCompletions] engine https://copilot-proxy.githubusercontent.com/v1/engines/copilot-codex
+[INFO] [ghostText] [2023-11-20T19:14:57.000Z] Cancelled during debounce
+[INFO] [ghostText] [2023-11-20T19:14:57.142Z] Cancelled during debounce
+[INFO] [default] [2023-11-20T19:14:57.237Z] [fetchCompletions] engine https://copilot-proxy.githubusercontent.com/v1/engines/copilot-codex
+[INFO] [default] [2023-11-20T19:14:57.506Z] [fetchCompletions] engine https://copilot-proxy.githubusercontent.com/v1/engines/copilot-codex
+[INFO] [default] [2023-11-20T19:14:57.950Z] [fetchCompletions] engine https://copilot-proxy.githubusercontent.com/v1/engines/copilot-codex
+[INFO] [default] [2023-11-20T19:14:58.156Z] [fetchCompletions] engine https://copilot-proxy.githubusercontent.com/v1/engines/copilot-codex
+[INFO] [ghostText] [2023-11-20T19:14:58.666Z] Cancelled during debounce
+[INFO] [default] [2023-11-20T19:14:58.745Z] [fetchCompletions] engine https://copilot-proxy.githubusercontent.com/v1/engines/copilot-codex
+[INFO] [default] [2023-11-20T19:14:59.697Z] request.response: [https://copilot-proxy.githubusercontent.com/v1/engines/copilot-codex/completions] took 951 ms
+[INFO] [streamChoices] [2023-11-20T19:14:59.700Z] solution 0 returned. finish reason: [stop]
+[INFO] [streamChoices] [2023-11-20T19:14:59.705Z] request done: headerRequestId: [6b2955f0-179d-4e7d-83e4-a7e6fe23184d] model deployment ID: [w43c9b5e45a36]
+[INFO] [ghostText] [2023-11-20T19:15:00.775Z] Found inline suggestions locally
+[INFO] [default] [2023-11-20T19:29:12.663Z] [fetchCompletions] engine https://copilot-proxy.githubusercontent.com/v1/engines/copilot-codex
