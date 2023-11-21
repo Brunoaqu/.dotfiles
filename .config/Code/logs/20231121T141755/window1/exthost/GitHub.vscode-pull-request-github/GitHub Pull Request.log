@@ -21,3 +21,9 @@
 2023-11-21 14:46:31.381 [info] Review> No matching pull request metadata found locally for current branch master
 2023-11-21 14:46:31.418 [info] Review> Failed to get upstream for branch master from git config.
 2023-11-21 14:46:31.418 [info] Review> No matching pull request metadata found on GitHub for current branch master
+2023-11-21 14:47:13.096 [info] Review> Validate state in progress
+2023-11-21 14:47:13.096 [info] Review> Validating state...
+2023-11-21 14:47:13.117 [info] Found GitHub remote for folder /home/bruno/.config/tmux/plugins/tpm
+2023-11-21 14:47:13.118 [info] Using in-memory cached assignable users.
+2023-11-21 14:47:13.166 [info] Review> No matching pull request metadata found locally for current branch master
+2023-11-21 14:47:13.166 [info] Review> No matching pull request metadata found on GitHub for current branch master

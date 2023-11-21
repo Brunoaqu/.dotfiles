@@ -18,8 +18,8 @@
             "file:///home/bruno/Desktop/tampermonkey-scripts": "__default__profile__",
             "file:///home/bruno/.config/polybar": "__default__profile__",
             "file:///home/bruno/.config/rofi": "__default__profile__",
-            "file:///home/bruno/Desktop/api": "__default__profile__",
             "file:///home/bruno/.config/nvim": "__default__profile__",
+            "file:///home/bruno/Desktop/api": "__default__profile__",
             "file:///home/bruno/.config": "__default__profile__"
         },
         "emptyWindows": {}
@@ -93,23 +93,23 @@
                                     "id": "openRecentFolder",
                                     "uri": {
                                         "$mid": 1,
-                                        "external": "file:///home/bruno/.config/nvim",
-                                        "path": "/home/bruno/.config/nvim",
-                                        "scheme": "file"
-                                    },
-                                    "enabled": true,
-                                    "label": "~/.config/nvim"
-                                },
-                                {
-                                    "id": "openRecentFolder",
-                                    "uri": {
-                                        "$mid": 1,
                                         "external": "file:///home/bruno/Desktop/api",
                                         "path": "/home/bruno/Desktop/api",
                                         "scheme": "file"
                                     },
                                     "enabled": true,
                                     "label": "~/Desktop/api"
+                                },
+                                {
+                                    "id": "openRecentFolder",
+                                    "uri": {
+                                        "$mid": 1,
+                                        "external": "file:///home/bruno/.config/nvim",
+                                        "path": "/home/bruno/.config/nvim",
+                                        "scheme": "file"
+                                    },
+                                    "enabled": true,
+                                    "label": "~/.config/nvim"
                                 },
                                 {
                                     "id": "openRecentFolder",
@@ -305,11 +305,13 @@
                     },
                     {
                         "id": "workbench.action.files.save",
-                        "label": "&&Save"
+                        "label": "&&Save",
+                        "enabled": false
                     },
                     {
                         "id": "workbench.action.files.saveAs",
-                        "label": "Save &&As..."
+                        "label": "Save &&As...",
+                        "enabled": false
                     },
                     {
                         "id": "saveAll",
@@ -457,11 +459,13 @@
                     },
                     {
                         "id": "workbench.action.files.revert",
-                        "label": "Re&&vert File"
+                        "label": "Re&&vert File",
+                        "enabled": false
                     },
                     {
                         "id": "workbench.action.closeActiveEditor",
-                        "label": "&&Close Editor"
+                        "label": "&&Close Editor",
+                        "enabled": false
                     },
                     {
                         "id": "workbench.action.closeFolder",

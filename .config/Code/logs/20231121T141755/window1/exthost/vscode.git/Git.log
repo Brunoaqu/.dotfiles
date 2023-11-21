@@ -156,3 +156,27 @@ Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
 2023-11-21 14:46:31.405 [info] > git config --get commit.template [11ms]
 2023-11-21 14:46:31.405 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/master refs/remotes/master [0ms]
 2023-11-21 14:46:31.417 [info] > git status -z -uall [1ms]
+2023-11-21 14:47:13.080 [info] > git config --get commit.template [12ms]
+2023-11-21 14:47:13.081 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/master refs/remotes/master [2ms]
+2023-11-21 14:47:13.093 [info] > git status -z -uall [2ms]
+2023-11-21 14:47:13.130 [info] > git config --local branch.master.github-pr-owner-number [1ms]
+2023-11-21 14:47:13.152 [info] > git config --get commit.template [11ms]
+2023-11-21 14:47:13.153 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/master refs/remotes/master [2ms]
+2023-11-21 14:47:13.165 [info] > git status -z -uall [2ms]
+2023-11-21 14:47:13.695 [info] > git rev-parse --show-toplevel [1ms]
+2023-11-21 14:47:14.402 [info] > git fetch [1346ms]
+2023-11-21 14:47:14.402 [info] Missing or invalid credentials.
+Skip silent fetch commands
+git@github.com: Permission denied (publickey).
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+2023-11-21 14:47:14.425 [info] > git config --get commit.template [11ms]
+2023-11-21 14:47:14.425 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/master refs/remotes/master [1ms]
+2023-11-21 14:47:14.437 [info] > git status -z -uall [2ms]
+2023-11-21 14:47:14.952 [info] > git rev-parse --show-toplevel [1ms]
+2023-11-21 14:48:18.132 [info] > git config --get commit.template [1ms]
+2023-11-21 14:48:18.145 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/master refs/remotes/master [2ms]
+2023-11-21 14:48:18.157 [info] > git status -z -uall [1ms]
+2023-11-21 14:48:18.672 [info] > git rev-parse --show-toplevel [1ms]

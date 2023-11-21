@@ -1,0 +1,11 @@
+2023-11-21 15:21:50,476 DEBUG    root            Loaded Command Group: ['gcloud', 'compute']
+2023-11-21 15:21:50,591 DEBUG    root            Loaded Command Group: ['gcloud', 'compute', 'ssh']
+2023-11-21 15:21:50,593 DEBUG    root            Running [gcloud.compute.ssh] with arguments: [[USER@]INSTANCE: "bruno@swarm-manager-p001"]
+2023-11-21 15:21:50,715 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): compute.googleapis.com:443
+2023-11-21 15:21:51,942 DEBUG    urllib3.connectionpool https://compute.googleapis.com:443 "GET /compute/v1/projects/pixlog-backend-ml/zones/us-central1-a/instances/swarm-manager-p001?alt=json HTTP/1.1" 200 None
+2023-11-21 15:21:51,946 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): compute.googleapis.com:443
+2023-11-21 15:21:52,158 INFO     ___FILE_ONLY___ 
+
+Command killed by keyboard interrupt
+
+

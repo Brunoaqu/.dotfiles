@@ -1,0 +1,15 @@
+2023-11-21 15:14:19.285 [warning] /home/bruno/.ssh/config: ENOENT: no such file or directory, open '/home/bruno/.ssh/config'
+2023-11-21 15:14:19.285 [info] Activation> Extension version: 0.76.1
+2023-11-21 15:14:19.986 [info] Looking for git repository
+2023-11-21 15:14:19.986 [info] Found 0 repositories during activation
+2023-11-21 15:14:19.986 [info] Git repository found, initializing review manager and pr tree view.
+2023-11-21 15:14:19.987 [info] Registering git provider
+2023-11-21 15:14:19.987 [info] Review> Validate state in progress
+2023-11-21 15:14:19.987 [info] Review> Validating state...
+2023-11-21 15:14:20.007 [info] Found GitHub remote for folder /home/bruno/Desktop/api
+2023-11-21 15:14:20.007 [info] Trying to use globalState for assignableUsers.
+2023-11-21 15:14:20.027 [info] GlobalState does not exist for assignableUsers.
+2023-11-21 15:14:20.097 [info] Repo state for file:///home/bruno/Desktop/api changed.
+2023-11-21 15:14:20.097 [info] Repo file:///home/bruno/Desktop/api has already been setup.
+2023-11-21 15:14:20.097 [info] Review> No matching pull request metadata found locally for current branch master
+2023-11-21 15:14:20.098 [info] Review> No matching pull request metadata found on GitHub for current branch master

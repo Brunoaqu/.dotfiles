@@ -1,0 +1,101 @@
+2023-11-21 15:14:17.377 [info] Log level: Info
+2023-11-21 15:14:17.377 [info] Validating found git in: "git"
+2023-11-21 15:14:17.377 [info] Using git "2.42.0" from "git"
+2023-11-21 15:14:17.377 [info] > git rev-parse --show-toplevel [7ms]
+2023-11-21 15:14:17.377 [info] > git rev-parse --git-dir --git-common-dir [3ms]
+2023-11-21 15:14:17.377 [info] Open repository: /home/bruno/Desktop/api
+2023-11-21 15:14:17.383 [info] > git rev-parse --show-toplevel [164ms]
+2023-11-21 15:14:17.383 [info] fatal: not a git repository (or any parent up to mount point /)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+2023-11-21 15:14:17.384 [info] > git config --get commit.template [176ms]
+2023-11-21 15:14:17.503 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/master refs/remotes/master [8ms]
+2023-11-21 15:14:17.514 [info] > git rev-parse --show-toplevel [69ms]
+2023-11-21 15:14:17.551 [info] > git status -z -uall [37ms]
+2023-11-21 15:14:17.576 [info] > git rev-parse --show-toplevel [26ms]
+2023-11-21 15:14:17.598 [info] > git config --get commit.template [29ms]
+2023-11-21 15:14:17.616 [info] > git rev-parse --show-toplevel [18ms]
+2023-11-21 15:14:17.642 [info] > git rev-parse --show-toplevel [3ms]
+2023-11-21 15:14:17.642 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/master refs/remotes/master [14ms]
+2023-11-21 15:14:18.025 [info] > git status -z -uall [374ms]
+2023-11-21 15:14:18.025 [info] > git check-ignore -v -z --stdin [13ms]
+2023-11-21 15:14:18.850 [info] > git rev-parse --show-toplevel [826ms]
+2023-11-21 15:14:18.851 [info] > git fetch [1656ms]
+2023-11-21 15:14:18.851 [info] Missing or invalid credentials.
+Skip silent fetch commands
+git@github.com: Permission denied (publickey).
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+2023-11-21 15:14:19.007 [info] > git config --get commit.template [78ms]
+2023-11-21 15:14:19.007 [info] > git rev-parse --show-toplevel [99ms]
+2023-11-21 15:14:19.176 [info] > git rev-parse --show-toplevel [39ms]
+2023-11-21 15:14:19.211 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/master refs/remotes/master [39ms]
+2023-11-21 15:14:19.240 [info] > git status -z -uall [17ms]
+2023-11-21 15:14:19.251 [info] > git rev-parse --show-toplevel [40ms]
+2023-11-21 15:14:20.024 [info] > git config --local branch.master.github-pr-owner-number [4ms]
+2023-11-21 15:14:20.049 [info] > git config --get commit.template [3ms]
+2023-11-21 15:14:20.071 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/master refs/remotes/master [7ms]
+2023-11-21 15:14:20.096 [info] > git status -z -uall [9ms]
+2023-11-21 15:14:21.798 [info] > git check-ignore -v -z --stdin [50ms]
+2023-11-21 15:14:22.804 [info] > git check-ignore -v -z --stdin [12ms]
+2023-11-21 15:14:23.447 [info] > git check-ignore -v -z --stdin [1ms]
+2023-11-21 15:14:24.404 [info] > git check-ignore -v -z --stdin [10ms]
+2023-11-21 15:14:46.640 [info] > git show --textconv :src/shared/infra/http/utils/Middleware.ts [17ms]
+2023-11-21 15:14:46.643 [info] > git ls-files --stage -- /home/bruno/Desktop/api/src/shared/infra/http/utils/Middleware.ts [5ms]
+2023-11-21 15:14:46.685 [info] > git cat-file -s ce0e07836f4386062f8fb70ec03a3dcbc0cc11d1 [24ms]
+2023-11-21 15:14:50.480 [info] > git show --textconv :src/shared/infra/http/app.ts [43ms]
+2023-11-21 15:14:50.481 [info] > git ls-files --stage -- /home/bruno/Desktop/api/src/shared/infra/http/app.ts [26ms]
+2023-11-21 15:14:50.660 [info] > git cat-file -s c66b2c8c15bdc33c912365ba8f8c7d4048f6ebf0 [158ms]
+2023-11-21 15:15:01.757 [info] > git config --get commit.template [2ms]
+2023-11-21 15:15:01.778 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/master refs/remotes/master [2ms]
+2023-11-21 15:15:01.804 [info] > git status -z -uall [7ms]
+2023-11-21 15:15:07.219 [info] > git config --get commit.template [3ms]
+2023-11-21 15:15:07.244 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/master refs/remotes/master [3ms]
+2023-11-21 15:15:07.274 [info] > git status -z -uall [7ms]
+2023-11-21 15:15:12.300 [info] > git config --get commit.template [1ms]
+2023-11-21 15:15:12.326 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/master refs/remotes/master [1ms]
+2023-11-21 15:15:12.351 [info] > git status -z -uall [4ms]
+2023-11-21 15:15:20.882 [info] > git config --get commit.template [18ms]
+2023-11-21 15:15:20.883 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/master refs/remotes/master [2ms]
+2023-11-21 15:15:20.904 [info] > git status -z -uall [4ms]
+2023-11-21 15:15:32.148 [info] > git config --get commit.template [18ms]
+2023-11-21 15:15:32.148 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/master refs/remotes/master [1ms]
+2023-11-21 15:15:32.169 [info] > git status -z -uall [4ms]
+2023-11-21 15:15:37.217 [info] > git config --get commit.template [25ms]
+2023-11-21 15:15:37.218 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/master refs/remotes/master [2ms]
+2023-11-21 15:15:37.241 [info] > git status -z -uall [4ms]
+2023-11-21 15:15:43.490 [info] > git config --get commit.template [1ms]
+2023-11-21 15:15:43.512 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/master refs/remotes/master [1ms]
+2023-11-21 15:15:43.539 [info] > git status -z -uall [4ms]
+2023-11-21 15:15:48.578 [info] > git config --get commit.template [1ms]
+2023-11-21 15:15:48.599 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/master refs/remotes/master [2ms]
+2023-11-21 15:15:48.622 [info] > git status -z -uall [5ms]
+2023-11-21 15:15:53.718 [info] > git config --get commit.template [34ms]
+2023-11-21 15:15:53.719 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/master refs/remotes/master [1ms]
+2023-11-21 15:15:53.744 [info] > git status -z -uall [4ms]
+2023-11-21 15:19:20.014 [info] > git config --local branch.master.github-pr-owner-number [1ms]
+2023-11-21 15:19:20.044 [info] > git config --get commit.template [14ms]
+2023-11-21 15:19:20.044 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/master refs/remotes/master [1ms]
+2023-11-21 15:19:20.064 [info] > git status -z -uall [5ms]
+2023-11-21 15:24:20.082 [info] > git config --local branch.master.github-pr-owner-number [1ms]
+2023-11-21 15:24:20.112 [info] > git config --get commit.template [15ms]
+2023-11-21 15:24:20.113 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/master refs/remotes/master [2ms]
+2023-11-21 15:24:20.133 [info] > git status -z -uall [5ms]
+2023-11-21 15:25:46.331 [info] > git config --get commit.template [17ms]
+2023-11-21 15:25:46.332 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/master refs/remotes/master [1ms]
+2023-11-21 15:25:46.353 [info] > git status -z -uall [5ms]
+2023-11-21 15:25:47.221 [info] > git fetch [923ms]
+2023-11-21 15:25:47.221 [info] Missing or invalid credentials.
+Skip silent fetch commands
+git@github.com: Permission denied (publickey).
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+2023-11-21 15:25:47.252 [info] > git config --get commit.template [15ms]
+2023-11-21 15:25:47.252 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/master refs/remotes/master [1ms]
+2023-11-21 15:25:47.272 [info] > git status -z -uall [5ms]
+2023-11-21 15:25:53.911 [info] > git ls-files --stage -- /home/bruno/Desktop/api/src/shared/infra/http/app.ts [3ms]
+2023-11-21 15:25:53.931 [info] > git cat-file -s c66b2c8c15bdc33c912365ba8f8c7d4048f6ebf0 [2ms]
+2023-11-21 15:25:53.950 [info] > git show --textconv :src/shared/infra/http/app.ts [2ms]

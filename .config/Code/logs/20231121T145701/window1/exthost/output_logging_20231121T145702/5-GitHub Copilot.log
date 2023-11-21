@@ -1,0 +1,33 @@
+[INFO] [default] [2023-11-21T17:57:27.020Z] [fetchCompletions] engine https://copilot-proxy.githubusercontent.com/v1/engines/copilot-codex
+[INFO] [default] [2023-11-21T17:57:27.919Z] request.response: [https://copilot-proxy.githubusercontent.com/v1/engines/copilot-codex/completions] took 898 ms
+[INFO] [streamChoices] [2023-11-21T17:57:27.929Z] solution 0 returned. finish reason: [stop]
+[INFO] [streamChoices] [2023-11-21T17:57:27.933Z] request done: headerRequestId: [36eb24a1-ebb7-4f85-b283-e374180f3182] model deployment ID: [wf1c940e73ac]
+[INFO] [ghostText] [2023-11-21T17:58:31.727Z] Cancelled during debounce
+[INFO] [default] [2023-11-21T17:58:31.885Z] [fetchCompletions] engine https://copilot-proxy.githubusercontent.com/v1/engines/copilot-codex
+[INFO] [default] [2023-11-21T17:58:32.335Z] [fetchCompletions] engine https://copilot-proxy.githubusercontent.com/v1/engines/copilot-codex
+[INFO] [ghostText] [2023-11-21T17:58:32.758Z] Cancelled during debounce
+[INFO] [default] [2023-11-21T17:58:32.853Z] [fetchCompletions] engine https://copilot-proxy.githubusercontent.com/v1/engines/copilot-codex
+[INFO] [default] [2023-11-21T17:58:33.230Z] request.response: [https://copilot-proxy.githubusercontent.com/v1/engines/copilot-codex/completions] took 377 ms
+[INFO] [streamChoices] [2023-11-21T17:58:33.232Z] solution 0 returned. finish reason: [stop]
+[INFO] [streamChoices] [2023-11-21T17:58:33.233Z] request done: headerRequestId: [ba763db1-b752-4960-a45d-a761215bf813] model deployment ID: [wf1c940e73ac]
+[INFO] [default] [2023-11-21T18:01:32.781Z] [fetchCompletions] engine https://copilot-proxy.githubusercontent.com/v1/engines/copilot-codex
+[INFO] [default] [2023-11-21T18:01:33.025Z] [fetchCompletions] engine https://copilot-proxy.githubusercontent.com/v1/engines/copilot-codex
+[INFO] [default] [2023-11-21T18:01:33.281Z] request.response: [https://copilot-proxy.githubusercontent.com/v1/engines/copilot-codex/completions] took 256 ms
+[INFO] [streamChoices] [2023-11-21T18:01:33.287Z] solution 0 returned. finish reason: [stop]
+[INFO] [streamChoices] [2023-11-21T18:01:33.290Z] request done: headerRequestId: [607e6188-0ead-42a9-aa11-81c082079a59] model deployment ID: [wf1c940e73ac]
+[INFO] [default] [2023-11-21T18:05:54.947Z] [fetchCompletions] engine https://copilot-proxy.githubusercontent.com/v1/engines/copilot-codex
+[INFO] [default] [2023-11-21T18:05:55.281Z] [fetchCompletions] engine https://copilot-proxy.githubusercontent.com/v1/engines/copilot-codex
+[INFO] [default] [2023-11-21T18:05:55.640Z] request.response: [https://copilot-proxy.githubusercontent.com/v1/engines/copilot-codex/completions] took 358 ms
+[INFO] [streamChoices] [2023-11-21T18:05:55.643Z] solution 0 returned. finish reason: [stop]
+[INFO] [streamChoices] [2023-11-21T18:05:55.645Z] request done: headerRequestId: [d599f045-6673-4a6d-870b-3ff9db59968e] model deployment ID: [wf1c940e73ac]
+[INFO] [ghostText] [2023-11-21T18:05:59.096Z] Cancelled during debounce
+[INFO] [default] [2023-11-21T18:05:59.211Z] [fetchCompletions] engine https://copilot-proxy.githubusercontent.com/v1/engines/copilot-codex
+[INFO] [default] [2023-11-21T18:05:59.701Z] [fetchCompletions] engine https://copilot-proxy.githubusercontent.com/v1/engines/copilot-codex
+[INFO] [default] [2023-11-21T18:05:59.950Z] [fetchCompletions] engine https://copilot-proxy.githubusercontent.com/v1/engines/copilot-codex
+[INFO] [default] [2023-11-21T18:06:00.147Z] [fetchCompletions] engine https://copilot-proxy.githubusercontent.com/v1/engines/copilot-codex
+[INFO] [ghostText] [2023-11-21T18:06:00.480Z] Cancelled during debounce
+[INFO] [ghostText] [2023-11-21T18:06:00.512Z] Cancelled after extractPrompt
+[INFO] [default] [2023-11-21T18:06:00.671Z] [fetchCompletions] engine https://copilot-proxy.githubusercontent.com/v1/engines/copilot-codex
+[INFO] [default] [2023-11-21T18:06:00.925Z] request.response: [https://copilot-proxy.githubusercontent.com/v1/engines/copilot-codex/completions] took 253 ms
+[INFO] [streamChoices] [2023-11-21T18:06:00.929Z] solution 0 returned. finish reason: [stop]
+[INFO] [streamChoices] [2023-11-21T18:06:00.930Z] request done: headerRequestId: [0934ff4a-26c0-477c-adcb-aeee16914ae1] model deployment ID: [wf1c940e73ac]
