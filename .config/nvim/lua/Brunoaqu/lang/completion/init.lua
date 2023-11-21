@@ -1,0 +1,5 @@
+require('Brunoaqu.lang.completion.sources')
+require('Brunoaqu.lang.completion.ui')
+require('Brunoaqu.lang.completion.cmdline')
+require('Brunoaqu.lang.completion.search')
+require('Brunoaqu.keymaps').completion()
