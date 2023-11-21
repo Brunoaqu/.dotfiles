@@ -3,3 +3,8 @@
 2023-11-21 15:25:59.142 [info] Searching for existing authentication session with ID 1e45a356817a7c4b
 2023-11-21 15:26:00.164 [info] Found existing authentication session with ID 1e45a356817a7c4b
 2023-11-21 15:26:00.945 [info] Aborting resuming edit session as no edit session content is available to be applied
+2023-11-21 15:49:40.498 [info] Resuming cloud changes, reason: cloud changes enabled...
+2023-11-21 15:49:40.498 [info] Checking for pending cloud changes...
+2023-11-21 15:49:40.498 [info] Searching for existing authentication session with ID 1e45a356817a7c4b
+2023-11-21 15:49:41.147 [info] Found existing authentication session with ID 1e45a356817a7c4b
+2023-11-21 15:49:41.946 [info] Aborting resuming edit session as no edit session content is available to be applied

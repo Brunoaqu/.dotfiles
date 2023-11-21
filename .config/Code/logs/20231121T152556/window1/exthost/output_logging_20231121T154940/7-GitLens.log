@@ -1,0 +1,22 @@
+GitLens v14.5.1 activating in Visual Studio Code (1.84.2) on the desktop; language='en', logLevel='warn', defaultDateLocale='null' (b5c7e76f73cc3a6be9cc6b54a327480a720992d7bc2f3f2eee37662f422a45ea|c49c9c8f-24f3-4cf5-aa7e-043fdccba2781700592579496)
+To enable debug logging, set `"gitlens.outputLevel: "debug"` or run "GitLens: Enable Debug Logging" from the Command Palette
+[2023-11-21 18:49:41.859] [GIT  ] [/home/bruno/.config] git rev-parse --show-toplevel • Command failed: /usr/bin/git -c core.quotepath=false -c color.ui=false rev-parse --show-toplevel • not a git repository (or any parent up to mount point /) • Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set). [95ms]
+
+[2023-11-21 18:51:31.896] [GIT  ] [/home/bruno/.config/i3] git rev-parse --show-toplevel • Command failed: /usr/bin/git -c core.quotepath=false -c color.ui=false rev-parse --show-toplevel • not a git repository (or any parent up to mount point /) • Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set). [10ms]
+
+[2023-11-21 18:59:33.883] [GIT  ] [/home/bruno/.config] git rev-parse --show-toplevel • Command failed: /usr/bin/git -c core.quotepath=false -c color.ui=false rev-parse --show-toplevel • not a git repository (or any parent up to mount point /) • Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set). [15ms]
+
+[2023-11-21 18:59:46.924] [GIT  ] [/home/bruno/.config/kitty] git rev-parse --show-toplevel • Command failed: /usr/bin/git -c core.quotepath=false -c color.ui=false rev-parse --show-toplevel • not a git repository (or any parent up to mount point /) • Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set). [12ms]
+
+[2023-11-21 19:00:27.626] [GIT  ] [/home/bruno/.config/kitty] git rev-parse --show-toplevel • Command failed: /usr/bin/git -c core.quotepath=false -c color.ui=false rev-parse --show-toplevel • not a git repository (or any parent up to mount point /) • Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set). [17ms]
+
+[2023-11-21 19:00:43.498] [GIT  ] [/home/bruno/.config/kitty] git rev-parse --show-toplevel • Command failed: /usr/bin/git -c core.quotepath=false -c color.ui=false rev-parse --show-toplevel • not a git repository (or any parent up to mount point /) • Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set). [17ms]
+
+[2023-11-21 19:00:48.251] [GIT  ] [/home/bruno/.config/kitty] git rev-parse --show-toplevel • Command failed: /usr/bin/git -c core.quotepath=false -c color.ui=false rev-parse --show-toplevel • not a git repository (or any parent up to mount point /) • Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set). [21ms]
+
+[2023-11-21 19:01:03.534] [GIT  ] [/home/bruno/.config/kitty] git rev-parse --show-toplevel • Command failed: /usr/bin/git -c core.quotepath=false -c color.ui=false rev-parse --show-toplevel • not a git repository (or any parent up to mount point /) • Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set). [18ms]
+
+[2023-11-21 19:01:15.572] [GIT  ] [/home/bruno/.config/kitty] git rev-parse --show-toplevel • Command failed: /usr/bin/git -c core.quotepath=false -c color.ui=false rev-parse --show-toplevel • not a git repository (or any parent up to mount point /) • Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set). [18ms]
+
+[2023-11-21 19:04:12.013] [GIT  ] [/home/bruno/.config/alacritty] git rev-parse --show-toplevel • Command failed: /usr/bin/git -c core.quotepath=false -c color.ui=false rev-parse --show-toplevel • not a git repository (or any parent up to mount point /) • Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set). [15ms]
+

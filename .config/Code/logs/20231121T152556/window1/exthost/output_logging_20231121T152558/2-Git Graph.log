@@ -20,3 +20,10 @@
 [2023-11-21 15:26:04.192] > git rev-parse --show-toplevel
 [2023-11-21 15:26:19.787] > git rev-parse --show-toplevel
 [2023-11-21 15:27:24.142] > git rev-parse --show-toplevel
+[2023-11-21 15:34:04.154] > git rev-parse --show-toplevel
+[2023-11-21 15:34:04.168] > git rev-parse --show-toplevel
+[2023-11-21 15:34:04.182] > git rev-parse --show-toplevel
+[2023-11-21 15:36:43.977] > git rev-parse --show-toplevel
+[2023-11-21 15:40:10.843] > git rev-parse --show-toplevel
+[2023-11-21 15:41:34.197] > git rev-parse --show-toplevel
+[2023-11-21 15:41:34.203] Added new repo: /home/bruno/.config/tmux/plugins/tmux-resurrect

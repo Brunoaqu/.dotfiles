@@ -4,3 +4,6 @@
 [submodule "/home/bruno/.config/tmux/plugins/tpm"]
 	path = /home/bruno/.config/tmux/plugins/tpm
 	url = git@github.com:tmux-plugins/tpm.git
+[submodule "/home/bruno/.config/tmux/plugins/tmux-resurrect"]
+	path = /home/bruno/.config/tmux/plugins/tmux-resurrect
+	url = git@github.com:tmux-plugins/tmux-resurrect.git

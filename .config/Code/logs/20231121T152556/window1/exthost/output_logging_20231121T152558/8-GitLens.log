@@ -8,3 +8,23 @@ To enable debug logging, set `"gitlens.outputLevel: "debug"` or run "GitLens: En
 
 [2023-11-21 18:27:21.897] [GIT  ] [/home/bruno/.config/tmux/utils] git rev-parse --show-toplevel • Command failed: /usr/bin/git -c core.quotepath=false -c color.ui=false rev-parse --show-toplevel • not a git repository (or any parent up to mount point /) • Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set). [14ms]
 
+[2023-11-21 18:30:10.982] [GIT  ] [/home/bruno/.config/i3] git rev-parse --show-toplevel • Command failed: /usr/bin/git -c core.quotepath=false -c color.ui=false rev-parse --show-toplevel • not a git repository (or any parent up to mount point /) • Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set). [18ms]
+
+[2023-11-21 18:32:02.119] [GIT  ] [/home/bruno/.config/rofi] git rev-parse --show-toplevel • Command failed: /usr/bin/git -c core.quotepath=false -c color.ui=false rev-parse --show-toplevel • not a git repository (or any parent up to mount point /) • Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set). [17ms]
+
+[2023-11-21 18:32:03.032] [GIT  ] [/home/bruno/.config/rofi/tmux] git rev-parse --show-toplevel • Command failed: /usr/bin/git -c core.quotepath=false -c color.ui=false rev-parse --show-toplevel • not a git repository (or any parent up to mount point /) • Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set). [23ms]
+
+[2023-11-21 18:32:04.018] [GIT  ] [/home/bruno/.config/rofi/tmux] git rev-parse --show-toplevel • Command failed: /usr/bin/git -c core.quotepath=false -c color.ui=false rev-parse --show-toplevel • not a git repository (or any parent up to mount point /) • Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set). [15ms]
+
+[2023-11-21 18:33:03.828] [GIT  ] [/home/bruno/.config] git rev-parse --show-toplevel • Command failed: /usr/bin/git -c core.quotepath=false -c color.ui=false rev-parse --show-toplevel • not a git repository (or any parent up to mount point /) • Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set). [14ms]
+
+[2023-11-21 18:33:13.144] [GIT  ] [/home/bruno/.config/gcloud] git rev-parse --show-toplevel • Command failed: /usr/bin/git -c core.quotepath=false -c color.ui=false rev-parse --show-toplevel • not a git repository (or any parent up to mount point /) • Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set). [12ms]
+
+[2023-11-21 18:33:14.162] [GIT  ] [/home/bruno/.config/gcloud] git rev-parse --show-toplevel • Command failed: /usr/bin/git -c core.quotepath=false -c color.ui=false rev-parse --show-toplevel • not a git repository (or any parent up to mount point /) • Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set). [22ms]
+
+[2023-11-21 18:40:41.584] [GIT  ] [/home/bruno/.config/tmux/utils] git rev-parse --show-toplevel • Command failed: /usr/bin/git -c core.quotepath=false -c color.ui=false rev-parse --show-toplevel • not a git repository (or any parent up to mount point /) • Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set). [12ms]
+
+[2023-11-21 18:42:19.018] [GIT  ] [/home/bruno/.config/rofi/launcher] git rev-parse --show-toplevel • Command failed: /usr/bin/git -c core.quotepath=false -c color.ui=false rev-parse --show-toplevel • not a git repository (or any parent up to mount point /) • Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set). [11ms]
+
+[2023-11-21 18:42:22.156] [GIT  ] [/home/bruno/.config/rofi/launcher] git rev-parse --show-toplevel • Command failed: /usr/bin/git -c core.quotepath=false -c color.ui=false rev-parse --show-toplevel • not a git repository (or any parent up to mount point /) • Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set). [17ms]
+

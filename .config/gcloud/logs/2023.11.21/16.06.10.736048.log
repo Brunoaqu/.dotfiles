@@ -1,0 +1,4 @@
+2023-11-21 16:06:10,736 DEBUG    root            Loaded Command Group: ['gcloud', 'projects']
+2023-11-21 16:06:10,737 DEBUG    root            Loaded Command Group: ['gcloud', 'projects', 'describe']
+2023-11-21 16:06:10,739 DEBUG    root            Running [gcloud.projects.describe] with arguments: [--account: "bruno@pixlog.com.br", --configuration: "default", --format: "value(name)", PROJECT_ID_OR_NUMBER: "pixlog-backend-ml"]
+2023-11-21 16:06:10,749 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): cloudresourcemanager.googleapis.com:443
