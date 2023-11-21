@@ -1,0 +1,44 @@
+2023-11-21 16:32:38.244 [info] Extension host with pid 107808 started
+2023-11-21 16:32:38.244 [info] Skipping acquiring lock for /home/bruno/.config/Code/User/workspaceStorage/577345d3a7faf11616ec40c9de50f37e.
+2023-11-21 16:32:38.385 [info] ExtensionService#_doActivateExtension vscode.git-base, startup: true, activationEvent: '*'
+2023-11-21 16:32:38.388 [info] ExtensionService#_doActivateExtension redhat.vscode-yaml, startup: true, activationEvent: '*', root cause: 42Crunch.vscode-openapi
+2023-11-21 16:32:38.457 [info] ExtensionService#_doActivateExtension vscode.github, startup: true, activationEvent: '*'
+2023-11-21 16:32:38.495 [info] ExtensionService#_doActivateExtension 42Crunch.vscode-openapi, startup: true, activationEvent: '*'
+2023-11-21 16:32:38.791 [info] ExtensionService#_doActivateExtension vscode.github-authentication, startup: false, activationEvent: 'onAuthenticationRequest:github'
+2023-11-21 16:32:38.862 [info] ExtensionService#_doActivateExtension vscode.microsoft-authentication, startup: false, activationEvent: 'onAuthenticationRequest:microsoft'
+2023-11-21 16:32:38.882 [info] Eager extensions activated
+2023-11-21 16:32:38.920 [info] ExtensionService#_doActivateExtension vscode.debug-auto-launch, startup: false, activationEvent: 'onStartupFinished'
+2023-11-21 16:32:38.922 [info] ExtensionService#_doActivateExtension vscode.merge-conflict, startup: false, activationEvent: 'onStartupFinished'
+2023-11-21 16:32:38.928 [info] ExtensionService#_doActivateExtension alefragnani.Bookmarks, startup: false, activationEvent: 'onStartupFinished'
+2023-11-21 16:32:38.933 [info] ExtensionService#_doActivateExtension eamodio.gitlens, startup: false, activationEvent: 'onStartupFinished'
+2023-11-21 16:32:38.958 [info] ExtensionService#_doActivateExtension GitHub.vscode-pull-request-github, startup: false, activationEvent: 'onStartupFinished'
+2023-11-21 16:32:38.990 [info] ExtensionService#_doActivateExtension PKief.material-icon-theme, startup: false, activationEvent: 'onStartupFinished'
+2023-11-21 16:32:38.996 [info] ExtensionService#_doActivateExtension vscode-icons-team.vscode-icons, startup: false, activationEvent: 'onStartupFinished'
+2023-11-21 16:32:39.169 [info] ExtensionService#_doActivateExtension ms-vscode.js-debug, startup: false, activationEvent: 'onCommand:extension.js-debug.setAutoAttachVariables'
+2023-11-21 16:32:39.220 [warning] [redhat.vscode-yaml] Accessing a resource scoped configuration without providing a resource is not expected. To get the effective value for '[yaml]', provide the URI of a resource or 'null' for any resource.
+2023-11-21 16:32:39.227 [warning] [redhat.vscode-yaml] Accessing a resource scoped configuration without providing a resource is not expected. To get the effective value for '[yaml]', provide the URI of a resource or 'null' for any resource.
+2023-11-21 16:32:40.215 [warning] [redhat.vscode-yaml] Accessing a resource scoped configuration without providing a resource is not expected. To get the effective value for '[yaml]', provide the URI of a resource or 'null' for any resource.
+2023-11-21 16:32:40.299 [warning] [redhat.vscode-yaml] Accessing a resource scoped configuration without providing a resource is not expected. To get the effective value for '[yaml]', provide the URI of a resource or 'null' for any resource.
+2023-11-21 16:32:40.325 [info] ExtensionService#_doActivateExtension vscode.git, startup: false, activationEvent: 'api', root cause: vscode.github
+2023-11-21 16:32:40.418 [info] ExtensionService#_doActivateExtension dbaeumer.vscode-eslint, startup: false, activationEvent: 'onStartupFinished'
+2023-11-21 16:32:40.433 [info] ExtensionService#_doActivateExtension formulahendry.code-runner, startup: false, activationEvent: 'onStartupFinished'
+2023-11-21 16:32:40.493 [info] ExtensionService#_doActivateExtension GitHub.copilot, startup: false, activationEvent: 'onStartupFinished'
+2023-11-21 16:32:40.570 [info] ExtensionService#_doActivateExtension GitHub.copilot-chat, startup: false, activationEvent: 'onStartupFinished'
+2023-11-21 16:32:40.612 [info] ExtensionService#_doActivateExtension GitHub.copilot-labs, startup: false, activationEvent: 'onStartupFinished'
+2023-11-21 16:32:41.253 [info] ExtensionService#_doActivateExtension mhutchie.git-graph, startup: false, activationEvent: '*'
+2023-11-21 16:32:41.260 [info] ExtensionService#_doActivateExtension natqe.reload, startup: false, activationEvent: '*'
+2023-11-21 16:32:41.261 [info] ExtensionService#_doActivateExtension streetsidesoftware.code-spell-checker, startup: false, activationEvent: 'onStartupFinished'
+2023-11-21 16:32:41.408 [info] ExtensionService#_doActivateExtension ms-vscode.makefile-tools, startup: false, activationEvent: 'workspaceContains:**/makefile,**/Makefile,**/GNUmakefile'
+2023-11-21 16:32:41.427 [info] ExtensionService#_doActivateExtension hashicorp.terraform, startup: false, activationEvent: 'workspaceContains:**/*.tf,**/*.tfvars'
+2023-11-21 16:32:42.057 [info] ExtensionService#_doActivateExtension streetsidesoftware.code-spell-checker-portuguese-brazilian, startup: false, activationEvent: 'onStartupFinished'
+2023-11-21 16:32:42.503 [info] ExtensionService#_doActivateExtension vscode.json-language-features, startup: false, activationEvent: 'onLanguage:jsonc'
+2023-11-21 16:32:42.521 [info] ExtensionService#_doActivateExtension vscode.typescript-language-features, startup: false, activationEvent: 'onLanguage:jsonc'
+2023-11-21 16:32:42.554 [info] ExtensionService#_doActivateExtension denoland.vscode-deno, startup: false, activationEvent: 'onLanguage:jsonc'
+2023-11-21 16:32:42.575 [info] ExtensionService#_doActivateExtension vscode.emmet, startup: false, activationEvent: 'onLanguage'
+2023-11-21 16:32:42.874 [error] Activating extension denoland.vscode-deno failed due to an error:
+2023-11-21 16:32:42.874 [error] TypeError: Cannot read properties of undefined (reading 'onNotification')
+    at activate (/home/bruno/.vscode/extensions/denoland.vscode-deno-3.28.0/client/dist/main.js:21176:54)
+    at v.n (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:124:6205)
+    at v.m (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:124:6168)
+    at v.l (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:124:5625)
+2023-11-21 16:35:42.032 [info] ExtensionService#_doActivateExtension GrapeCity.gc-excelviewer, startup: false, activationEvent: 'onLanguage:plaintext'

@@ -1,0 +1,11 @@
+2023-11-21 16:32:37.576 [warning] Via 'product.json#extensionEnabledApiProposals' extension 'ms-dotnettools.dotnet-interactive-vscode' wants API proposal 'languageConfigurationAutoClosingPairs' but that proposal DOES NOT EXIST. Likely, the proposal has been finalized (check 'vscode.d.ts') or was abandoned.
+2023-11-21 16:32:38.813 [error] [xabikos.JavaScriptSnippets]: Unknown language in `contributes.JavaScriptSnippets.language`. Provided value: vue
+2023-11-21 16:32:40.082 [warning] [cmake-tools]: Couldn't find message for key cmake-tools.configuration.cmake.options.advanced.statusBarVisibility.variant.description.
+2023-11-21 16:32:40.180 [warning] [twxs.cmake]: Cannot register 'cmake.cmakePath'. This property is already registered.
+2023-11-21 16:32:40.238 [error] [xabikos.JavaScriptSnippets]: Unknown language in `contributes.JavaScriptSnippets.language`. Provided value: vue
+2023-11-21 16:32:40.663 [info] [perf] Render performance baseline is 52ms
+2023-11-21 16:32:41.299 [warning] [cmake-tools]: Couldn't find message for key cmake-tools.configuration.cmake.options.advanced.statusBarVisibility.variant.description.
+2023-11-21 16:32:44.008 [error] No registered selector for ID: copilot-chat.fixWithCopilot: Error: No registered selector for ID: copilot-chat.fixWithCopilot
+    at vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:1544:26325
+2023-11-21 16:33:11.997 [error] [File Watcher (parcel)] Unexpected error: inotify_add_watch on '/home/bruno/.config/Code/logs/20231121T084518/window1/exthost/output_logging_20231121T084520' failed: No such file or directory (EUNKNOWN) (path: /home/bruno)
+2023-11-21 16:33:11.997 [error] [File Watcher (universal)] restarting watcher after error: inotify_add_watch on '/home/bruno/.config/Code/logs/20231121T084518/window1/exthost/output_logging_20231121T084520' failed: No such file or directory

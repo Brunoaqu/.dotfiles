@@ -1,0 +1,5 @@
+2023-11-21 16:32:37.262 [info] update#setState idle
+2023-11-21 16:33:07.263 [info] update#setState checking for updates
+2023-11-21 16:33:07.466 [info] update#setState idle
+2023-11-21 16:33:11.998 [warning] [UtilityProcessWorker]: createWorker() found an existing worker that will be terminated (window: 1, moduleId: vs/platform/files/node/watcher/watcherMain)
+2023-11-21 16:33:12.007 [error] [UtilityProcess id: 1, type: fileWatcher, pid: 107779]: crashed with code 15 and reason 'killed'

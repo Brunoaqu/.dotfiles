@@ -2,7 +2,6 @@
     "userDataProfilesMigration": true,
     "profileAssociations": {
         "workspaces": {
-            "file:///home/bruno": "__default__profile__",
             "file:///home/bruno/Desktop": "__default__profile__",
             "file:///home/bruno/Desktop/server/v2": "__default__profile__",
             "file:///home/bruno/Desktop/api-docs": "__default__profile__",
@@ -20,7 +19,8 @@
             "file:///home/bruno/.config/rofi": "__default__profile__",
             "file:///home/bruno/.config/nvim": "__default__profile__",
             "file:///home/bruno/Desktop/api": "__default__profile__",
-            "file:///home/bruno/.config": "__default__profile__"
+            "file:///home/bruno/.config": "__default__profile__",
+            "file:///home/bruno": "__default__profile__"
         },
         "emptyWindows": {}
     },
@@ -30,7 +30,7 @@
         "workspaces": [],
         "folders": [
             {
-                "folderUri": "file:///home/bruno/.config"
+                "folderUri": "file:///home/bruno"
             }
         ],
         "emptyWindows": []
@@ -77,6 +77,17 @@
                                 },
                                 {
                                     "id": "vscode.menubar.separator"
+                                },
+                                {
+                                    "id": "openRecentFolder",
+                                    "uri": {
+                                        "$mid": 1,
+                                        "external": "file:///home/bruno",
+                                        "path": "/home/bruno",
+                                        "scheme": "file"
+                                    },
+                                    "enabled": true,
+                                    "label": "/home/bruno"
                                 },
                                 {
                                     "id": "openRecentFolder",
@@ -176,17 +187,6 @@
                                     },
                                     "enabled": true,
                                     "label": "~/Desktop/database-admin-backup"
-                                },
-                                {
-                                    "id": "openRecentFolder",
-                                    "uri": {
-                                        "$mid": 1,
-                                        "external": "file:///home/bruno/Desktop/api/src/modules/appResources",
-                                        "path": "/home/bruno/Desktop/api/src/modules/appResources",
-                                        "scheme": "file"
-                                    },
-                                    "enabled": true,
-                                    "label": "~/Desktop/api/src/modules/appResources"
                                 },
                                 {
                                     "id": "vscode.menubar.separator"
@@ -707,7 +707,8 @@
                                         "items": [
                                             {
                                                 "id": "workbench.action.positionPanelBottom",
-                                                "label": "Bottom"
+                                                "label": "Bottom",
+                                                "checked": true
                                             },
                                             {
                                                 "id": "workbench.action.positionPanelLeft",
@@ -715,8 +716,7 @@
                                             },
                                             {
                                                 "id": "workbench.action.positionPanelRight",
-                                                "label": "Right",
-                                                "checked": true
+                                                "label": "Right"
                                             }
                                         ]
                                     }
@@ -1860,14 +1860,14 @@
     },
     "windowsState": {
         "lastActiveWindow": {
-            "folder": "file:///home/bruno/.config",
-            "backupPath": "/home/bruno/.config/Code/Backups/3106f87a9bc0d18b4d1176bec2dbd19b",
+            "folder": "file:///home/bruno",
+            "backupPath": "/home/bruno/.config/Code/Backups/ad9a79a8eefd268d95405e665dbab99d",
             "uiState": {
                 "mode": 1,
                 "x": 10,
                 "y": 11,
                 "width": 2539,
-                "height": 1034
+                "height": 1058
             }
         },
         "openedWindows": []
