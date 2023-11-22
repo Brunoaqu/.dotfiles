@@ -1,0 +1,47 @@
+display_on=0
+span_image=false
+lock_timeout=300
+fx_list=(dim blur dimblur pixel dimpixel color)
+dim_level=40
+blur_level=1
+pixel_scale=10,1000
+wallpaper_cmd="feh --bg-fill"
+quiet=true
+# i3lockcolor_bin="i3lock-color" # Manually set command for i3lock-color
+
+# Formatting.
+locktext=" Locked"
+veriftext="..."
+wrongtext=""
+font="JetBrainsMono Nerd Font"
+time_format="%H:%M"
+
+# Blue.
+keyhlcolor=2BA8D9
+
+# Yellow.
+modifcolor=e0af68
+bshlcolor=e0af68
+
+# Red.
+wrongcolor=db4b4b
+insidewrongcolor=db4b4b
+
+# White.
+verifcolor=F2E2DF
+timecolor=F2E2DF
+greetercolor=F2E2DF
+layoutcolor=F2E2DF
+ringvercolor=F2E2DF
+ringcolor=F2E2DF
+ringwrongcolor=F2E2DF
+separatorcolor=F2E2DF
+
+# Black.
+insidevercolor=0D0D0D
+loginbox=0D0D0D
+bgcolor=0D0D0D
+solid_color=0D0D0D
+insidecolor=0D0D0D
+
+loginshadow=000000
