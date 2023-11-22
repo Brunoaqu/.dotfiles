@@ -1,0 +1,8 @@
+# Exclude All
+*
+
+# Manually Include
+!.zshenv
+!/.scripts
+!/.wallpapers
+!/.config
