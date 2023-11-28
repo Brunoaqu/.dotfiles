@@ -1,0 +1,91 @@
+# Nordic colors.
+
+set notification-error-bg       "#232831"
+set notification-error-fg       "#BF616A"
+set notification-warning-bg     "#232831"
+set notification-warning-fg     "#D08770"
+set notification-bg             "#232831"
+set notification-fg             "#D8DEE9"
+
+set completion-bg               "#232831"
+set completion-fg               "#D8DEE9"
+set completion-group-bg         "#3B4252"
+set completion-group-fg         "#D8DEE9"
+set completion-highlight-bg     "#88C0D0"
+set completion-highlight-fg     "#3B4252"
+
+set index-bg                    "#232831"
+set index-fg                    "#EBCB8B"
+set index-active-bg             "#2E3440"
+set index-active-fg             "#EBCB8B"
+
+set inputbar-bg                 "#232831"
+set inputbar-fg                 "#E5E9F0"
+
+set statusbar-bg                "#191C24"
+set statusbar-fg                "#BBC3D4"
+
+set highlight-color             "#D08770"
+set highlight-active-color      "#BF616A"
+
+set default-bg                  "#232831"
+set default-fg                  "#D8DEE9"
+set render-loading              "true"
+set render-loading-bg           "#232831"
+set render-loading-fg           "#434C5E"
+
+set recolor-lightcolor          "#232831"
+set recolor-darkcolor           "#ECEFF4"
+
+# Tokyonight colors.
+
+set notification-error-bg       "#1a1b26"
+set notification-error-fg       "#f7768e"
+set notification-warning-bg     "#1a1b26"
+set notification-warning-fg     "#D08770"
+set notification-bg             "#1a1b26"
+set notification-fg             "#c0caf5"
+
+set completion-bg               "#1a1b26"
+set completion-fg               "#c0caf5"
+set completion-group-bg         "#414868"
+set completion-group-fg         "#c0caf5"
+set completion-highlight-bg     "#7dcfff"
+set completion-highlight-fg     "#414868"
+
+set index-bg                    "#1a1b26"
+set index-fg                    "#e0af68"
+set index-active-bg             "#414868"
+set index-active-fg             "#e0af68"
+
+set inputbar-bg                 "#1a1b26"
+set inputbar-fg                 "#c0caf5"
+
+set statusbar-bg                "#16161e"
+set statusbar-fg                "#c0caf5"
+
+set highlight-color             "#ff9e64"
+set highlight-active-color      "#f7768e"
+
+set default-bg                  "#1a1b26"
+set default-fg                  "#f5f5f5"
+set render-loading              "true"
+set render-loading-bg           "#1a1b26"
+set render-loading-fg           "#414868"
+
+set recolor-lightcolor          "#1a1b26"
+set recolor-darkcolor           "#c0caf5"
+
+
+
+# Dark mode/invert.
+set recolor                     "true" 
+
+# Font.
+set font "JetBrainsMono Nerd Font 10"
+
+# Open document in fit-width mode by default
+set adjust-open "best-fit"
+
+# Pages per row.
+set pages-per-row 1
