@@ -1,0 +1,6 @@
+.vscode-oss/** linguist-vendored
+.local/share/gnome-shell/extensions/** linguist-vendored
+.config/i3/scripts/** linguist-vendored
+.config/fish/functions/** linguist-vendored
+.themes/** linguist-vendored
+.mozilla/** linguist-vendored
