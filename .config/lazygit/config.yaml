@@ -1,0 +1,5 @@
+gui:
+  border: 'rounded'
+  theme:
+    inactiveBorderColor:
+      - "#292e42"
