@@ -10,9 +10,11 @@ export EDITOR="nvim"
 
 # Path
 export PATH="$HOME/.local/bin/:$PATH"
+export PATH="$HOME/go/bin/:$PATH"
 
 # Aliases
 alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+alias tf='terraform'
 
 # Gotta go fast
 alias c="clear"
