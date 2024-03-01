@@ -5,3 +5,5 @@ if systemctl is-active --quiet ufw; then
 else
     echo "%{F#db4b4b}󱨑 "
 fi
+
+
