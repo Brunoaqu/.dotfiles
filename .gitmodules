@@ -16,3 +16,6 @@
 [submodule ".password-store"]
 	path = .password-store
 	url = git@github.com:Brunoaqu/.password-store.git
+[submodule ".private"]
+	path = .private
+	url = git@github.com:Brunoaqu/.private.git
