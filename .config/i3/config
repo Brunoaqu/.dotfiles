@@ -1,7 +1,6 @@
 ############
 # Settings #
 ############
-
 set $mod Mod4
 font pango: JetBrainsMono Nerd Font 10
 focus_follows_mouse no
@@ -11,17 +10,19 @@ workspace_layout default
 ##########
 # Colors #
 ##########
-
 set $black      #191D24
+set $gray       #242933
 set $gray0      #242933
 set $gray1      #2E3440
 set $gray2      #3B4252
 set $gray3      #434C5E
 set $gray4      #4C566A
 set $gray5      #60728A
+set $white      #D8DEE9
 set $white0     #D8DEE9
 set $white1     #E5E9F0
 set $white2     #ECEFF4
+set $blue       #5E81AC
 set $blue0      #5E81AC
 set $blue1      #81A1C1
 set $blue2      #88C0D0
@@ -35,17 +36,20 @@ set $magenta    #B48EAD
 #################
 # Window Colors #
 #################
-
 # Class                         border          bground         text            indicator       child_border
-client.focused	                $blue           $gray0          $white          $black          $cyan
+client.focused                  $blue           $gray0          $white          $black          $cyan
 client.unfocused                $blue           $blue           $gray           $black          $gray0
 client.focused_inactive         $blue           $blue           $gray           $black          $black
 client.urgent                   $red            $red            $red            $black          $red
 
+#################
+# Polybar Marin #
+#################
+gaps top 35
+
 ####################################
 # Additional Windows Configuration #
 ####################################
-
 # Thin borders
 hide_edge_borders both
 
@@ -53,9 +57,9 @@ hide_edge_borders both
 for_window [class="^.*"] border pixel 0
 
 # Set inner/outer gaps
-gaps inner 10
-gaps vertical 1
-gaps right 1
+gaps inner 8
+gaps horizontal 2
+gaps right 3
 smart_gaps off
 
 # Show window title bars (not officially supported with i3gaps)
@@ -120,14 +124,14 @@ bindcode $mod+Shift+Mod2+90 	move container to workspace  $ws10
 #####################################
 
 # Terminal stuff.
-bindsym $mod+t exec kitty --execute ~/.config/tmux/utils/start_terminal.sh
-# bindsym $mod+shift+t exec proxychains4 -q alacritty --execute ~/.config/tmux/utils/start_tor_terminal.sh
-# bindsym $mod+n exec alacritty --class neovim --execute ~/.config/tmux/utils/start_editor.sh
-bindsym $mod+shift+f exec kitty --execute tmux new-session -n "files" "ranger"
-bindsym $mod+m exec kitty --execute tmux new-session -n "monitor" bpytop
-bindsym $mod+g exec kitty --execute nvtop
-# bindsym $mod+r exec alacritty --execute ~/.config/tmux/utils/start_newsboat.sh
-# bindsym $mod+w exec alacritty --execute ~/.config/tmux/utils/start_iwctl.sh
+bindsym $mod+t exec st ~/.config/tmux/utils/start_terminal.sh
+bindsym $mod+shift+t exec st ~/.config/tmux/utils/start_terminal.sh
+bindsym $mod+b exec ~/.config/surf/scripts/open_browser.sh
+bindsym $mod+f exec st tmux new-session -n "files" yazi
+bindsym $mod+m exec exec st tmux new-session -n "monitor" btop
+bindsym $mod+g exec st nvtop
+bindsym $mod+n exec flatpak run org.wezfurlong.wezterm -e start --class neovim "$HOME/.config/tmux/apps/start_editor.sh"
+bindsym $mod+r exec st ~/.config/tmux/utils/start_newsboat.sh
 
 # Kill Focused Window.
 bindsym $mod+q kill
@@ -167,7 +171,7 @@ bindsym $mod+Shift+Right move right
 bindsym $mod+v split v
 
 # Enter Fullscreen Mode for the focused container.
-bindsym $mod+f fullscreen toggle
+bindsym $mod+Shift+f fullscreen toggle
 
 # Change Container Layout (stacked, tabbed, toggle split).
 bindsym $mod+Shift+g layout tabbed
@@ -186,19 +190,18 @@ bindsym $mod+a focus parent
 bindsym $mod+Shift+n exec ~/.config/i3/scripts/empty_workspace
 
 # Volume
-# bindsym XF86AudioRaiseVolume exec pamixer -i 5 && pkill -RTMIN+1 i3blocks
-# bindsym XF86AudioLowerVolume exec pamixer -d 5 && pkill -RTMIN+1 i3blocks
+bindsym XF86AudioRaiseVolume exec pamixer -i 5 && pkill -RTMIN+1 i3blocks
+bindsym XF86AudioLowerVolume exec pamixer -d 5 && pkill -RTMIN+1 i3blocks
 
 # Mute
-# bindsym XF86AudioMute exec pamixer -t && killall -USR1 i3blocks
-
+bindsym XF86AudioMute exec pamixer -t && killall -USR1 i3blocks
 
 # Audio control.
-# bindsym XF86AudioPlay exec playerctl play-pause
-# bindsym XF86AudioPause exec playerctl play-pause
-# bindsym XF86AudioNext exec playerctl next
-# bindsym XF86AudioPrev exec playerctl previous
-# bindsym XF86AudioNext exec playerctl play-pause
+bindsym XF86AudioPlay exec playerctl play-pause
+bindsym XF86AudioPause exec playerctl play-pause
+bindsym XF86AudioNext exec playerctl next
+bindsym XF86AudioPrev exec playerctl previous
+#bindsym XF86AudioNext exec playerctl play-pause
 
 #########################################
 # Configuration For Workspace Behaviour #
@@ -222,15 +225,19 @@ set $ws10 "10"
 ##################
 
 # Set Floating For Specific Windows.
-# for_window [class="Pavucontrol" instance="pavucontrol"] floating enable
-# for_window [class="Blueberry.py" instance="blueberry.py"] floating enable
-# for_window [class="Bluetooth-sendto" instance="bluetooth-sendto"] floating enable
-for_window [class="kitty"] floating enable
-# for_window [class="Gufw.py"] floating enable
+for_window [class="Pavucontrol" instance="pavucontrol"] floating enable
+for_window [class="Blueberry.py" instance="blueberry.py"] floating enable
+for_window [class="Bluetooth-sendto" instance="bluetooth-sendto"] floating enable
+for_window [class="wezterm"] floating enable
+for_window [class="Gufw.py"] floating enable
+for_window [class="st-256color"] floating enable
+# for_window [title="Picture-in-Picture"] floating enable, sticky enable
+for_window [class="zen" window_role="browser" title=".*Bitwarden.*"] resize set 400 600, move position center
 
 # Floating config.
-for_window [class=".*"] resize set 954 588
+for_window [class=".*"] resize set 1000 700
 for_window [class=".*"] move position center
+for_window [title="Picture-in-Picture"] floating enable, sticky enable, move position 1072 px 575 px, resize set 284 160
 
 # Browser fullscreen some windows.
 for_window [class="Brave-browser"] exec --no-startup-id ~/.config/i3/scripts/browser.sh
@@ -240,7 +247,8 @@ for_window [class="Brave-browser"] exec --no-startup-id ~/.config/i3/scripts/bro
 ####################################
 
 # Launcher.
-bindsym $mod+d exec ~/.config/rofi/launcher/run.sh
+# bindsym $mod+d exec ~/.config/rofi/laucher/run.sh
+bindsym $mod+d exec --no-startup-id "/home/bruno/.config/rofi/launcher/run.sh"
 
 # Tmux sessions.
 bindsym $mod+s exec ~/.config/rofi/tmux/run.sh
@@ -249,16 +257,21 @@ bindsym $mod+s exec ~/.config/rofi/tmux/run.sh
 bindsym $mod+Shift+s exec flameshot gui
 
 # reload the configuration file
-bindsym $mod+Shift+c reload
+# bindsym $mod+Shift+c reload
 
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
-bindsym $mod+Shift+r restart
+bindsym $mod+Shift+c restart
 
 # exit i3 (logs you out of your X session)
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
+
+# Toggle the inactive opacity for picom.
+bindsym $mod+Shift+r exec ~/.config/picom/scripts/toggle-picom-inactive-opacity.sh && polybar-msg action "#read-mode.exec"
 
 ####################
 # Startup scripts: #
 ####################
 
+exec --no-startup-id nm-applet
+exec --no-startup-id blueman-applet
 exec ~/.scripts/startup/startup.sh
