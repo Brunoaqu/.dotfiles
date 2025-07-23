@@ -1,14 +1,17 @@
 // Configuration.
 configuration {
-	modi:                       "dmenu";
-    show-icons:                 true;
-    font:                       "JetBrainsMono Nerd Font 9";
-    icon-theme:                 "Papirus-Dark";
-    monitor: -1;
+    show-icons:     true;
+    monitor:        -1;
+    modi:           "drun";
+    display-drun:   "  Apps";
+    font:           "JetBrainsMono Nerd Font 9";
+    icon-theme:     "Papirus-Dark";
 }
 
-// Globals.
-@import "~/.config/rofi/themes/mocha.rasi"
+// @import "catppuccin-latte"
+// @import "catppuccin-frappe"
+// @import "catppuccin-macchiato"
+@import "mocha"
 
 // Main window.
 window {
@@ -29,7 +32,6 @@ window {
     cursor:                      "default";
 }
 
-
 // Main box.
 mainbox {
     enabled:                     true;
@@ -37,7 +39,7 @@ mainbox {
     margin:                      0px;
     padding:                     20px;
     border:                      2px solid;
-    border-radius:               11px;
+    border-radius:               10px;
     border-color:                @border;
     background-color:            transparent;
     children:                    [ "inputbar", "listview" ];
@@ -50,8 +52,8 @@ inputbar {
     margin:                      0px;
     padding:                     0px 0px 20px 0px;
     border:                      0px solid;
-    border-radius:               11px;
-    border-color:                @selected;
+    border-radius:               10px;
+    border-color:                @selected-active-background;
     background-color:            @background;
     text-color:                  @foreground;
     children:                    [ "prompt", "entry" ];
@@ -63,8 +65,8 @@ prompt {
     background-color:            @sky;
     text-color:                  @background;
     border:                      0px;
-    border-color:                @sky;
-    border-radius:               11px;
+    border-color:                @foreground;
+    border-radius:               10px;
     padding:                     10px 20px;
 }
 
@@ -114,36 +116,19 @@ element {
     cursor:                      pointer;
     orientation:                 horizontal;
 }
-
 element normal.normal {
     background-color:            @normal-background;
     text-color:                  @normal-foreground;
-}
-// Selected, but no cursor.
-element normal.active {
-    background-color:            @active-background;
-    text-color:                  @active-foreground;
 }
 element alternate.normal {
     background-color:            @alternate-normal-background;
     text-color:                  @alternate-normal-foreground;
 }
-element alternate.active {
-    background-color:            @alternate-active-background;
-    text-color:                  @alternate-active-foreground;
-}
-// Not selected, has cursor.
 element selected.normal {
     background-color:            @selected-normal-background;
     text-color:                  @selected-normal-foreground;
 }
-// Selected, with cursor.
-element selected.active {
-    background-color:            @selected-normal-background;
-    text-color:                  @selected-normal-foreground;
-}
 element-icon {
-    enabled:                     false;
     background-color:            transparent;
     text-color:                  inherit;
     size:                        20px;
@@ -162,15 +147,16 @@ element-text {
 error-message {
     padding:                     20px;
     border:                      2px solid;
-    border-radius:               11px;
+    border-radius:               10px;
     border-color:                @urgent-foreground;
     background-color:            @urgent-background;
     text-color:                  @urgent-foreground;
 }
 textbox {
-    background-color:            @normal-background;
-    text-color:                  @normal-foreground;
+    background-color:            @background;
+    text-color:                  @foreground;
     vertical-align:              0.5;
     horizontal-align:            0.0;
     highlight:                   none;
 }
+

@@ -42,9 +42,9 @@ if [[ -n $selected_file ]]; then
     script="${selected_file#$prefix}"
     session_name="${script%$active}"
     if tmux has-session -t "$session_name" >/dev/null 2>&1; then
-        kitty --class "tmux-$session_name" --execute tmux attach -t "$session_name"
+        st -t "tmux-$session_name" -e tmux attach -t "$session_name"
     else
-        kitty --class "tmux-$session_name" --execute "$HOME/.config/tmux/sessions/$session_name.sh"
+        st -t "tmux-$session_name" -e sh -c "$HOME/.config/tmux/sessions/$session_name.sh"
     fi
 fi
 
