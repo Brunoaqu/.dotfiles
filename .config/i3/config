@@ -137,7 +137,7 @@ bindsym $mod+r exec st ~/.config/tmux/utils/start_newsboat.sh
 bindsym $mod+q kill
 
 # Lock The Screen.
-bindsym $mod+Escape exec "betterlockscreen --lock --display 1"
+bindsym $mod+Escape exec "betterlockscreen -u ~/Downloads/Cloudsday.jpg --lock blur"
 
 # Backlight Control.
 bindsym XF86MonBrightnessUp   exec --no-startup-id brightnessctl set +10% && notify-send --urgency=low -r 9999 "󰃠  Brightness: $((($(brightnessctl g)*100)/$(brightnessctl m)))%"
@@ -233,6 +233,7 @@ for_window [class="Gufw.py"] floating enable
 for_window [class="st-256color"] floating enable
 # for_window [title="Picture-in-Picture"] floating enable, sticky enable
 for_window [class="zen" window_role="browser" title=".*Bitwarden.*"] resize set 400 600, move position center
+for_window [class="spotify"] resize set 800 600, move position center
 
 # Floating config.
 for_window [class=".*"] resize set 1000 700
