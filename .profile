@@ -1,3 +1,5 @@
+source "$HOME/.private/env.sh" && true
+
 # Environment.
 export TERM="st-256color"
 export TERMINAL=$TERM
@@ -23,6 +25,15 @@ export PATH="$HOME/go/bin:$PATH"
 export PATH="$HOME/.local/share/coursier/bin:$PATH"
 export PATH="$HOME/.istioctl/bin:$PATH"
 export PATH="$HOME/.spicetify:$PATH"
+
+export FZF_DEFAULT_OPTS="
+  --color=fg:#CDD6F4,fg+:#CDD6F4,hl:#F38BA8,hl+:#F38BA8
+  --color=bg:-1,bg+:-1,gutter:-1,preview-bg:-1,preview-fg:#CDD6F4
+  --color=border:#313244,pointer:#F5E0DC,marker:#B4BEFE
+  --color=selected-bg:-1,info:#CBA6F7,prompt:#CBA6F7,spinner:#F5E0DC,header:#F38BA8
+  --color=label:#CDD6F4
+"
+
 
 # Dotfiles.
 alias config='git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
