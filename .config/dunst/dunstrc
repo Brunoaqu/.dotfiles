@@ -1,6 +1,8 @@
-# See dunst(5) for all configuration options
-
 [global]
+    frame_color = "#89b4fa"
+    separator_color= frame
+    highlight = "#89b4fa"
+
     ### Display ###
 
     # Which monitor should the notifications be displayed on.
@@ -33,7 +35,7 @@
     origin = bottom-right
 
     # Offset from the origin
-    offset = 6x30
+    offset = 20x20
     # offset = 10x35 # i3 gaps = 20x20
     # (H_Right_Gap/2) x (25+V_Bottom_Gap/2)
 
@@ -212,7 +214,7 @@
     dmenu = /usr/bin/dmenu -p dunst:
 
     # Browser for opening urls in context menu.
-    browser = /usr/bin/brave
+    browser = /usr/bin/firefox
 
     # Always run rule-defined scripts, even if the notification is suppressed
     always_run_script = true
@@ -428,19 +430,17 @@
     alignment = left
 
 [urgency_low]
-    background = "#16161e"
-    foreground = "#c0caf5"
-    frame_color = "#1f2335"
+    background = "#1e1e2e"
+    foreground = "#cdd6f4"
     timeout = 3
 
 [urgency_normal]
-    background = "#16161e"
-    foreground = "#c0caf5"
-    frame_color = "#3d59a1"
+    background = "#1e1e2e"
+    foreground = "#cdd6f4"
     timeout = 15
 
 [urgency_critical]
-    background = "#191D24"
-    foreground = "#c0caf5"
-    frame_color = "#db4b4b"
+    background = "#1e1e2e"
+    foreground = "#cdd6f4"
+    frame_color = "#fab387"
     timeout = 60
