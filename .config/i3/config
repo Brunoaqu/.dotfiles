@@ -137,7 +137,7 @@ bindsym $mod+r exec st ~/.config/tmux/utils/start_newsboat.sh
 bindsym $mod+q kill
 
 # Lock The Screen.
-bindsym $mod+Escape exec "betterlockscreen -u ~/Downloads/Cloudsday.jpg --lock blur"
+bindsym $mod+Escape exec "betterlockscreen --lock blur"
 
 # Backlight Control.
 bindsym XF86MonBrightnessUp   exec --no-startup-id brightnessctl set +10% && notify-send --urgency=low -r 9999 "󰃠  Brightness: $((($(brightnessctl g)*100)/$(brightnessctl m)))%"
@@ -248,11 +248,13 @@ for_window [class="Brave-browser"] exec --no-startup-id ~/.config/i3/scripts/bro
 ####################################
 
 # Launcher.
-# bindsym $mod+d exec ~/.config/rofi/laucher/run.sh
-bindsym $mod+d exec --no-startup-id "/home/bruno/.config/rofi/launcher/run.sh"
+bindsym $mod+d exec --no-startup-id ~/.config/rofi/launcher/run.sh
 
 # Tmux sessions.
 bindsym $mod+s exec ~/.config/rofi/tmux/run.sh
+
+# Switcher.
+bindsym $mod+Tab exec ~/.config/rofi/switcher/run.sh
 
 # Screenshot.
 bindsym $mod+Shift+s exec flameshot gui
