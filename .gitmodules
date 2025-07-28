@@ -22,3 +22,6 @@
 [submodule ".config/nvim"]
 	path = .config/nvim
 	url = git@github.com:Brunoaqu/nvim
+[submodule ".obsidian"]
+	path = .obsidian
+	url = git@github.com:Brunoaqu/.obsidian
