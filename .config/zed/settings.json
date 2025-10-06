@@ -1,0 +1,21 @@
+{
+  "agent": {
+    "model_parameters": [],
+    "single_file_review": false,
+    "version": "2"
+  },
+  "icon_theme": "Material Icon Theme",
+  "ui_font_size": 11,
+  "buffer_font_size": 10,
+  "ui_font_family": "JetBrainsMono Nerd Font",
+  "buffer_font_family": "JetBrainsMono Nerd Font",
+  "terminal": {
+    "font_family": "JetBrainsMono Nerd Font",
+    "font_size": 10
+  },
+  "theme": {
+    "mode": "system",
+    "light": "Catppuccin Mocha",
+    "dark": "One Dark"
+  }
+}
